@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   description:
     "Dusun Gebang, Kalurahan Ngloro, Kecamatan Saptosari, Kabupaten Gunungkidul",
   icons: {
-    icon: "/logo.svg", 
+    icon: "/img/logo.svg", 
   },
 };
 
