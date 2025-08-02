@@ -14,7 +14,11 @@ const lora = Lora({
 
 export const metadata: Metadata = {
   title: "Dusun Gebang",
-  description: "Dusun Gebang, Kalurahan Ngloro, Kecamatan Saptosari, Kabupaten Gunungkidul",
+  description:
+    "Dusun Gebang, Kalurahan Ngloro, Kecamatan Saptosari, Kabupaten Gunungkidul",
+  icons: {
+    icon: "/logo.svg", 
+  },
 };
 
 export default function RootLayout({
@@ -24,9 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${mulish.variable} ${lora.variable} antialiased`}
-      >
+      <body className={`${mulish.variable} ${lora.variable} antialiased`}>
         {children}
       </body>
     </html>
