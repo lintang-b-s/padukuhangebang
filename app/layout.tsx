@@ -13,8 +13,8 @@ const lora = Lora({
 });
 
 export const metadata: Metadata = {
-  title: "Ngloro Berseri",
-  description: "Ngloro berseri",
+  title: "Dusun Gebang",
+  description: "Dusun Gebang, Kalurahan Ngloro, Kecamatan Saptosari, Kabupaten Gunungkidul",
 };
 
 export default function RootLayout({
