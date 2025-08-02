@@ -105,6 +105,7 @@ function Events() {
             })
           : Array.from({ length: 9 }).map((_, index) => (
               <Skeleton
+                key={index}
                 className="group relative w-full h-full sm:max-w-[250px] sm:max-h-[195px]  lg:max-w-[350px] lg:max-h-[260px] aspect-square 
                  flex-shrink-0 cursor-pointer  hover:scale-[98%] active:scale-[98%]
                              transition-all duration-400 ease-in-out overflow-hidden"

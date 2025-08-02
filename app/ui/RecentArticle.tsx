@@ -51,11 +51,10 @@ function RecentArticles() {
         {currentArticles.length > 0
           ? currentArticles.slice(0, 4).map((article, index) => {
               return (
-                <a
+                <div
                   key={index}
                   className="flex flex-col sm:grid sm:grid-cols-1 gap-1 items-center justify-center group
                rounded-lg shadow-lg  px-4 py-5 border-1 border-slate-200"
-                  href={`/events/${article.id}`}
                 >
                   <div
                     className="relative w-full max-w-80 h-46 sm:w-52 sm:h-50 md:w-62 md:h-50 lg:w-90 lg:h-70
@@ -99,11 +98,12 @@ function RecentArticles() {
                       </span>
                     </a>
                   </div>
-                </a>
+                </div>
               );
             })
           : Array.from({ length: 9 }).map((_, index) => (
               <Skeleton
+                key={index}
                 className="group relative w-full h-full sm:max-w-[300px] sm:max-h-[470px]  lg:max-w-[360px] lg:max-h-[470px] aspect-square 
                          flex-shrink-0 cursor-pointer  hover:scale-[98%] active:scale-[98%]
                                      transition-all duration-400 ease-in-out overflow-hidden"

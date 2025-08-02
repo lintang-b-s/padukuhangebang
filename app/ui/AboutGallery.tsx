@@ -12,6 +12,7 @@ function AboutGallery() {
       >
         {aboutGallery.map((image, index) => (
           <div
+            key={index}
             className="group relative flex-shrink-0 w-40 h-40 md:w-50 md:h-50 rounded-lg
            hover:scale-105 active:scale-105 transition-all duration-400 ease-in-out  overflow-hidden
            "

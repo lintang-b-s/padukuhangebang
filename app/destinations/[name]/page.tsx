@@ -6,6 +6,7 @@ import Navbar from "@/app/ui/Navbar";
 import { Skeleton } from "@/components/ui/skeleton";
 import { allLocations } from "@/data/allLocation";
 import { destinations } from "@/data/destinations";
+import { fetchDestinations, storageImageURL } from "@/lib/api";
 import { fetchWeather, weatherCodesMap } from "@/lib/meteo";
 import { Destination, ImageModal, ObjectLocation } from "@/type/type";
 import Map, { Marker, NavigationControl, Popup } from "@vis.gl/react-maplibre";
@@ -125,68 +126,84 @@ function DestinationPage() {
   };
 
   useEffect(() => {
-    let foundData = destinations.find(
-      (dest) => dest.name === name.replaceAll("%20", " ")
-    );
-    setViewState({
-      longitude: foundData?.longitude || 100,
-      latitude: foundData?.latitude || -40,
-      zoom: 15,
-    });
-
-    if (foundData?.images) {
-      setImagesModal(
-        foundData.images.map((image) => ({
-          original: image,
-          thumbnail: image,
-        }))
+    const fetchData = async () => {
+      let foundData = await fetchDestinations();
+      let destData = foundData.find(
+        (dest) => dest.name === name.replaceAll("%20", " ")
       );
-    }
-    setData(foundData);
-    fetchWeather({
-      lat: foundData?.latitude || -40,
-      lon: foundData?.longitude || 100,
-    })
-      .then((weather) => {
+      if (destData?.thumbnail.startsWith("img/")) {
+        destData = {
+          ...destData,
+          thumbnail: storageImageURL(destData?.thumbnail),
+        };
+      }
+
+      if (destData && destData.images && destData.images.length > 0) {
+        destData.images = destData.images.map((image: string) =>
+          storageImageURL(image)
+        );
+        setImagesModal(
+          destData.images.map((image) => ({
+            original: image,
+            thumbnail: image,
+          }))
+        );
+        console.log("updated destData: ", destData)
+      }
+      setViewState({
+        longitude: destData?.longitude || 100,
+        latitude: destData?.latitude || -40,
+        zoom: 15,
+      });
+
+      setData(destData);
+      try {
+        const weather = await fetchWeather({
+          lat: destData?.latitude || -40,
+          lon: destData?.longitude || 100,
+        });
         setTemperateure2m(weather.temperature2m);
         setWeatherCode(weather.weatherCode);
         weatherCodeToIconString(weather.weatherCode);
-      })
-      .catch((error) => {
+      } catch (error) {
         console.error("Error fetching weather data:", error);
-      });
-
-    const handleScroll = () => {
-      if (window.scrollY > window.innerHeight * 0.7) {
-        setShowWeather(true);
-      } else {
-        setShowWeather(false);
       }
-    };
-    const setGeojson = async () => {
-      try {
-        const response = await fetch("/saptosari.geojson");
-        const dataGeojson = await response.json();
-        setSaptosariGeojson(dataGeojson as FeatureCollection);
-      } catch (e) {
-        console.log("Failed to fetch geojson file: ", e);
-      }
-    };
-    setGeojson();
 
-    setDescriptions(
-      foundData?.description.split("\n").filter((p) => p.trim() !== "")!
-    );
+      const handleScroll = () => {
+        if (window.scrollY > window.innerHeight * 0.7) {
+          setShowWeather(true);
+        } else {
+          setShowWeather(false);
+        }
+      };
+      window.addEventListener("scroll", handleScroll);
+      const setGeojson = async () => {
+        try {
+          const response = await fetch("/saptosari.geojson");
+          const dataGeojson = await response.json();
+          setSaptosariGeojson(dataGeojson as FeatureCollection);
+        } catch (e) {
+          console.log("Failed to fetch geojson file: ", e);
+        }
+      };
+      setGeojson();
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+      setDescriptions(
+        destData?.description.split("\n").filter((p) => p.trim() !== "")!
+      );
+    };
+
+    fetchData();
+    return () => {
+      window.removeEventListener("scroll", () => {});
+    };
   }, []);
 
   return (
     <div className="relative w-screen min-h-screen ">
       {/* image gallery modal */}
       <div
-        className={` fixed z-12 pt-24 left-0 top-0 w-full h-full overflow-auto bg-[rgba(0,0,0,0.9)] 
+        className={` fixed z-100 pt-24 left-0 top-0 w-full h-full overflow-auto bg-[rgba(0,0,0,0.9)] 
         ${isOpen ? `block` : `hidden`} `}
       >
         {/* // close button */}

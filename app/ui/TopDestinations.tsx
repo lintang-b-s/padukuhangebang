@@ -1,7 +1,7 @@
 "use client";
 import { Skeleton } from "@/components/ui/skeleton";
 import { destinations } from "@/data/destinations";
-import { fetchDestinations } from "@/lib/api";
+import { fetchDestinations, storageImageURL } from "@/lib/api";
 import { Destination } from "@/type/type";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
@@ -9,9 +9,29 @@ import { FaArrowRight } from "react-icons/fa";
 
 function TopDestinations() {
   const [currentItems, setCurrentItems] = useState<Destination[]>([]);
+  const [pageCount, setPageCount] = useState(0);
+  const itemsPerPage = 15;
 
   useEffect(() => {
-    fetchDestinations().then((data) => setCurrentItems(data));
+    fetchDestinations().then((data) => {
+      const currentDestinations = data.slice(0, 8).map((destination) => {
+        let updatedDestination = destination;
+        if (destination.thumbnail.startsWith("img/")) {
+          updatedDestination = {
+            ...destination,
+            thumbnail: storageImageURL(destination.thumbnail),
+          };
+        }
+
+        updatedDestination.images = destination.images.map((image: string) =>
+          image.startsWith("img/") ? storageImageURL(image) : image
+        );
+        return updatedDestination;
+      });
+      setPageCount(Math.ceil(data.length / itemsPerPage));
+
+      setCurrentItems(currentDestinations);
+    });
   }, []);
   return (
     <div className="flex flex-col gap-y-4 pl-1 pr-6 pt-4 container mt-10">
@@ -56,6 +76,7 @@ function TopDestinations() {
             ))
           : Array.from({ length: 9 }).map((_, index) => (
               <Skeleton
+                key={index}
                 className="group relative w-full h-full sm:max-w-[350px] sm:max-h-[350px]  lg:max-w-[350px] lg:max-h-[350px] aspect-square 
                          flex-shrink-0 cursor-pointer  hover:scale-[98%] active:scale-[98%]
                                      transition-all duration-400 ease-in-out overflow-hidden"

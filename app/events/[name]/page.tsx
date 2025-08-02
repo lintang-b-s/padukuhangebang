@@ -44,6 +44,7 @@ import type { FeatureCollection } from "geojson";
 import { Skeleton } from "@/components/ui/skeleton";
 import { TbMapSearch } from "react-icons/tb";
 import DisplayListImages from "@/app/ui/DisplayListImages";
+import { fetchEvents } from "@/lib/api";
 
 const mLocalizer = momentLocalizer(moment);
 
@@ -119,46 +120,52 @@ function EventDetail() {
   });
 
   useEffect(() => {
-    const foundData = events.find((event) => event.name == removedName);
-    setData(foundData);
-    let dataStartDate = new Date(foundData!.startDate);
-    dataStartDate.setDate(dataStartDate.getDate() - 5);
-    setStartDate(dataStartDate);
+    fetchEvents().then((events) => {
+      let foundData = events.find((event) => event.name === removedName);
+      setData(foundData);
+      let dataStartDate = new Date(foundData!.startDate);
+      dataStartDate.setDate(dataStartDate.getDate() - 5);
+      setStartDate(dataStartDate);
 
-    setCalendarEvents([
-      ...calendarEvents,
-      {
-        title: foundData?.name!,
-        start: foundData?.startDate!,
-        end: foundData?.endDate!,
-        allDay: true,
-      },
-    ]);
+      setCalendarEvents([
+        ...calendarEvents,
+        {
+          title: foundData?.name!,
+          start: foundData?.startDate!,
+          end: foundData?.endDate!,
+          allDay: true,
+        },
+      ]);
 
-    setViewState({
-      longitude: foundData?.longitude || 100,
-      latitude: foundData?.latitude || -40,
-      zoom: 15,
-    });
-
-    const dataEnd = new Date(foundData?.endDate!);
-    const viewEnd = new Date(dataEnd);
-    viewEnd.setDate(viewEnd.getDate() + 10);
-
-    setEndDateView(viewEnd);
-
-    fetchWeather({
-      lat: foundData?.latitude || -40,
-      lon: foundData?.longitude || 100,
-    })
-      .then((weather) => {
-        setTemperature2m(weather.temperature2m);
-        setWeatherCode(weather.weatherCode);
-        weatherCodeToIconString(weather.weatherCode);
-      })
-      .catch((error) => {
-        console.log("Error fetching weather data:", error);
+      setViewState({
+        longitude: foundData?.longitude || 100,
+        latitude: foundData?.latitude || -40,
+        zoom: 15,
       });
+
+      const dataEnd = new Date(foundData?.endDate!);
+      const viewEnd = new Date(dataEnd);
+      viewEnd.setDate(viewEnd.getDate() + 10);
+
+      setEndDateView(viewEnd);
+
+      fetchWeather({
+        lat: foundData?.latitude || -40,
+        lon: foundData?.longitude || 100,
+      })
+        .then((weather) => {
+          setTemperature2m(weather.temperature2m);
+          setWeatherCode(weather.weatherCode);
+          weatherCodeToIconString(weather.weatherCode);
+        })
+        .catch((error) => {
+          console.log("Error fetching weather data:", error);
+        });
+
+      setDescriptions(
+        foundData?.description.split("\n").filter((p) => p.trim() !== "")!
+      );
+    });
 
     const handleScroll = () => {
       if (window.scrollY > window.innerHeight * 0.9) {
@@ -167,10 +174,6 @@ function EventDetail() {
         setShowWeather(false);
       }
     };
-
-    setDescriptions(
-      foundData?.description.split("\n").filter((p) => p.trim() !== "")!
-    );
 
     window.addEventListener("scroll", handleScroll);
     const setGeojson = async () => {
@@ -232,7 +235,7 @@ function EventDetail() {
     <div className="relative w-screen min-h-screen">
       {/* image gallery modal */}
       <div
-        className={`fixed z-12 pt-24 left-0 top-0 w-full h-full overflow-auto bg-[rgba(0,0,0,0.9)] 
+        className={`fixed z-100 pt-24 left-0 top-0 w-full h-full overflow-auto bg-[rgba(0,0,0,0.9)] 
         ${isOpen ? `block` : `hidden`} `}
       >
         {/* close button */}
@@ -311,7 +314,8 @@ function EventDetail() {
         z-1 absolute  ${
           modalDetailType == "contact"
             ? `animate-open-modal origin-top`
-            : `hidden` }`}
+            : `hidden`
+        }`}
           >
             <div className="flex flex-col items-start ">
               <span className="!text-[#272726] font-bold">Kontak</span>

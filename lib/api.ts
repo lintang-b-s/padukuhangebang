@@ -149,6 +149,13 @@ const fetchDestinations = async function () {
   return items;
 };
 
+export function storageImageURL(path: string) {
+  if (!path.startsWith("img/")) return path;
+
+  const encodedPath = encodeURIComponent(path);
+  return `https://firebasestorage.googleapis.com/v0/b/kkn-gebang-ab3a7.firebasestorage.app/o/${encodedPath}?alt=media`;
+}
+
 export {
   db,
   umkmFetcher,

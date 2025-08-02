@@ -1,7 +1,7 @@
 "use client";
 import { destinations } from "@/data/destinations";
 import { Destination, ObjectLocation } from "@/type/type";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { LiaMapMarkedAltSolid } from "react-icons/lia";
 import ReactPaginate from "react-paginate";
 import Maps from "../ui/Map";
@@ -9,32 +9,44 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import Navbar from "../ui/Navbar";
 import Image from "next/image";
 import { Skeleton } from "@/components/ui/skeleton";
+import { fetchDestinations, storageImageURL } from "@/lib/api";
 
 function Destinations() {
   const [showMap, setShowMap] = useState(false);
   const [itemOffset, setItemOffset] = useState(0);
   const itemsPerPage = 15;
   const endOffset = itemOffset + itemsPerPage;
-  const currentDestinations = destinations.slice(itemOffset, endOffset);
-
-  const currentItems: ObjectLocation[] = currentDestinations.map(
-    (destination, index) => ({
-      id: index,
-      name: destination.name,
-      latitude: destination.latitude,
-      longitude: destination.longitude,
-      hrefLink: `/destinations/${destination.name.replaceAll(/\s+/g, "-")}`,
-      thumbnail: destination.thumbnail,
-      summary: destination.description,
-      address: destination.address,
-    })
-  );
-  const pageCount = Math.ceil(destinations.length / itemsPerPage);
+  const [currentItems, setCurrentItems] = useState<ObjectLocation[]>([]);
+  const [pageCount, setPageCount] = useState(0);
   const handlePageClick = (event: any) => {
     const newOffset = (event.selected * itemsPerPage) % destinations.length;
 
     setItemOffset(newOffset);
   };
+
+  useEffect(() => {
+    fetchDestinations().then((data) => {
+      const currentDestinations = data
+        .slice(itemOffset, endOffset)
+        .map((destination) => {
+          let updatedDestination = destination;
+          if (destination.thumbnail.startsWith("img/")) {
+            updatedDestination = {
+              ...destination,
+              thumbnail: storageImageURL(destination.thumbnail),
+            };
+          }
+
+          updatedDestination.images = destination.images.map((image: string) =>
+            image.startsWith("img/") ? storageImageURL(image) : image
+          );
+          return updatedDestination;
+        });
+      setPageCount(Math.ceil(data.length / itemsPerPage));
+
+      setCurrentItems(currentDestinations);
+    });
+  }, []);
 
   return (
     <div className="relative w-screen min-h-screen overflow-x-hidden">

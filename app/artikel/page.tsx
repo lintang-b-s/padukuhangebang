@@ -110,6 +110,7 @@ function Articles() {
               })
             : Array.from({ length: 9 }).map((_, index) => (
                 <Skeleton
+                key={index}
                   className="group relative w-full h-full max-w-[600px] max-h-[350px] aspect-square md:max-h-[350px] 
                             md:max-w-[500px]  flex-shrink-0 cursor-pointer  hover:scale-[98%] active:scale-[98%]
                              transition-all duration-400 ease-in-out overflow-hidden"
