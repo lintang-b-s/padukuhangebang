@@ -92,7 +92,7 @@ function Maps(props: MapsProps) {
                   href={`${location.hrefLink}`}
                 >
                   <Marker
-                    key={`${location!.name}-${location.id}`}
+                    key={`${location!.name}`}
                     longitude={location?.longitude!}
                     latitude={location?.latitude!}
                     anchor="center"

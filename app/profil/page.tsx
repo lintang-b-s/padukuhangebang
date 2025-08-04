@@ -22,12 +22,7 @@ import {
   ChartTooltipContent,
 } from "@/components/ui/chart";
 import { Bar, BarChart, CartesianGrid, LabelList, XAxis } from "recharts";
-import {
-  Map,
-  Marker,
-  NavigationControl,
-  Popup,
-} from "@vis.gl/react-maplibre";
+import { Map, Marker, NavigationControl, Popup } from "@vis.gl/react-maplibre";
 import { ObjectLocation } from "@/type/type";
 import { allLocations } from "@/data/allLocation";
 import { FaLocationDot } from "react-icons/fa6";
@@ -205,16 +200,6 @@ function About() {
   const [popupData, setPopupData] = React.useState<ObjectLocation | undefined>(
     undefined
   );
-  const currentItems: ObjectLocation[] = allLocations.map((place) => ({
-    id: place.id,
-    name: place.name,
-    latitude: place.latitude,
-    longitude: place.longitude,
-    hrefLink: `/place/${place.name}`,
-    thumbnail: place.thumbnail,
-    summary: place.summary,
-    address: place.address,
-  }));
 
   return (
     <div className="relative w-full min-h-screen overflow-hidden">
@@ -413,7 +398,9 @@ function About() {
               </div>
               <div className="flex flex-col gap-2 items-start">
                 <h3 className="!text-white">{potensi.potensi}</h3>
-                <p className="!text-white text-wrap pr-2">{potensi.description}</p>
+                <p className="!text-white text-wrap pr-2">
+                  {potensi.description}
+                </p>
               </div>
             </div>
           ))}
@@ -505,7 +492,7 @@ function About() {
                     }}
                   >
                     <Marker
-                      key={`${location!.name}-${location.id}`}
+                      key={`${location!.name}`}
                       longitude={location?.longitude!}
                       latitude={location?.latitude!}
                       anchor="center"
