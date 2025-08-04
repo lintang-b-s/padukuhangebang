@@ -9,7 +9,7 @@ function Navbar() {
       <nav className="h-[50px] lg:h-[95px] w-full flex flex-row justify-between items-center">
         <a
           href="/"
-          className="px-[12px] absolute left-5 md:left-5 lg:left-[5vw] xl:left-[14vw] 2xl:left-[18vw]"
+          className="px-[12px] absolute left-[26px] md:left-[26px] lg:left-[5vw] xl:left-[14vw] 2xl:left-[18vw]"
         >
           <img
             src={"/img/logo.svg"}
@@ -109,6 +109,17 @@ function Navbar() {
                 Galeri
               </a>
             </li>
+
+            <li>
+              <a
+                href="/pengaduan"
+                className="relative text-[#304F47] after:w-0 after:h-[2px] after:bg-[#304F47] 
+              after:transition-[width] after:duration-300 after:absolute after:left-0 after:bottom-[-8px] 
+             active:after:w-[70%] "
+              >
+                Laporan Pengaduan
+              </a>
+            </li>
           </ul>
 
           {/* desktop */}
@@ -199,6 +210,17 @@ function Navbar() {
                 Galeri
               </a>
             </li>
+
+            <li>
+              <a
+                href="/pengaduan"
+                className="relative text-[#304F47] after:w-0 after:h-[2px] after:bg-[#304F47] 
+              after:transition-[width] after:duration-300 after:absolute after:left-0 after:bottom-[-8px] 
+             hover:after:w-[70%] "
+              >
+                Pengaduan
+              </a>
+            </li>
           </ul>
 
           <div
@@ -212,7 +234,7 @@ function Navbar() {
         </div>
 
         <div
-          className="flex cursor-pointer text-[20px] lg:hidden"
+          className="flex cursor-pointer text-[20px] lg:hidden ml-1"
           onClick={() => {
             setShowMenu(true);
           }}

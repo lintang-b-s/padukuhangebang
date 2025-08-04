@@ -1,3 +1,5 @@
+import { ActivityGallery } from "@/type/type";
+
 export const aboutGallery = [
   {
     name: "Pantai Ngobaran",
@@ -61,7 +63,7 @@ export const aboutGallery = [
   },
 ];
 
-export const photoGallery = [
+export const photoGallery: ActivityGallery[] = [
   {
     name: "Sholawatan",
     images: [

@@ -1,8 +1,7 @@
-import { Cuisine } from "@/data/restaurants";
 import type { FeatureCollection } from "geojson";
 
 export type UMKMCard = {
-  id: number;
+  id?: string;
   title: string;
   image: string;
   alt: string;
@@ -61,7 +60,6 @@ export type OnlineShop = {
 };
 
 export type ObjectLocation = {
-  id: number;
   name: string;
   latitude: number;
   longitude: number;
@@ -72,22 +70,6 @@ export type ObjectLocation = {
   startDate?: Date;
 };
 
-export type Restaurant = {
-  id: number;
-  name: string;
-  description: string;
-  openingHours: string[];
-  address: string;
-  kelurahan?: string;
-  latitude: number;
-  longitude: number;
-  thumbnail: string;
-  images?: string[];
-  kontak?: UMKMContact;
-  fasilitas?: string[];
-  masakan?: Cuisine[];
-};
-
 export type MapsProps = {
   places: ObjectLocation[];
   largeScreen: boolean;
@@ -96,7 +78,7 @@ export type MapsProps = {
 };
 
 export type EventSaptosari = {
-  id: number;
+  id?: string;
   name: string;
   address: string;
   kelurahan: string;
@@ -144,7 +126,7 @@ export type MapsPlaceProps = {
 };
 
 export type Destination = {
-  id: number;
+  id?: string;
   name: string;
   thumbnail: string;
   images: string[];
@@ -173,7 +155,7 @@ export type UserLocation = {
 };
 
 export type Article = {
-  id: number;
+  id?: string;
   title: string;
   summary: string;
   content: string;
@@ -188,4 +170,9 @@ export type Article = {
     twitter?: string;
     telegram?: string;
   };
+};
+
+export type ActivityGallery = {
+  name: string;
+  images: string[];
 };

@@ -46,7 +46,7 @@ function KontenArtikel() {
   useEffect(() => {
     fetchArticles().then((data) => {
       for (let article of data) {
-        if (article.id == Number(id)) {
+        if (article.id == id) {
           setData(article);
         }
       }
@@ -123,7 +123,7 @@ function KontenArtikel() {
           <div className="py-6 pr-1">
             <div
               dangerouslySetInnerHTML={{
-                __html: `${data.content}`,
+                __html: data.content,
               }}
             ></div>
             {data!.images!.length > 0 && (

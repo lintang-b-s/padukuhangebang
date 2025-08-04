@@ -1,8 +1,7 @@
 "use client";
 import Footer from "@/app/ui/Footer";
 import Navbar from "@/app/ui/Navbar";
-import { events } from "@/data/events";
-import { monthToIndonesianMonthName } from "@/data/restaurants";
+
 import Image from "next/image";
 import { useParams } from "next/navigation";
 import React, { Fragment, useEffect, useRef, useState } from "react";
@@ -628,7 +627,6 @@ function EventDetail() {
                       onMouseEnter={() => {
                         if (window.innerWidth >= 768) {
                           setPopupData({
-                            id: 0,
                             name: data?.name!,
                             latitude: data?.latitude!,
                             longitude: data?.longitude!,
@@ -648,7 +646,6 @@ function EventDetail() {
                         e.stopPropagation();
                         if (window.innerWidth < 768) {
                           setPopupData({
-                            id: 0,
                             name: data?.name!,
                             latitude: data?.latitude!,
                             longitude: data?.longitude!,
@@ -696,7 +693,7 @@ function EventDetail() {
                           }}
                         >
                           <Marker
-                            key={`${location!.name}-${location.id}`}
+                            key={`${location!.name}`}
                             longitude={location?.longitude!}
                             latitude={location?.latitude!}
                             anchor="center"

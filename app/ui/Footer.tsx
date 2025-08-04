@@ -18,8 +18,8 @@ const footerLinks = [
 function Footer() {
   return (
     <>
-      <div className="w-full h-[0.5px]  bg-[#77797B] mt-24"></div>
-      <footer className="w-full  bg-white   relative container  py-8 ">
+      <div className="w-full h-[0.5px] bg-[#77797B] mt-24"></div>
+      <footer className="w-full bg-white relative container py-8 ">
         <div className="flex flex-col gap-y-4 md:grid-y-0 md:grid md:grid-cols-2 items-start">
           <Image
             alt="logo gunungkidul"

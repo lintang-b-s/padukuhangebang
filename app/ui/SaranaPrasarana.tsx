@@ -31,7 +31,7 @@ function SaranaPrasarana() {
             </div>
             <div className="flex flex-col gap-2 items-start">
               <h3 className="!text-white">{tempat.nama}</h3>
-              <p className="!text-white">{tempat.deskripsi}</p>
+              <p className="!text-white text-wrap pr-2">{tempat.deskripsi}</p>
             </div>
           </div>
         ))}

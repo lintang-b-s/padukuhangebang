@@ -8,12 +8,6 @@ import Recommendation from "./ui/Recommendation";
 import TopAttraction from "./ui/TopAttraction";
 import Events from "./ui/Events";
 import AboutGallery from "./ui/AboutGallery";
-import {
-  addDataArticles,
-  addDataDestinations,
-  addDataEvents,
-  addDataUMKM,
-} from "@/lib/addData";
 import RecentArticles from "./ui/RecentArticle";
 
 export default function Home() {

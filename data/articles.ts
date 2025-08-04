@@ -2,7 +2,6 @@ import { Article } from "@/type/type";
 
 export const articles: Article[] = [
   {
-    id: 1,
     title: "Lorem Ipsum Dolor Sit Amet",
     summary:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et sapien vel mi egestas feugiat et sit amet mauris. Curabitur eu facilisis augue. Mauris rhoncus augue et ligula pulvinar, nec euismod velit feugiat. Ut eget nulla eu nulla pharetra ultrices. Sed sit amet velit a turpis dignissim suscipit nec non dolor. Aliquam erat volutpat. Suspendisse gravida, tellus vitae pulvinar tincidunt, enim nibh fringilla tortor, nec aliquam augue tellus a quam. Curabitur condimentum pharetra lacus, in tincidunt lorem molestie a. Pellentesque pharetra vestibulum lorem eget ullamcorper. Pellentesque at leo sed ligula viverra egestas.",
@@ -39,7 +38,6 @@ Integer suscipit molestie mauris, et aliquet elit fringilla id. Suspendisse vest
     },
   },
   {
-    id: 2,
     title: "Lorem Ipsum Dolor Sit Amet",
     summary:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et sapien vel mi egestas feugiat et sit amet mauris. Curabitur eu facilisis augue. Mauris rhoncus augue et ligula pulvinar, nec euismod velit feugiat. Ut eget nulla eu nulla pharetra ultrices. Sed sit amet velit a turpis dignissim suscipit nec non dolor. Aliquam erat volutpat. Suspendisse gravida, tellus vitae pulvinar tincidunt, enim nibh fringilla tortor, nec aliquam augue tellus a quam. Curabitur condimentum pharetra lacus, in tincidunt lorem molestie a. Pellentesque pharetra vestibulum lorem eget ullamcorper. Pellentesque at leo sed ligula viverra egestas.",
@@ -76,7 +74,6 @@ Integer suscipit molestie mauris, et aliquet elit fringilla id. Suspendisse vest
     },
   },
   {
-    id: 3,
     title: "Lorem Ipsum Dolor Sit Amet",
     summary:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et sapien vel mi egestas feugiat et sit amet mauris. Curabitur eu facilisis augue. Mauris rhoncus augue et ligula pulvinar, nec euismod velit feugiat. Ut eget nulla eu nulla pharetra ultrices. Sed sit amet velit a turpis dignissim suscipit nec non dolor. Aliquam erat volutpat. Suspendisse gravida, tellus vitae pulvinar tincidunt, enim nibh fringilla tortor, nec aliquam augue tellus a quam. Curabitur condimentum pharetra lacus, in tincidunt lorem molestie a. Pellentesque pharetra vestibulum lorem eget ullamcorper. Pellentesque at leo sed ligula viverra egestas.",
@@ -113,7 +110,6 @@ Integer suscipit molestie mauris, et aliquet elit fringilla id. Suspendisse vest
     },
   },
   {
-    id: 4,
     title: "Lorem Ipsum Dolor Sit Amet",
     summary:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et sapien vel mi egestas feugiat et sit amet mauris. Curabitur eu facilisis augue. Mauris rhoncus augue et ligula pulvinar, nec euismod velit feugiat. Ut eget nulla eu nulla pharetra ultrices. Sed sit amet velit a turpis dignissim suscipit nec non dolor. Aliquam erat volutpat. Suspendisse gravida, tellus vitae pulvinar tincidunt, enim nibh fringilla tortor, nec aliquam augue tellus a quam. Curabitur condimentum pharetra lacus, in tincidunt lorem molestie a. Pellentesque pharetra vestibulum lorem eget ullamcorper. Pellentesque at leo sed ligula viverra egestas.",
@@ -150,7 +146,6 @@ Integer suscipit molestie mauris, et aliquet elit fringilla id. Suspendisse vest
     },
   },
   {
-    id: 5,
     title: "Lorem Ipsum Dolor Sit Amet",
     summary:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et sapien vel mi egestas feugiat et sit amet mauris. Curabitur eu facilisis augue. Mauris rhoncus augue et ligula pulvinar, nec euismod velit feugiat. Ut eget nulla eu nulla pharetra ultrices. Sed sit amet velit a turpis dignissim suscipit nec non dolor. Aliquam erat volutpat. Suspendisse gravida, tellus vitae pulvinar tincidunt, enim nibh fringilla tortor, nec aliquam augue tellus a quam. Curabitur condimentum pharetra lacus, in tincidunt lorem molestie a. Pellentesque pharetra vestibulum lorem eget ullamcorper. Pellentesque at leo sed ligula viverra egestas.",
@@ -188,7 +183,6 @@ Integer suscipit molestie mauris, et aliquet elit fringilla id. Suspendisse vest
   },
 
   {
-    id: 6,
     title: "Lorem Ipsum Dolor Sit Amet",
     summary:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et sapien vel mi egestas feugiat et sit amet mauris. Curabitur eu facilisis augue. Mauris rhoncus augue et ligula pulvinar, nec euismod velit feugiat. Ut eget nulla eu nulla pharetra ultrices. Sed sit amet velit a turpis dignissim suscipit nec non dolor. Aliquam erat volutpat. Suspendisse gravida, tellus vitae pulvinar tincidunt, enim nibh fringilla tortor, nec aliquam augue tellus a quam. Curabitur condimentum pharetra lacus, in tincidunt lorem molestie a. Pellentesque pharetra vestibulum lorem eget ullamcorper. Pellentesque at leo sed ligula viverra egestas.",
@@ -225,7 +219,6 @@ Integer suscipit molestie mauris, et aliquet elit fringilla id. Suspendisse vest
     },
   },
   {
-    id: 7,
     title: "Lorem Ipsum Dolor Sit Amet",
     summary:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et sapien vel mi egestas feugiat et sit amet mauris. Curabitur eu facilisis augue. Mauris rhoncus augue et ligula pulvinar, nec euismod velit feugiat. Ut eget nulla eu nulla pharetra ultrices. Sed sit amet velit a turpis dignissim suscipit nec non dolor. Aliquam erat volutpat. Suspendisse gravida, tellus vitae pulvinar tincidunt, enim nibh fringilla tortor, nec aliquam augue tellus a quam. Curabitur condimentum pharetra lacus, in tincidunt lorem molestie a. Pellentesque pharetra vestibulum lorem eget ullamcorper. Pellentesque at leo sed ligula viverra egestas.",
@@ -262,7 +255,6 @@ Integer suscipit molestie mauris, et aliquet elit fringilla id. Suspendisse vest
     },
   },
   {
-    id: 8,
     title: "Lorem Ipsum Dolor Sit Amet",
     summary:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et sapien vel mi egestas feugiat et sit amet mauris. Curabitur eu facilisis augue. Mauris rhoncus augue et ligula pulvinar, nec euismod velit feugiat. Ut eget nulla eu nulla pharetra ultrices. Sed sit amet velit a turpis dignissim suscipit nec non dolor. Aliquam erat volutpat. Suspendisse gravida, tellus vitae pulvinar tincidunt, enim nibh fringilla tortor, nec aliquam augue tellus a quam. Curabitur condimentum pharetra lacus, in tincidunt lorem molestie a. Pellentesque pharetra vestibulum lorem eget ullamcorper. Pellentesque at leo sed ligula viverra egestas.",
@@ -299,7 +291,6 @@ Integer suscipit molestie mauris, et aliquet elit fringilla id. Suspendisse vest
     },
   },
   {
-    id: 9,
     title: "Lorem Ipsum Dolor Sit Amet",
     summary:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et sapien vel mi egestas feugiat et sit amet mauris. Curabitur eu facilisis augue. Mauris rhoncus augue et ligula pulvinar, nec euismod velit feugiat. Ut eget nulla eu nulla pharetra ultrices. Sed sit amet velit a turpis dignissim suscipit nec non dolor. Aliquam erat volutpat. Suspendisse gravida, tellus vitae pulvinar tincidunt, enim nibh fringilla tortor, nec aliquam augue tellus a quam. Curabitur condimentum pharetra lacus, in tincidunt lorem molestie a. Pellentesque pharetra vestibulum lorem eget ullamcorper. Pellentesque at leo sed ligula viverra egestas.",
@@ -336,7 +327,6 @@ Integer suscipit molestie mauris, et aliquet elit fringilla id. Suspendisse vest
     },
   },
   {
-    id: 10,
     title: "Lorem Ipsum Dolor Sit Amet",
     summary:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et sapien vel mi egestas feugiat et sit amet mauris. Curabitur eu facilisis augue. Mauris rhoncus augue et ligula pulvinar, nec euismod velit feugiat. Ut eget nulla eu nulla pharetra ultrices. Sed sit amet velit a turpis dignissim suscipit nec non dolor. Aliquam erat volutpat. Suspendisse gravida, tellus vitae pulvinar tincidunt, enim nibh fringilla tortor, nec aliquam augue tellus a quam. Curabitur condimentum pharetra lacus, in tincidunt lorem molestie a. Pellentesque pharetra vestibulum lorem eget ullamcorper. Pellentesque at leo sed ligula viverra egestas.",
@@ -373,7 +363,6 @@ Integer suscipit molestie mauris, et aliquet elit fringilla id. Suspendisse vest
     },
   },
   {
-    id: 11,
     title: "Lorem Ipsum Dolor Sit Amet",
     summary:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et sapien vel mi egestas feugiat et sit amet mauris. Curabitur eu facilisis augue. Mauris rhoncus augue et ligula pulvinar, nec euismod velit feugiat. Ut eget nulla eu nulla pharetra ultrices. Sed sit amet velit a turpis dignissim suscipit nec non dolor. Aliquam erat volutpat. Suspendisse gravida, tellus vitae pulvinar tincidunt, enim nibh fringilla tortor, nec aliquam augue tellus a quam. Curabitur condimentum pharetra lacus, in tincidunt lorem molestie a. Pellentesque pharetra vestibulum lorem eget ullamcorper. Pellentesque at leo sed ligula viverra egestas.",
@@ -410,7 +399,6 @@ Integer suscipit molestie mauris, et aliquet elit fringilla id. Suspendisse vest
     },
   },
   {
-    id: 12,
     title: "Lorem Ipsum Dolor Sit Amet",
     summary:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et sapien vel mi egestas feugiat et sit amet mauris. Curabitur eu facilisis augue. Mauris rhoncus augue et ligula pulvinar, nec euismod velit feugiat. Ut eget nulla eu nulla pharetra ultrices. Sed sit amet velit a turpis dignissim suscipit nec non dolor. Aliquam erat volutpat. Suspendisse gravida, tellus vitae pulvinar tincidunt, enim nibh fringilla tortor, nec aliquam augue tellus a quam. Curabitur condimentum pharetra lacus, in tincidunt lorem molestie a. Pellentesque pharetra vestibulum lorem eget ullamcorper. Pellentesque at leo sed ligula viverra egestas.",
@@ -447,7 +435,6 @@ Integer suscipit molestie mauris, et aliquet elit fringilla id. Suspendisse vest
     },
   },
   {
-    id: 13,
     title: "Lorem Ipsum Dolor Sit Amet",
     summary:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et sapien vel mi egestas feugiat et sit amet mauris. Curabitur eu facilisis augue. Mauris rhoncus augue et ligula pulvinar, nec euismod velit feugiat. Ut eget nulla eu nulla pharetra ultrices. Sed sit amet velit a turpis dignissim suscipit nec non dolor. Aliquam erat volutpat. Suspendisse gravida, tellus vitae pulvinar tincidunt, enim nibh fringilla tortor, nec aliquam augue tellus a quam. Curabitur condimentum pharetra lacus, in tincidunt lorem molestie a. Pellentesque pharetra vestibulum lorem eget ullamcorper. Pellentesque at leo sed ligula viverra egestas.",
@@ -484,7 +471,6 @@ Integer suscipit molestie mauris, et aliquet elit fringilla id. Suspendisse vest
     },
   },
   {
-    id: 14,
     title: "Lorem Ipsum Dolor Sit Amet",
     summary:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et sapien vel mi egestas feugiat et sit amet mauris. Curabitur eu facilisis augue. Mauris rhoncus augue et ligula pulvinar, nec euismod velit feugiat. Ut eget nulla eu nulla pharetra ultrices. Sed sit amet velit a turpis dignissim suscipit nec non dolor. Aliquam erat volutpat. Suspendisse gravida, tellus vitae pulvinar tincidunt, enim nibh fringilla tortor, nec aliquam augue tellus a quam. Curabitur condimentum pharetra lacus, in tincidunt lorem molestie a. Pellentesque pharetra vestibulum lorem eget ullamcorper. Pellentesque at leo sed ligula viverra egestas.",

@@ -17,22 +17,24 @@ import { Skeleton } from "@/components/ui/skeleton";
 function UMKMS() {
   const [showMap, setShowMap] = useState(false);
   const [itemOffset, setItemOffset] = useState(0);
-  const itemsPerPage = 15;
-  const endOffset = itemOffset + itemsPerPage;
-
+  const itemsPerPage = 10;
   const [currentItems, setCurrentItems] = useState<ObjectLocation[]>([]);
-
-  const pageCount = Math.ceil(dataUMKMUnggulan.length / itemsPerPage);
+  const [pageCount, setPageCount] = useState(0);
+  const [itemCount, setItemCount] = useState(0);
 
   const handlePageClick = (event: any) => {
-    const newOffset = (event.selected * itemsPerPage) % dataUMKMUnggulan.length;
-
+    const newOffset = (event.selected * itemsPerPage) % itemCount;
     setItemOffset(newOffset);
   };
 
   useEffect(() => {
-    umkmFetcher().then((items) => setCurrentItems(items));
-  }, []);
+    umkmFetcher().then((items) => {
+      const endOffset = itemOffset + itemsPerPage;
+      setItemCount(items.length);
+      setPageCount(Math.ceil(items.length / itemsPerPage));
+      setCurrentItems(items.slice(itemOffset, endOffset));
+    });
+  }, [itemOffset]);
   return (
     <div className="relative w-screen min-h-screen overflow-x-hidden">
       {!showMap && <Navbar />}
@@ -107,9 +109,9 @@ function UMKMS() {
         </div>
 
         {/* list umkms & map (jika lg screen) */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 w-full justify-center">
           <div className="col-span-2">
-            <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 ">
+            <div className="mt-4  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 ">
               {currentItems.length > 0
                 ? currentItems.map((umkm, index) => (
                     <UMKMCardComponent key={index} umkm={umkm} />
@@ -117,7 +119,7 @@ function UMKMS() {
                 : Array.from({ length: 9 }).map((_, index) => (
                     <Skeleton
                       key={index}
-                      className="relative w-40 h-34 sm:w-44 sm:h-34 md:w-56 md:h-40 xl:w-70 xl:h-60"
+                      className="relative w-full max-w-[350px] h-34 sm:w-44 sm:h-34 md:w-56 md:h-40 xl:w-70 xl:h-60"
                     ></Skeleton>
                   ))}
             </div>
@@ -156,11 +158,15 @@ function UMKMS() {
 
 function UMKMCardComponent({ umkm }: { umkm: ObjectLocation }) {
   return (
-    <a className="group grid  sm:grid-cols-1 gap-3" href={`/umkm/${umkm.name}`}>
+    <a
+      className="group grid grid-cols-2 sm:grid-cols-1 gap-3"
+      href={`/umkm/${umkm.name}`}
+    >
       {/* umkm image */}
       <div
-        className="relative w-40 h-34 sm:w-44 sm:h-34 md:w-56 md:h-40 xl:w-70 xl:h-60
-      group-hover:scale-[98%]  group-active:scale-[98%] rounded-lg transition-all duration-400 ease-in-out overflow-hidden  "
+        className="group relative w-40 h-34 sm:w-44 sm:h-34 md:w-56 md:h-40 xl:w-70 xl:h-60
+              group-hover:scale-[98%]  group-active:scale-[98%] rounded-lg transition-all duration-400 
+              ease-in-out overflow-hidden"
       >
         <Image
           src={umkm.thumbnail!}

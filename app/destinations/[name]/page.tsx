@@ -148,7 +148,7 @@ function DestinationPage() {
             thumbnail: image,
           }))
         );
-        console.log("updated destData: ", destData)
+        console.log("updated destData: ", destData);
       }
       setViewState({
         longitude: destData?.longitude || 100,
@@ -526,7 +526,6 @@ function DestinationPage() {
                         onMouseEnter={() => {
                           if (window.innerWidth >= 768) {
                             setPopupData({
-                              id: 0,
                               name: data?.name!,
                               latitude: data?.latitude!,
                               longitude: data?.longitude!,
@@ -546,7 +545,6 @@ function DestinationPage() {
                           e.stopPropagation(); // prevent propagation to the map
                           if (window.innerWidth < 768) {
                             setPopupData({
-                              id: 0,
                               name: data?.name!,
                               latitude: data?.latitude!,
                               longitude: data?.longitude!,
@@ -593,7 +591,7 @@ function DestinationPage() {
                             }}
                           >
                             <Marker
-                              key={`${location!.name}-${location.id}`}
+                              key={`${location!.name}`}
                               longitude={location?.longitude!}
                               latitude={location?.latitude!}
                               anchor="center"

@@ -2,26 +2,19 @@
 import React from "react";
 import Navbar from "../ui/Navbar";
 import Image from "next/image";
-import NgloroPlace from "../ui/NgloroPlace";
 import NgloroBoundary from "../ui/NgloroBoundary";
-import SejarahDesa from "../ui/SejarahDesa";
-import DestinationsAbout from "../ui/DestinationsAbout";
 import Footer from "../ui/Footer";
 import UMKMUnggulan from "../ui/UMKMUnggulan";
-import AboutGallery from "../ui/AboutGallery";
 import {
   Table,
   TableBody,
-  TableCaption,
   TableCell,
-  TableFooter,
   TableHead,
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
 import SaranaPrasarana from "../ui/SaranaPrasarana";
 import { Pie, PieChart } from "recharts";
-import { TrendingUp } from "lucide-react";
 import {
   ChartConfig,
   ChartContainer,
@@ -30,15 +23,12 @@ import {
 } from "@/components/ui/chart";
 import { Bar, BarChart, CartesianGrid, LabelList, XAxis } from "recharts";
 import {
-  GeolocateControl,
   Map,
   Marker,
   NavigationControl,
   Popup,
 } from "@vis.gl/react-maplibre";
-import Maps from "../ui/Map";
 import { ObjectLocation } from "@/type/type";
-import { dataUMKMUnggulan } from "@/data/umkm";
 import { allLocations } from "@/data/allLocation";
 import { FaLocationDot } from "react-icons/fa6";
 import "maplibre-gl/dist/maplibre-gl.css";
@@ -227,9 +217,9 @@ function About() {
   }));
 
   return (
-    <div className="relative w-screen min-h-screen overflow-hidden">
+    <div className="relative w-full min-h-screen overflow-hidden">
       <Navbar />
-      <div className="relative h-dvh w-screen overflow-hidden ">
+      <div className="relative h-dvh w-full overflow-hidden ">
         <div className="relative h-full w-full ">
           <Image
             src={"/img/balai-dusun-gebang/balai-dusun-gebang1.jpeg"}
@@ -248,7 +238,8 @@ function About() {
       </div>
       <div className="mt-4 py-2 container ">
         <div
-          className="grid grid-cols-1 gap-y-3 md:grid-cols-3 md:gap-4 justify-center items-center
+          className="grid grid-cols-1 gap-y-3 md:grid-cols-3 md:gap-4 items-center
+          justify-items-center
         mt-8 "
         >
           <div className="md:col-span-2">
@@ -270,8 +261,8 @@ function About() {
             </p>
           </div>
           <div
-            className="order-first md:order-last  mx-auto w-80 h-80 md:w-[440px] md:h-[400px] flex-shrink-0 cursor-pointer 
-           relative "
+            className="order-first md:order-last w-80 h-80 md:w-[440px] md:h-[400px] flex-shrink-0 cursor-pointer 
+           relative mx-auto"
           >
             <Image
               src="/img/balai-dusun2.jpg"
@@ -355,7 +346,7 @@ function About() {
           </div>
         </div>
         <div className="mt-6 pr-4 flex flex-col gap-8 items-center">
-          <div className="w-[90vw] ">
+          <div className="w-[90%] ">
             <ChartContainer config={profesiChartConfig}>
               <BarChart
                 accessibilityLayer
@@ -422,7 +413,7 @@ function About() {
               </div>
               <div className="flex flex-col gap-2 items-start">
                 <h3 className="!text-white">{potensi.potensi}</h3>
-                <p className="!text-white">{potensi.description}</p>
+                <p className="!text-white text-wrap pr-2">{potensi.description}</p>
               </div>
             </div>
           ))}
@@ -441,7 +432,7 @@ function About() {
           src={"/img/element/stroke-motif-walang.png"}
         />
         <h2 className="font-bold mt-12">Peta Dusun</h2>
-        <div className="w-[90vw] lg:w-[80vw] h-[50vh] md:h-[70vh] mt-4">
+        <div className="w-[90%] lg:w-[80vw] h-[50vh] md:h-[70vh] mt-4">
           <Map
             {...viewState}
             style={{

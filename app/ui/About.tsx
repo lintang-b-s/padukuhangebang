@@ -116,9 +116,9 @@ function About() {
         />
 
         <div className="text-left lg:text-left ">
-          <h2 className="pb-4 font-bold  ">Mengenal Dusun Gebang</h2>
+          <h2 className="pb-4 font-bold">Mengenal Dusun Gebang</h2>
 
-          <p className="lg:text-xl">
+          <p className="lg:text-xl text-wrap pr-2">
             Dalam pembagian administratifnya Dusun Gebang terbagi menjadi 4 RT
             yaitu : RT 16 (Kayutowo) RT 17 (Gebang) dan RT 18 RT 19 (Sidowayah)
           </p>
@@ -348,7 +348,7 @@ function About() {
             Kebudayaan & Destinasi Wisata Terdekat
           </h2>
 
-          <p className="lg:text-xl">
+          <p className="lg:text-xl text-wrap pr-2">
             Dusun Gebang tak hanya menyuguhkan keindahan alam, tetapi juga
             kekayaan budaya yang kental dan masih lestari hingga kini.
             Masyarakat masih aktif melestarikan berbagai tradisi dan kesenian
@@ -358,7 +358,7 @@ function About() {
             namun juga sarana mempererat kebersamaan warga.
           </p>
           <br />
-          <p className="lg:text-xl">
+          <p className="lg:text-xl text-wrap pr-2">
             Di sekitar Dusun Gebang, terdapat pula berbagai destinasi wisata
             yang mudah dijangkau dan sangat menarik untuk dikunjungi.
             Pantai-pantai eksotis seperti Pantai Ngeden, Pantai Nglorong, dan

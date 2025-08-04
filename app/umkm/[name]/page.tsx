@@ -264,7 +264,7 @@ function UMKMDetail() {
       </div>
 
       <div
-        className={` fixed z-12 pt-24 left-0 top-0 w-full h-full overflow-auto bg-[rgba(0,0,0,0.9)] 
+        className={` fixed z-100 pt-24 left-0 top-0 w-full h-full overflow-auto bg-[rgba(0,0,0,0.9)] 
         ${isOpenProductModal ? `block` : `hidden`} `}
       >
         {/* // close button */}
@@ -720,7 +720,6 @@ function UMKMDetail() {
                           onMouseEnter={() => {
                             if (window.innerWidth >= 768) {
                               setPopupData({
-                                id: 0,
                                 name: data?.title!,
                                 latitude: data?.latitude!,
                                 longitude: data?.longitude!,
@@ -740,7 +739,6 @@ function UMKMDetail() {
                             e.stopPropagation(); // prevent propagation to the map
                             if (window.innerWidth < 768) {
                               setPopupData({
-                                id: 0,
                                 name: data?.title!,
                                 latitude: data?.latitude!,
                                 longitude: data?.longitude!,
@@ -787,7 +785,7 @@ function UMKMDetail() {
                               }}
                             >
                               <Marker
-                                key={`${location!.name}-${location.id}`}
+                                key={`${location!.name}`}
                                 longitude={location?.longitude!}
                                 latitude={location?.latitude!}
                                 anchor="center"

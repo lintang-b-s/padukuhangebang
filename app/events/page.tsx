@@ -32,6 +32,8 @@ function EventList() {
   };
 
   useEffect(() => {
+    const endOffset = itemOffset + itemsPerPage;
+
     fetchEvents().then((data) => {
       const now = new Date();
       const futureEvents = data.filter((event) => event.startDate > now);
@@ -39,13 +41,13 @@ function EventList() {
 
       let sortedEvents: EventSaptosari[];
       if (futureEvents.length > 0) {
-        sortedEvents = futureEvents.sort(
-          (a, b) => a.startDate.getTime() - b.startDate.getTime()
-        );
+        sortedEvents = futureEvents
+          .slice(itemOffset, endOffset)
+          .sort((a, b) => a.startDate.getTime() - b.startDate.getTime());
       } else {
-        sortedEvents = pastEvents.sort(
-          (a, b) => b.startDate.getTime() - a.startDate.getTime()
-        );
+        sortedEvents = pastEvents
+          .slice(itemOffset, endOffset)
+          .sort((a, b) => b.startDate.getTime() - a.startDate.getTime());
       }
       setCurrentItems(sortedEvents);
     });

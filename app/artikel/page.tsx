@@ -34,9 +34,9 @@ function Articles() {
   }, []);
 
   return (
-    <div className="relative w-screen min-h-screen overflow-hidden">
+    <div className="relative w-full min-h-screen overflow-hidden">
       <Navbar />
-      <div className="relative h-dvh w-screen overflow-hidden ">
+      <div className="relative h-dvh w-full overflow-hidden ">
         <div className="relative h-full w-full ">
           <Image
             src={"/img/dokumentasi/article.jpg"}
@@ -110,7 +110,7 @@ function Articles() {
               })
             : Array.from({ length: 9 }).map((_, index) => (
                 <Skeleton
-                key={index}
+                  key={index}
                   className="group relative w-full h-full max-w-[600px] max-h-[350px] aspect-square md:max-h-[350px] 
                             md:max-w-[500px]  flex-shrink-0 cursor-pointer  hover:scale-[98%] active:scale-[98%]
                              transition-all duration-400 ease-in-out overflow-hidden"

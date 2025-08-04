@@ -2,7 +2,6 @@ import { EventSaptosari, PlaceType } from "@/type/type";
 
 export const events: EventSaptosari[] = [
   {
-    id: 1,
     name: "Ketoprak",
     address: "Kelurahan Saptosari, Saptosari, Gunungkidul, Yogyakarta",
     kelurahan: "Ngloro",
@@ -34,7 +33,6 @@ Melalui event ini, penonton diajak untuk menyelami kedalaman cerita dan kearifan
     },
   },
   {
-    id: 2,
     name: "Adeging Kelurahan Jetis",
     address: "Kelurahan Jetis, Saptosari, Gunungfkidul, Yogyakarta",
     kelurahan: "Jetis",
@@ -67,7 +65,6 @@ Adeging Kelurahan Jetis diharapkan menjadi pengingat bahwa kekuatan sebuah komun
     },
   },
   {
-    id: 3,
     name: "Gebyar Sholawat",
     address: "Kelurahan Jetis, Saptosari, Gunungkidul, Yogyakarta",
     kelurahan: "Jetis",
@@ -101,7 +98,6 @@ Dengan semangat cinta Rasul dan kebersamaan, Gebyar Sholawat diharapkan dapat me
     },
   },
   {
-    id: 4,
     name: "Rasulan Sedekah Bumi",
     address: "Kelurahan Jetis, Saptosari, Gunungkidul, Yogyakarta",
     kelurahan: "Jetis",

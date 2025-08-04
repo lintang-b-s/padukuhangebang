@@ -1,9 +1,7 @@
 import { dataUMKMUnggulan } from "@/data/umkm";
 import { db } from "./api";
-import { collection, doc, setDoc } from "firebase/firestore";
-import { getAuth, onAuthStateChanged } from "firebase/auth";
+import { addDoc, collection, doc, setDoc } from "firebase/firestore";
 import { events } from "@/data/events";
-import { Client, Databases, ID } from "appwrite";
 import { articles } from "@/data/articles";
 import { destinations } from "@/data/destinations";
 
@@ -12,8 +10,7 @@ export async function addDataUMKM() {
 
   for (const umkm of dataUMKMUnggulan) {
     try {
-      const umkmDoc = doc(umkmCollection, umkm.id.toString());
-      await setDoc(umkmDoc, umkm);
+      await addDoc(umkmCollection, umkm);
       console.log(`added data umkm: ${umkm.title}`);
     } catch (err) {
       console.error("error: ", err);
@@ -22,13 +19,11 @@ export async function addDataUMKM() {
 }
 
 export async function addDataEvents() {
-  const umkmCollection = collection(db, "kegiatan");
+  const eventCollection = collection(db, "kegiatan");
 
-  for (const umkm of events) {
+  for (const event of events) {
     try {
-      const umkmDoc = doc(umkmCollection, umkm.id.toString());
-      await setDoc(umkmDoc, umkm);
-      console.log(`added data kegiatan: ${umkm.name}`);
+      await addDoc(eventCollection, event);
     } catch (err) {
       console.error("error: ", err);
     }
@@ -40,9 +35,7 @@ export async function addDataArticles() {
 
   for (const article of articles) {
     try {
-      const articleDoc = doc(artikelCollection, article.id.toString());
-      await setDoc(articleDoc, article);
-      console.log(`added data artikel: ${article.title}`);
+      await addDoc(artikelCollection, article);
     } catch (err) {
       console.error("error: ", err);
     }
@@ -54,11 +47,7 @@ export async function addDataDestinations() {
 
   for (const destination of destinations) {
     try {
-      const destinationDoc = doc(
-        destinationsCollection,
-        destination.id.toString()
-      );
-      await setDoc(destinationDoc, destination);
+      await addDoc(destinationsCollection, destination);
       console.log(`added data wisata: ${destination.name}`);
     } catch (err) {
       console.error("error: ", err);

@@ -27,6 +27,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
+
 const umkmFetcher = async function () {
   let items: ObjectLocation[] = [];
   const q = query(collection(db, "umkm"));
@@ -34,7 +35,6 @@ const umkmFetcher = async function () {
   querySnapshot.forEach((doc) => {
     console.log(doc.id, " => ", doc.data());
     items.push({
-      id: Number(doc.id),
       name: doc.data().title,
       latitude: doc.data().latitude,
       longitude: doc.data().longitude,
@@ -55,7 +55,6 @@ const umkmFetcherCard = async function () {
   querySnapshot.forEach((doc) => {
     console.log(doc.id, " => ", doc.data());
     items.push({
-      id: Number(doc.id),
       title: doc.data().title,
       latitude: doc.data().latitude,
       longitude: doc.data().longitude,
@@ -83,7 +82,7 @@ const fetchArticles = async function () {
   const querySnapshot = await getDocs(q);
   querySnapshot.forEach((doc) => {
     items.push({
-      id: Number(doc.id),
+      id: doc.id,
       title: doc.data().title,
       content: doc.data().content,
       summary: doc.data().summary,
@@ -105,7 +104,6 @@ const fetchEvents = async function () {
   const querySnapshot = await getDocs(q);
   querySnapshot.forEach((doc) => {
     items.push({
-      id: Number(doc.id),
       name: doc.data().name,
       address: doc.data().address,
       kelurahan: doc.data().kelurahan,
@@ -131,7 +129,6 @@ const fetchDestinations = async function () {
   const querySnapshot = await getDocs(q);
   querySnapshot.forEach((doc) => {
     items.push({
-      id: Number(doc.id),
       name: doc.data().name,
       thumbnail: doc.data().thumbnail,
       images: doc.data().images,

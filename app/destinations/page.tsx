@@ -15,7 +15,6 @@ function Destinations() {
   const [showMap, setShowMap] = useState(false);
   const [itemOffset, setItemOffset] = useState(0);
   const itemsPerPage = 15;
-  const endOffset = itemOffset + itemsPerPage;
   const [currentItems, setCurrentItems] = useState<ObjectLocation[]>([]);
   const [pageCount, setPageCount] = useState(0);
   const handlePageClick = (event: any) => {
@@ -26,6 +25,8 @@ function Destinations() {
 
   useEffect(() => {
     fetchDestinations().then((data) => {
+      const endOffset = itemOffset + itemsPerPage;
+
       const currentDestinations = data
         .slice(itemOffset, endOffset)
         .map((destination) => {

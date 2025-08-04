@@ -142,20 +142,21 @@
 
 .container {
   max-width: 1120px;
-  margin-left: 0.2rem;
-  margin-right: 0.2rem;
+  /* margin-left: 0.4rem;
+  margin-right: 0.4rem; */
+  margin-inline: 0.4rem;
 }
 
 .container-list {
   max-width: 1340px;
   margin-inline: auto;
-   margin-left: 0.2rem;
-  margin-right: 0.2rem;
+  margin-left: 0.8rem;
+  margin-right: 0.8rem;
 }
 
 body {
   font-family: var(--body-font);
-
+  overflow-x: hidden;
 }
 
 * {
@@ -206,7 +207,6 @@ span {
     font-size: var(--h2-font-size);
     font-family: var(--h2-font-family);
     color: var(--h2-font-color);
-
   }
 
   h3 {
@@ -227,7 +227,6 @@ span {
     font-size: calc(20.66667px + 1.58333vw);
     font-family: var(--h2-font-family);
     color: var(--h2-font-color);
-
   }
 
   h3 {
