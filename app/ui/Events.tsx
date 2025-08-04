@@ -51,6 +51,9 @@ function Events() {
       let dataStartDate = sortedEvents[0].startDate;
 
       setStartDate(dataStartDate);
+      if (futureEvents.length > 0) {
+        setStartDate(new Date());
+      }
       setEndDateView(sortedEvents[sortedEvents.length - 1].endDate);
 
       const calEvents = data.map((e) => ({
@@ -200,7 +203,7 @@ function CustomToolbar({
       >
         Prev
       </button>
-      <span className="font-bold">{label}</span>
+      <span className="font-bold ml-4 md:ml-0">{label}</span>
       <button
         className="flex items-center justify-center p-2 border-1 border-[#e2e0d6] rounded-lg hover:bg-[#e2e0d6]
         hover:text-black transition-colors duration-300"

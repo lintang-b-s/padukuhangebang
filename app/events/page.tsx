@@ -5,14 +5,30 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
 import { LiaMapMarkedAltSolid } from "react-icons/lia";
-import { EventSaptosari, ObjectLocation, UMKMCard } from "@/type/type";
+import {
+  CalendarEvent,
+  EventSaptosari,
+  ObjectLocation,
+  UMKMCard,
+} from "@/type/type";
 import ReactPaginate from "react-paginate";
 import Maps from "../ui/Map";
-import { CiMenuBurger } from "react-icons/ci";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { events } from "@/data/events";
 import { fetchEvents } from "@/lib/api";
 import { Skeleton } from "@/components/ui/skeleton";
+import "moment/locale/id";
+import moment from "moment";
+import {
+  Calendar,
+  momentLocalizer,
+  ToolbarProps,
+  Views,
+} from "react-big-calendar";
+import "react-big-calendar/lib/css/react-big-calendar.css";
+
+moment.locale("id");
+const mLocalizer = momentLocalizer(moment);
 
 function EventList() {
   const [showMap, setShowMap] = useState(false);
@@ -20,6 +36,11 @@ function EventList() {
   const [places, setPlaces] = useState<ObjectLocation[]>([]);
   const itemsPerPage = 15;
   const [currentItems, setCurrentItems] = useState<EventSaptosari[]>([]);
+
+  const [startDate, setStartDate] = useState<Date>(new Date());
+
+  const [calendarEvents, setCalendarEvents] = useState<CalendarEvent[]>([]);
+  const [endDateView, setEndDateView] = useState<Date>(new Date());
 
   const pageCount = Math.ceil(events.length / itemsPerPage);
 
@@ -39,17 +60,35 @@ function EventList() {
       const futureEvents = data.filter((event) => event.startDate > now);
       const pastEvents = data.filter((event) => event.startDate <= now);
 
-      let sortedEvents: EventSaptosari[];
+      let sortedEvents: EventSaptosari[] = [];
       if (futureEvents.length > 0) {
-        sortedEvents = futureEvents
-          .slice(itemOffset, endOffset)
-          .sort((a, b) => a.startDate.getTime() - b.startDate.getTime());
-      } else {
-        sortedEvents = pastEvents
-          .slice(itemOffset, endOffset)
-          .sort((a, b) => b.startDate.getTime() - a.startDate.getTime());
+        let sortedFutureEvents = futureEvents.sort(
+          (a, b) => a.startDate.getTime() - b.startDate.getTime()
+        );
+        sortedEvents.push(...sortedFutureEvents);
+      }
+
+      let sortedPastEvents = pastEvents.sort(
+        (a, b) => b.startDate.getTime() - a.startDate.getTime()
+      );
+
+      sortedEvents.push(...sortedPastEvents);
+      let dataStartDate = sortedEvents[0].startDate;
+
+      setStartDate(dataStartDate);
+      if (futureEvents.length > 0) {
+        setStartDate(new Date());
       }
       setCurrentItems(sortedEvents);
+
+      setEndDateView(sortedEvents[sortedEvents.length - 1].endDate);
+
+      const calEvents = data.map((e) => ({
+        title: e?.name!,
+        start: e?.startDate!,
+        end: e?.endDate!,
+      }));
+      setCalendarEvents(calEvents);
     });
     setPlaces(
       events.map((event) => ({
@@ -107,8 +146,10 @@ function EventList() {
           showMap ? `hidden` : `block`
         }`}
       >
-        <h1 className="!text-[#272726] font-semibold leading-[1.2]">Events</h1>
-        <div className="w-screen h-[1px] bg-[#dbd9d2] relative left-1/2 -ml-[50vw] "></div>
+        <h1 className="!text-[#272726] font-semibold leading-[1.2]">
+          Kegiatan Desa
+        </h1>
+        <div className="w-screen h-[1px] bg-[#dbd9d2] relative left-1/2 -ml-[50vw] mt-4 "></div>
 
         <div className="mt-4  ">
           <div className=" mt-4 flex flex-row justify-between items-center">
@@ -134,7 +175,7 @@ function EventList() {
         </div>
 
         {/* list events & map (jika lg screen) */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-2">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
           <div className="col-span-2">
             <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 ">
               {currentItems.length > 0
@@ -175,8 +216,71 @@ function EventList() {
             )}
           </div>
         </div>
+        <div className="w-[95%] h-[70vh] mt-12 mx-auto">
+          {currentItems.length > 0 ? (
+            <Calendar
+              toolbar={true}
+              components={{
+                toolbar: CustomToolbar,
+                eventWrapper: ({ event }: { event: CalendarEvent }) => (
+                  <div className="bg-[#F3C725] p-[1px] text-sm pl-1 text-white rounded-tl-lg rounded-tr-lg">
+                    {event.title}
+                  </div>
+                ),
+              }}
+              formats={{
+                agendaHeaderFormat: ({ start, end }) =>
+                  `${moment(start).format("DD MMMM YYYY")} - ${moment(
+                    end
+                  ).format("DD MMMM YYYY")}`,
+              }}
+              date={startDate}
+              events={calendarEvents}
+              localizer={mLocalizer}
+              max={endDateView}
+              onNavigate={(newDate) => setStartDate(newDate)}
+              showMultiDayTimes
+              step={60}
+              defaultView={Views.AGENDA}
+              views={Object.keys(Views).map(
+                (k) => Views[k as keyof typeof Views]
+              )}
+            />
+          ) : (
+            <Skeleton className="w-full h-full" />
+          )}
+        </div>
       </div>
       <Footer />
+    </div>
+  );
+}
+
+function CustomToolbar({
+  label,
+  onNavigate,
+  onView,
+  view,
+  views,
+}: ToolbarProps<CalendarEvent, object>) {
+  console.log("label: ", label);
+  return (
+    <div className="flex items-center justify-between mb-2">
+      <button
+        className="flex items-center justify-center p-2 border-1 border-[#e2e0d6] rounded-lg hover:bg-[#e2e0d6]
+        hover:text-black transition-colors duration-300"
+        onClick={() => onNavigate("PREV")}
+      >
+        Prev
+      </button>
+      <span className="font-bold ml-4 md:ml-0">{label}</span>
+      <button
+        className="flex items-center justify-center p-2 border-1 border-[#e2e0d6] rounded-lg hover:bg-[#e2e0d6]
+        hover:text-black transition-colors duration-300"
+        onClick={() => onNavigate("NEXT")}
+      >
+        Next
+      </button>
     </div>
   );
 }

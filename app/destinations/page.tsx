@@ -1,6 +1,6 @@
 "use client";
 import { destinations } from "@/data/destinations";
-import { Destination, ObjectLocation } from "@/type/type";
+import { ObjectLocation } from "@/type/type";
 import React, { useEffect, useState } from "react";
 import { LiaMapMarkedAltSolid } from "react-icons/lia";
 import ReactPaginate from "react-paginate";
@@ -68,7 +68,8 @@ function Destinations() {
 
           {/* map button */}
           <div
-            className="flex items-center gap-x-2 mt-2 p-3 rounded-xl  bg-[#F0EFEB] cursor-pointer hover:bg-[#E8E6E2] transition-all duration-300
+            className="flex items-center gap-x-2 mt-2 p-3 rounded-xl 
+             bg-[#F0EFEB] cursor-pointer hover:bg-[#E8E6E2] transition-all duration-300
             lg:hidden"
             onClick={() => {
               setShowMap(false);
@@ -93,7 +94,7 @@ function Destinations() {
           showMap ? `hidden` : `block`
         }`}
       >
-        <h1 className="!text-[#272726] font-bold">Wisata</h1>
+        <h1 className="!text-[#272726] font-bold">Destinasi Wisata Terdekat</h1>
 
         <div className="mt-4  ">
           <div className="w-screen h-[1px] bg-[#dbd9d2] relative left-1/2 -ml-[50vw] "></div>
