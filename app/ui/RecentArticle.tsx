@@ -17,17 +17,18 @@ function RecentArticles() {
       const futureArticles = data.filter((event) => event.postDate > now);
       const pastArticles = data.filter((event) => event.postDate <= now);
 
-      let sortedArticles: Article[];
+      let sortedArticles: Article[] = [];
       if (futureArticles.length > 0) {
-        sortedArticles = futureArticles.sort(
+        let sortedFutureArticles = futureArticles.sort(
           (a, b) => a.postDate.getTime() - b.postDate.getTime()
         );
-      } else {
-        sortedArticles = pastArticles.sort(
-          (a, b) => b.postDate.getTime() - a.postDate.getTime()
-        );
+        sortedArticles.push(...sortedFutureArticles);
       }
-      console.log("sorted Articles:", data);
+      let sortedPastArticles = pastArticles.sort(
+        (a, b) => b.postDate.getTime() - a.postDate.getTime()
+      );
+
+      sortedArticles.push(...sortedPastArticles);
       setCurrentArticles(sortedArticles);
     });
   }, []);

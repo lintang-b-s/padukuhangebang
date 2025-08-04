@@ -1,34 +1,64 @@
 "use client";
 import { Skeleton } from "@/components/ui/skeleton";
-import { events } from "@/data/events";
 import { fetchEvents } from "@/lib/api";
-import { EventSaptosari } from "@/type/type";
+import { CalendarEvent, EventSaptosari } from "@/type/type";
+import moment from "moment";
 import Image from "next/image";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import {
+  Calendar,
+  momentLocalizer,
+  Views,
+  ToolbarProps,
+} from "react-big-calendar";
 import { FaArrowRight } from "react-icons/fa";
+import "react-big-calendar/lib/css/react-big-calendar.css";
+import "moment/locale/id";
+
+moment.locale("id");
+const mLocalizer = momentLocalizer(moment);
 
 function Events() {
   const [currentEvents, setCurrentEvents] = React.useState<EventSaptosari[]>(
     []
   );
+
+  const [startDate, setStartDate] = useState<Date>(new Date());
+
+  const [calendarEvents, setCalendarEvents] = useState<CalendarEvent[]>([]);
+  const [endDateView, setEndDateView] = useState<Date>(new Date());
+
   useEffect(() => {
     fetchEvents().then((data) => {
       const now = new Date();
       const futureEvents = data.filter((event) => event.startDate > now);
       const pastEvents = data.filter((event) => event.startDate <= now);
 
-      let sortedEvents: EventSaptosari[];
+      let sortedEvents: EventSaptosari[] = [];
       if (futureEvents.length > 0) {
-        sortedEvents = futureEvents.sort(
+        let sortedFutureEvents = futureEvents.sort(
           (a, b) => a.startDate.getTime() - b.startDate.getTime()
         );
-      } else {
-        sortedEvents = pastEvents.sort(
-          (a, b) => b.startDate.getTime() - a.startDate.getTime()
-        );
+        sortedEvents.push(...sortedFutureEvents);
       }
-      console.log("sorted events:", data);
+
+      let sortedPastEvents = pastEvents.sort(
+        (a, b) => b.startDate.getTime() - a.startDate.getTime()
+      );
+      sortedEvents.push(...sortedPastEvents);
+
       setCurrentEvents(sortedEvents);
+      let dataStartDate = sortedEvents[0].startDate;
+
+      setStartDate(dataStartDate);
+      setEndDateView(sortedEvents[sortedEvents.length - 1].endDate);
+
+      const calEvents = data.map((e) => ({
+        title: e?.name!,
+        start: e?.startDate!,
+        end: e?.endDate!,
+      }));
+      setCalendarEvents(calEvents);
     });
   }, []);
 
@@ -96,8 +126,9 @@ function Events() {
                       {event.name}
                     </span>
                     <span className="mt-3 !text-[#686867]">
-                      {event.kelurahan}, {event.startDate.toLocaleDateString()}{" "}
-                      - {event.endDate.toLocaleDateString()}
+                      {event.kelurahan},{" "}
+                      {moment(event.startDate).format("D MMMM YYYY")} -{" "}
+                      {moment(event.endDate).format("D MMMM YYYY")}
                     </span>
                   </div>
                 </a>
@@ -112,6 +143,71 @@ function Events() {
               />
             ))}
       </div>
+
+      <div className="w-[95%] h-[70vh] mt-3 mx-auto">
+        {currentEvents.length > 0 ? (
+          <Calendar
+            toolbar={true}
+            components={{
+              toolbar: CustomToolbar,
+
+              eventWrapper: ({ event }: { event: CalendarEvent }) => (
+                <div className="bg-[#F3C725] p-[1px] text-sm pl-1 text-white rounded-tl-lg rounded-tr-lg">
+                  {event.title}
+                </div>
+              ),
+            }}
+            formats={{
+              agendaHeaderFormat: ({ start, end }) =>
+                `${moment(start).format("DD MMMM YYYY")} - ${moment(end).format(
+                  "DD MMMM YYYY"
+                )}`,
+            }}
+            date={startDate}
+            events={calendarEvents}
+            localizer={mLocalizer}
+            max={endDateView}
+            onNavigate={(newDate) => setStartDate(newDate)}
+            showMultiDayTimes
+            step={60}
+            defaultView={Views.AGENDA}
+            views={Object.keys(Views).map(
+              (k) => Views[k as keyof typeof Views]
+            )}
+          />
+        ) : (
+          <Skeleton className="w-full h-full" />
+        )}
+      </div>
+    </div>
+  );
+}
+
+function CustomToolbar({
+  label,
+  onNavigate,
+  onView,
+  view,
+  views,
+}: ToolbarProps<CalendarEvent, object>) {
+  console.log("label: ", label);
+  return (
+    <div className="flex items-center justify-between mb-2">
+      <button
+        className="flex items-center justify-center p-2 border-1 border-[#e2e0d6] rounded-lg hover:bg-[#e2e0d6]
+        hover:text-black transition-colors duration-300"
+        onClick={() => onNavigate("PREV")}
+      >
+        Prev
+      </button>
+      <span className="font-bold">{label}</span>
+      <button
+        className="flex items-center justify-center p-2 border-1 border-[#e2e0d6] rounded-lg hover:bg-[#e2e0d6]
+        hover:text-black transition-colors duration-300"
+        onClick={() => onNavigate("NEXT")}
+      >
+        Next
+      </button>
     </div>
   );
 }

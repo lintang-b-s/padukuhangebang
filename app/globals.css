@@ -432,6 +432,36 @@ span {
   --sidebar-ring: oklch(0.556 0 0);
 }
 
+.rbc-header {
+  color: white !important;
+  background: #15334a;
+  height: 36px;
+  font-size: 16px !important;
+}
+
+.rbc-agenda-date-cell {
+  background: #f5d573;
+  color: white;
+}
+
+.rbc-header span {
+  color: white !important;
+}
+.rbc-month-header {
+  color: white !important;
+  background: #15334a;
+  height: 36px;
+  font-size: 16px !important;
+}
+
+.rbc-overlay-header {
+  color: white;
+}
+
+.rbc-toolbar-label {
+  color: white !important;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;

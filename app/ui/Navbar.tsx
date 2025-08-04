@@ -109,17 +109,6 @@ function Navbar() {
                 Galeri
               </a>
             </li>
-
-            <li>
-              <a
-                href="/pengaduan"
-                className="relative text-[#304F47] after:w-0 after:h-[2px] after:bg-[#304F47] 
-              after:transition-[width] after:duration-300 after:absolute after:left-0 after:bottom-[-8px] 
-             active:after:w-[70%] "
-              >
-                Laporan Pengaduan
-              </a>
-            </li>
           </ul>
 
           {/* desktop */}
@@ -208,17 +197,6 @@ function Navbar() {
              hover:after:w-[70%] "
               >
                 Galeri
-              </a>
-            </li>
-
-            <li>
-              <a
-                href="/pengaduan"
-                className="relative text-[#304F47] after:w-0 after:h-[2px] after:bg-[#304F47] 
-              after:transition-[width] after:duration-300 after:absolute after:left-0 after:bottom-[-8px] 
-             hover:after:w-[70%] "
-              >
-                Pengaduan
               </a>
             </li>
           </ul>

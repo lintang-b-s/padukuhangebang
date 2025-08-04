@@ -4,7 +4,7 @@ import Navbar from "@/app/ui/Navbar";
 
 import Image from "next/image";
 import { useParams } from "next/navigation";
-import React, { Fragment, useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { MdOpenInFull } from "react-icons/md";
 import ReactImageGallery from "react-image-gallery";
 import moment from "moment";
@@ -44,6 +44,9 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { TbMapSearch } from "react-icons/tb";
 import DisplayListImages from "@/app/ui/DisplayListImages";
 import { fetchEvents } from "@/lib/api";
+import "moment/locale/id";
+
+moment.locale("id");
 
 const mLocalizer = momentLocalizer(moment);
 
