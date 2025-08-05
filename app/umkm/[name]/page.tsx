@@ -249,7 +249,7 @@ function UMKMDetail() {
     <div className="relative w-screen min-h-screen">
       {/* image gallery modal */}
       <div
-        className={` fixed z-12 pt-24 left-0 top-0 w-full h-full overflow-auto bg-[rgba(0,0,0,0.9)] 
+        className={` fixed z-100 pt-24 left-0 top-0 w-full h-full overflow-auto bg-[rgba(0,0,0,0.9)] 
         ${isOpen ? `block` : `hidden`} `}
       >
         {/* // close button */}
