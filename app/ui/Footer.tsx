@@ -25,7 +25,7 @@ function Footer() {
             alt="logo gunungkidul"
             width={100}
             height={100}
-            src="/img/logo-gk.jpg"
+            src="/img/gebang.svg"
           />
           <div className="flex flex-col gap-y-3">
             <div className="flex flex-col gap-y-2">

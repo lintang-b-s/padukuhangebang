@@ -17,7 +17,11 @@ export const metadata: Metadata = {
   description:
     "Dusun Gebang, Kalurahan Ngloro, Kecamatan Saptosari, Kabupaten Gunungkidul",
   icons: {
-    icon: "/img/logo.svg", 
+    icon: {
+      url: "/img/gebang-70.svg",
+      type: "image/svg+xml",
+      sizes: "100x100",
+    },
   },
 };
 

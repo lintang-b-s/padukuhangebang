@@ -12,8 +12,8 @@ function Navbar() {
           className="px-[12px] absolute left-[26px] md:left-[26px] lg:left-[5vw] xl:left-[14vw] 2xl:left-[18vw]"
         >
           <img
-            src={"/img/logo.svg"}
-            className="rounded-full w-[50px] h-[50px] lg:w-[60px] lg:h-[60px]"
+            src={"/img/gebang.svg"}
+            className="rounded-full w-[65px] h-[65px] lg:w-[75px] lg:h-[75px]"
           />
         </a>
 
