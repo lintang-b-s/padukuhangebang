@@ -1,18 +1,20 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@plugin "@tailwindcss/typography";
 
 @custom-variant dark (&:is(.dark *));
 
 :root {
   --h1-font-size: 62px;
   --h1-font-family: var(--font-lora-serif);
-  --h1-font-color: #ffffff;
+  --h1-font-color: #000000;
   --h2-font-size: 40px;
   --h2-font-family: var(--font-lora-serif);
   --h2-font-color: #272726;
   --h3-font-size: 24px;
+  
   --h3-font-family: var(--font-lora-serif);
-  --h3-font-color: #ffffff;
+  --h3-font-color: #000000;
 
   --body-font: "Poppins", sans-serif;
 
@@ -157,6 +159,8 @@
 body {
   font-family: var(--body-font);
   overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 * {

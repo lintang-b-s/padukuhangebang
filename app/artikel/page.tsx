@@ -47,7 +47,8 @@ function Articles() {
 
           <h1
             className="absolute left-[50%] top-[50%] -translate-x-[50%]
-                          -translate-y-[50%] text-center leading-[1.2] !text-headerOne text-shadow-headerOne font-semibold"
+                          -translate-y-[50%] text-center leading-[1.2] !text-headerOne 
+                        !text-white  text-shadow-headerOne font-semibold"
           >
             Articles
           </h1>
@@ -64,7 +65,7 @@ function Articles() {
                   <div
                     key={index}
                     className="flex flex-col gap-1 px-4 py-4 rounded-lg shadow-lg
-                   items-start  border-1 border-slate-200"
+                   items-start relative border-1 border-slate-200 h-full max-h-[526px]"
                   >
                     <a
                       className="group relative w-full h-full max-w-[600px] max-h-[300px] aspect-square md:max-h-[300px] 
@@ -92,12 +93,19 @@ function Articles() {
                           <span>{article.penulis}</span>
                         </div>
                       </div>
-                      <p>{article.summary.slice(0, 100)}...</p>
+                      <div className="ql-editor pb-14">
+                        <div
+                          className="prose max-w-none "
+                          dangerouslySetInnerHTML={{
+                            __html: article.content.slice(0, 100) + "...",
+                          }}
+                        />
+                      </div>
                     </div>
 
                     <a
-                      className="flex flex-row items-center justify-center p-2
-                  bg-[#F3C725] w-full  rounded-lg shadow-md hover:scale-95 active:scale-95 transform ease-in-out
+                      className="absolute inset-x-4 bottom-3 flex flex-row items-center justify-center p-2
+                  bg-[#F3C725] w-[90%]  rounded-lg shadow-md hover:scale-95 active:scale-95 transform ease-in-out
                                 duration-400 transition-transform cursor-pointer "
                       href={`/artikel/${article.id}`}
                     >

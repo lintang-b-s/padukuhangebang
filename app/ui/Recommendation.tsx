@@ -57,7 +57,7 @@ function Recommendation() {
               fill
               className="rounded-lg object-cover  group-hover:scale-110 group-active:scale-110 transform ease-in-out duration-400 transition-transform "
             />
-            <h3 className="text-white absolute bottom-2 left-2 font-bold italic">
+            <h3 className="!text-white absolute bottom-2 left-2 font-bold italic text-shadow-headerOne">
               {item.title}
             </h3>
           </a>

@@ -23,7 +23,7 @@ function VideoHero({ params: { slug } }: { params: { slug: string } }) {
 
         <h1
           className="absolute left-[50%] top-[50%] -translate-x-[50%]
-         -translate-y-[50%]"
+         -translate-y-[50%] !text-white"
         >
           {videoTitle}
         </h1>

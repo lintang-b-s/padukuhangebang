@@ -69,7 +69,7 @@ function TopDestinations() {
                   className={`rounded-lg object-cover group-hover:scale-110  group-active:scale-110 transform ease-in-out
                duration-400 transition-transform`}
                 />
-                <h3 className="font-bold text-white absolute bottom-2 left-2 ">
+                <h3 className="font-bold !text-white absolute bottom-2 left-2  text-shadow-headerOne">
                   {destination.name}
                 </h3>
               </a>

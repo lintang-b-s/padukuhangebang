@@ -54,8 +54,8 @@ function RecentArticles() {
               return (
                 <div
                   key={index}
-                  className="flex flex-col sm:grid sm:grid-cols-1 gap-1 items-center justify-center group
-               rounded-lg shadow-lg  px-4 py-5 border-1 border-slate-200"
+                  className="relative flex flex-col sm:grid sm:grid-cols-1 gap-1 items-center justify-center group
+               rounded-lg shadow-lg  px-4 py-5 border-1 border-slate-200 h-full max-h-[526px]"
                 >
                   <div
                     className="relative w-full max-w-80 h-46 sm:w-52 sm:h-50 md:w-62 md:h-50 lg:w-90 lg:h-70
@@ -86,11 +86,18 @@ function RecentArticles() {
                         <span>{article.penulis}</span>
                       </div>
                     </div>
-                    <p>{article.summary.slice(0, 80)}...</p>
+                    <div className="ql-editor pb-14">
+                      <div
+                        className="prose  "
+                        dangerouslySetInnerHTML={{
+                          __html: article.content.slice(0, 50) + "...",
+                        }}
+                      />
+                    </div>
 
                     <a
-                      className="flex flex-row items-center justify-center p-2
-                  bg-[#F3C725] w-full  rounded-lg shadow-md hover:scale-95 active:scale-95 transform ease-in-out
+                      className="absolute inset-x-4 bottom-3  flex flex-row items-center justify-center p-2
+                  bg-[#F3C725] w-[90%]  rounded-lg shadow-md hover:scale-95 active:scale-95 transform ease-in-out
                                 duration-400 transition-transform cursor-pointer "
                       href={`/artikel/${article.id}`}
                     >

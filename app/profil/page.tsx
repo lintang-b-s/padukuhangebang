@@ -215,7 +215,8 @@ function About() {
 
           <h1
             className="absolute left-[50%] top-[50%] -translate-x-[50%]
-              -translate-y-[50%] text-center leading-[1.2] !text-headerOne text-shadow-headerOne font-semibold"
+              -translate-y-[50%] text-center leading-[1.2] !text-headerOne
+              !text-white text-shadow-headerOne font-semibold"
           >
             Profil Dusun
           </h1>

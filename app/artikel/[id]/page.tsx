@@ -1,6 +1,6 @@
 "use client";
 import Navbar from "@/app/ui/Navbar";
-import { articles } from "@/data/articles";
+import { decode } from "he";
 import { Article } from "@/type/type";
 import Image from "next/image";
 import { useParams } from "next/navigation";
@@ -19,6 +19,9 @@ import "react-image-gallery/styles/css/image-gallery.css";
 import "maplibre-gl/dist/maplibre-gl.css";
 import { Skeleton } from "@/components/ui/skeleton";
 import { fetchArticles } from "@/lib/api";
+import ReactMarkdown from "react-markdown";
+import parse from "html-react-parser";
+import "quill/dist/quill.snow.css";
 
 function KontenArtikel() {
   const { id }: { id: string } = useParams();
@@ -121,11 +124,13 @@ function KontenArtikel() {
             </div>
           </div>
           <div className="py-6 pr-1">
-            <div
-              dangerouslySetInnerHTML={{
-                __html: data.content,
-              }}
-            ></div>
+            <div className="ql-editor">
+              <div
+                className="prose max-w-none "
+                dangerouslySetInnerHTML={{ __html: data.content }}
+              />
+            </div>
+
             {data!.images!.length > 0 && (
               <div className="mt-6">
                 <div className="flex justify-between mt-4">

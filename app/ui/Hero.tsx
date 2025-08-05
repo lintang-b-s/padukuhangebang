@@ -109,7 +109,7 @@ function Hero() {
          lg:translate-x-0 lg:translate-y-0 lg:top-[200px] lg:left-[136px]  animate-text  px-8"
               >
                 <div className="text-left">
-                  <h1 className="text-center leading-[1.2] !text-headerOne text-shadow-headerOne font-semibold ">
+                  <h1 className="text-center leading-[1.2] !text-headerOne !text-white text-shadow-headerOne font-semibold ">
                     {image.title}
                   </h1>
                   <span className="!text-white text-center text-shadow-headerOne">

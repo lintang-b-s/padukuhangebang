@@ -157,7 +157,6 @@ export type UserLocation = {
 export type Article = {
   id?: string;
   title: string;
-  summary: string;
   content: string;
   thumbnail: string;
   postDate: Date;
