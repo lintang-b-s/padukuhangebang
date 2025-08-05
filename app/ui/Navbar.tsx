@@ -52,7 +52,7 @@ function Navbar() {
               after:transition-[width] after:duration-300 after:absolute after:left-0 after:bottom-[-8px] 
              active:after:w-[70%] "
               >
-                Artikel
+                Berita Dusun
               </a>
             </li>
 
@@ -142,7 +142,7 @@ function Navbar() {
               after:transition-[width] after:duration-300 after:absolute after:left-0 after:bottom-[-8px] 
              hover:after:w-[70%] "
               >
-                Artikel
+                Berita Dusun
               </a>
             </li>
 
