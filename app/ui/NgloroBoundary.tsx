@@ -68,9 +68,9 @@ function NgloroBoundary() {
         </div>
 
         <p className=" pr-4">
-          Dusun Gobong merupakan salah satu Dusun di wilayah Kalurahan Ngloro
+          Dusun Gebang merupakan salah satu Dusun di wilayah Kalurahan Ngloro
           Kapanewon Saptosari Kabupaten Gunungkidul dengan luas wilayah
-          1.080,2550 Ha. Dusun Gobong memiliki topografi yang berbukit-bukit
+          1.080,2550 Ha. Dusun Gebang memiliki topografi yang berbukit-bukit
           dengan ketinggian rata-rata 25 m di atas permukaan laut dengan suhu
           udara berkisar 27–32°C serta kontur tanah berupa dataran dan
           pegunungan

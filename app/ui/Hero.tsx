@@ -14,7 +14,7 @@ const heroImages = [
   {
     src: "/img/hero/kebun-singkong-gebang2.jpg",
     alt: "Kebun Singkong Gebang",
-    title: "Jelajahi permata tersembunyi Dusun Ngloro",
+    title: "Jelajahi permata tersembunyi Dusun Gebang",
     subtitle:
       "Temukan kekayaan budaya dan hasil bumi yang diolah dengan kearifan lokal",
   },

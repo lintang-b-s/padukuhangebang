@@ -33,7 +33,7 @@ function NgloroPlace() {
   }, []);
   return (
     <div className="relative mt-20 mx-auto">
-      <h2>Peta Desa Ngloro</h2>
+      <h2>Peta Dusun Gebang</h2>
       <div
         id="place"
         className="px-4 pt-2 pb-3  shadow-lg absolute rounded-lg bg-white flex flex-col items-center gap-2 text-lg
