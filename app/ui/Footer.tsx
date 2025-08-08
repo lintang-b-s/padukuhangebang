@@ -33,7 +33,7 @@ function Footer() {
                 Alamat
               </span>
               <span className="text-start text-lg text-[#77797B]  ">
-                Kecamatan Saptosari, Kabupaten Gunungkidul, Daerah Istimewa
+                Padukuhan Gebang, Kalurahan Ngloro, Kecamatan Saptosari, Kabupaten Gunungkidul, Daerah Istimewa
                 Yogyakarta
               </span>
             </div>
@@ -44,7 +44,7 @@ function Footer() {
               </span>
               <span className="text-start text-lg text-[#77797B]  ">
                 Dibuat Oleh: Lintang Birda Saputra (22/505034/PA/21737) Subunit
-                Ngloro 4
+                Ngloro 4 KKN UGM kode YO-054
               </span>
             </div>
             <p className="text-start text-lg text-[#77797B] ">Follow us</p>

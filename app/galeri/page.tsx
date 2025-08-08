@@ -43,7 +43,7 @@ function Galeri() {
         let currentItemImages = [];
         for (let curImage of item!.images!) {
           currentItemImages.push(
-            curImage.startsWith("img/") ? storageImageURL(curImage) : curImage
+             storageImageURL(curImage) 
           );
         }
         if (currentItemImages.length === 0) {

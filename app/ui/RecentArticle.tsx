@@ -1,7 +1,7 @@
 "use client";
 import { Skeleton } from "@/components/ui/skeleton";
 import { articles } from "@/data/articles";
-import { fetchArticles } from "@/lib/api";
+import { fetchArticles, storageImageURL } from "@/lib/api";
 import { Article } from "@/type/type";
 import Image from "next/image";
 import React, { useEffect } from "react";
@@ -29,7 +29,22 @@ function RecentArticles() {
       );
 
       sortedArticles.push(...sortedPastArticles);
-      setCurrentArticles(sortedArticles);
+
+      const currentSortedArticles = sortedArticles.map((article) => {
+        let updatedArticle = article;
+        if (article.thumbnail.startsWith("img/") ||  article.thumbnail.startsWith("images/")) {
+          updatedArticle = {
+            ...article,
+            thumbnail: storageImageURL(article.thumbnail),
+          };
+        }
+
+        updatedArticle.images = article.images!.map((image: string) =>
+          storageImageURL(image)
+        );
+        return updatedArticle;
+      });
+      setCurrentArticles(currentSortedArticles);
     });
   }, []);
   return (
@@ -63,7 +78,7 @@ function RecentArticles() {
               ease-in-out overflow-hidden"
                   >
                     <Image
-                      src={article.thumbnail!}
+                      src={storageImageURL(article.thumbnail)!}
                       alt={article.title}
                       fill
                       className=" object-cover group-hover:scale-110 group-active:scale-110
@@ -73,7 +88,7 @@ function RecentArticles() {
 
                   <div className="flex flex-col gap-y-2 mt-1 sm:gap-y-0 sm:mt-2">
                     <span className="text-lg font-bold md:text-2xl">
-                      {article.title}
+                      {`${article.title.slice(0, 54)}...`}
                     </span>
 
                     <div className="flex flex-row gap-6 items-center">
@@ -90,7 +105,7 @@ function RecentArticles() {
                       <div
                         className="prose  "
                         dangerouslySetInnerHTML={{
-                          __html: article.content.slice(0, 50) + "...",
+                          __html: article.content.slice(0, 80) + "...",
                         }}
                       />
                     </div>

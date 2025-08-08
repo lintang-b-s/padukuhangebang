@@ -18,7 +18,7 @@ import Footer from "@/app/ui/Footer";
 import "react-image-gallery/styles/css/image-gallery.css";
 import "maplibre-gl/dist/maplibre-gl.css";
 import { Skeleton } from "@/components/ui/skeleton";
-import { fetchArticles } from "@/lib/api";
+import { fetchArticles, storageImageURL } from "@/lib/api";
 import ReactMarkdown from "react-markdown";
 import parse from "html-react-parser";
 import "quill/dist/quill.snow.css";
@@ -50,6 +50,10 @@ function KontenArtikel() {
     fetchArticles().then((data) => {
       for (let article of data) {
         if (article.id == id) {
+          article.images = article.images!.map((image: string) => {
+            return storageImageURL(image);
+          });
+
           setData(article);
         }
       }
@@ -105,7 +109,7 @@ function KontenArtikel() {
           cursor-pointer mt-4"
           >
             <Image
-              src={data?.thumbnail!}
+              src={storageImageURL(data?.thumbnail!)}
               alt={data?.title!}
               fill
               className="rounded-lg object-cover"

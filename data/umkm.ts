@@ -279,7 +279,7 @@ export const dataUMKMUnggulanHome: UMKMUnggulan[] = [
   {
     title: "Kerajinan Bambu Pak Yanto",
     description:
-      "Pak Yanto adalah salah satu pengrajin bambu unggulan dari Kalurahan Ngloro yang telah menekuni seni kerajinan ini selama lebih dari 5 tahun. Dengan keterampilan tangan yang terasah dan pengalaman panjang, beliau mampu menciptakan berbagai produk bernilai seni tinggi, mulai dari anyaman tradisional, perabot rumah tangga, hingga hiasan dekoratif yang ramah lingkungan.",
+      "Pak Yanto adalah salah satu pengrajin bambu unggulan dari Padukuhan Gebang yang telah menekuni seni kerajinan ini selama lebih dari 5 tahun. Dengan keterampilan tangan yang terasah dan pengalaman panjang, beliau mampu menciptakan berbagai produk bernilai seni tinggi, mulai dari anyaman tradisional, perabot rumah tangga, hingga hiasan dekoratif yang ramah lingkungan.",
     image: "/img/bambu-yanto1.jpeg",
   },
 ];

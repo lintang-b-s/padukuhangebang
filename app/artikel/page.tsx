@@ -9,7 +9,7 @@ import { IoPeopleOutline } from "react-icons/io5";
 import ReactPaginate from "react-paginate";
 import { Article } from "@/type/type";
 import { Skeleton } from "@/components/ui/skeleton";
-import { fetchArticles } from "@/lib/api";
+import { fetchArticles, storageImageURL } from "@/lib/api";
 
 function Articles() {
   const [itemOffset, setItemOffset] = useState(0);
@@ -28,8 +28,43 @@ function Articles() {
 
   useEffect(() => {
     fetchArticles().then((data) => {
-      setPageCount(Math.ceil(data.length / itemsPerPage));
-      setCurrentItems(data.slice(itemOffset, endOffset));
+      const now = new Date();
+      const futureArticles = data.filter((event) => event.postDate > now);
+      const pastArticles = data.filter((event) => event.postDate <= now);
+
+      let sortedArticles: Article[] = [];
+      if (futureArticles.length > 0) {
+        let sortedFutureArticles = futureArticles.sort(
+          (a, b) => a.postDate.getTime() - b.postDate.getTime()
+        );
+        sortedArticles.push(...sortedFutureArticles);
+      }
+      let sortedPastArticles = pastArticles.sort(
+        (a, b) => b.postDate.getTime() - a.postDate.getTime()
+      );
+
+      sortedArticles.push(...sortedPastArticles);
+
+      const currentSortedArticles = sortedArticles.map((article) => {
+        let updatedArticle = article;
+        if (
+          article.thumbnail.startsWith("img/") ||
+          article.thumbnail.startsWith("images/")
+        ) {
+          updatedArticle = {
+            ...article,
+            thumbnail: storageImageURL(article.thumbnail),
+          };
+        }
+
+        updatedArticle.images = article.images!.map((image: string) =>
+          storageImageURL(image)
+        );
+        return updatedArticle;
+      });
+
+      setPageCount(Math.ceil(currentSortedArticles.length / itemsPerPage));
+      setCurrentItems(currentSortedArticles.slice(itemOffset, endOffset));
     });
   }, []);
 
@@ -82,7 +117,10 @@ function Articles() {
                       />
                     </a>
                     <div className="flex flex-col gap-2">
-                      <h4 className="font-bold !text-black">{article.title}</h4>
+                      <h4 className="font-bold !text-black">{`${article.title.slice(
+                        0,
+                        75
+                      )}...`}</h4>
                       <div className="flex flex-row gap-6 items-center">
                         <div className="flex flex-row gap-2">
                           <CiCalendarDate size={20} />
@@ -97,7 +135,7 @@ function Articles() {
                         <div
                           className="prose max-w-none "
                           dangerouslySetInnerHTML={{
-                            __html: article.content.slice(0, 100) + "...",
+                            __html: article.content.slice(0, 80) + "...",
                           }}
                         />
                       </div>

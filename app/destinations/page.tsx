@@ -31,7 +31,7 @@ function Destinations() {
         .slice(itemOffset, endOffset)
         .map((destination) => {
           let updatedDestination = destination;
-          if (destination.thumbnail.startsWith("img/")) {
+          if (destination.thumbnail.startsWith("img/") || destination.thumbnail.startsWith("images/")) {
             updatedDestination = {
               ...destination,
               thumbnail: storageImageURL(destination.thumbnail),
@@ -39,7 +39,7 @@ function Destinations() {
           }
 
           updatedDestination.images = destination.images.map((image: string) =>
-            image.startsWith("img/") ? storageImageURL(image) : image
+            storageImageURL(image)
           );
           return updatedDestination;
         });

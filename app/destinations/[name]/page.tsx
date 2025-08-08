@@ -131,7 +131,7 @@ function DestinationPage() {
       let destData = foundData.find(
         (dest) => dest.name === name.replaceAll("%20", " ")
       );
-      if (destData?.thumbnail.startsWith("img/")) {
+      if (destData?.thumbnail.startsWith("img/") || destData?.thumbnail.startsWith("images/")) {
         destData = {
           ...destData,
           thumbnail: storageImageURL(destData?.thumbnail),

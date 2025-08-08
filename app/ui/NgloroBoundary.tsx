@@ -104,7 +104,7 @@ function NgloroBoundary() {
           </Table>
         </div>
         <p className="pr-4">
-          Alamat balai dusun: Kayutowo RT 16 RW 04, Gebang, Kalurahan Ngloro,
+          Alamat balai dusun: Kayutowo RT 16 RW 04, Padukuhan Gebang, Kalurahan Ngloro,
           Kapanewon Saptosari, Gunung Kidul, Yogyakarta
         </p>
       </div>

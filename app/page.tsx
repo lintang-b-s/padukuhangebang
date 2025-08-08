@@ -17,6 +17,7 @@ import {
 
 export default function Home() {
  
+
   return (
     <main className="font-[family-name:var(--font-mulish-sans)] relative min-h-screen w-screen overflow-x-hidden">
       <Navbar />
