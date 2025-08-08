@@ -13,9 +13,9 @@ const lora = Lora({
 });
 
 export const metadata: Metadata = {
-  title: "Dusun Gebang",
+  title: "Padukuhan Gebang",
   description:
-    "Dusun Gebang, Kalurahan Ngloro, Kecamatan Saptosari, Kabupaten Gunungkidul",
+    "Padukuhan Gebang, Kalurahan Ngloro, Kecamatan Saptosari, Kabupaten Gunungkidul",
   icons: {
     icon: {
       url: "/img/gebang-70.svg",
