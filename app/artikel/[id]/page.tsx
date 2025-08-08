@@ -174,7 +174,7 @@ function KontenArtikel() {
                   className="flex flex-row items-center justify-center p-3 
              rounded-full bg-[#1977F2] cursor-pointer hover:scale-105 active:scale-105
               transition-all duration-200"
-                  href={data?.share.facebook}
+                  href={`https://www.facebook.com/sharer.php?u=https://www.padukuhangebang.com/artikel/${data?.id}`}
                 >
                   <FiFacebook color="white" size={22} />
                 </a>
@@ -182,7 +182,7 @@ function KontenArtikel() {
                   className="flex flex-row items-center justify-center p-3 
              rounded-full bg-[#23D366] cursor-pointer hover:scale-105 active:scale-105
              transition-all duration-200"
-                  href={data?.share.whatsapp}
+                  href={`https://api.whatsapp.com/send?text=https://www.padukuhangebang.com/artikel/${data?.id}`}
                 >
                   <FaWhatsapp color="white" size={22} />
                 </a>
@@ -190,7 +190,7 @@ function KontenArtikel() {
                   className="flex flex-row items-center justify-center p-3 
              rounded-full bg-black cursor-pointer hover:scale-105 active:scale-105
               transition-all duration-200"
-                  href={data?.share.twitter}
+                  href={`https://x.com/intent/post?url=https://www.padukuhangebang.com/artikel/${data?.id}`}
                 >
                   <FaXTwitter color="white" size={22} />
                 </a>
@@ -198,7 +198,7 @@ function KontenArtikel() {
                   className="flex flex-row items-center justify-center p-3 
              rounded-full bg-[#0088CB] cursor-pointer hover:scale-105 active:scale-105
               transition-all duration-200"
-                  href={data?.share.telegram}
+                  href={`https://telegram.me/share/url?url=https://www.padukuhangebang.com/artikel/${data?.id}`}
                 >
                   <PiTelegramLogo color="white" size={22} />
                 </a>
