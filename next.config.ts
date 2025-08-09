@@ -13,6 +13,16 @@ const nextConfig = {
     ],
     domains: ["firebasestorage.googleapis.com"],
   },
+  target: "serverless",
+  future: { webpack5: true },
+  webpack: (
+    config: any,
+    { buildId, dev, isServer, defaultLoaders, webpack }: any
+  ) => {
+    config.resolve.alias.canvas = false;
+    config.resolve.alias.encoding = false;
+    return config;
+  },
 };
 
 export default nextConfig;
