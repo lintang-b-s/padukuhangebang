@@ -90,7 +90,7 @@ function Navbar() {
 
             <li>
               <a
-                href="#booklet"
+                href="/booklet"
                 className="relative text-[#304F47] after:w-0 after:h-[2px] after:bg-[#304F47] 
               after:transition-[width] after:duration-300 after:absolute after:left-0 after:bottom-[-8px] 
              active:after:w-[70%] "
@@ -180,7 +180,7 @@ function Navbar() {
 
             <li>
               <a
-                href="#booklet"
+                href="/booklet"
                 className="relative text-[#304F47] after:w-0 after:h-[2px] after:bg-[#304F47] 
               after:transition-[width] after:duration-300 after:absolute after:left-0 after:bottom-[-8px] 
              hover:after:w-[70%] "

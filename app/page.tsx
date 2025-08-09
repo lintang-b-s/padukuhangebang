@@ -8,16 +8,9 @@ import TopAttraction from "./ui/TopAttraction";
 import Events from "./ui/Events";
 import AboutGallery from "./ui/AboutGallery";
 import RecentArticles from "./ui/RecentArticle";
-import {
-  addDataArticles,
-  addDataDestinations,
-  addDataEvents,
-  addDataUMKM,
-} from "@/lib/addData";
+import { Worker } from "@react-pdf-viewer/core";
 
 export default function Home() {
- 
-
   return (
     <main className="font-[family-name:var(--font-mulish-sans)] relative min-h-screen w-screen overflow-x-hidden">
       <Navbar />
