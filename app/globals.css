@@ -570,3 +570,8 @@ span {
 .video-js .vjs-play-progress:before {
   color: #000 !important;
 }
+
+.video-js.vjs-white-theme {
+  border-radius: 4px;
+  overflow: hidden; 
+}

@@ -52,7 +52,7 @@ export const VideoJS = (props: { options: any; onReady?: any }) => {
     };
   }, [playerRef]);
 
-  return <div ref={placeholderRef}></div>;
+  return <div   ref={placeholderRef}></div>;
 };
 
 export default VideoJS;
