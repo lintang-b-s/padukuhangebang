@@ -476,13 +476,12 @@ span {
 }
 
 /* video.js */
-/* Control bar background already white (if needed) */
+
 .video-js.vjs-white-theme .vjs-control-bar {
   background: #fff !important;
   box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.08);
 }
 
-/* Quality (http source) selector button */
 .video-js.vjs-white-theme .vjs-http-source-selector.vjs-menu-button button {
   background: #fff !important;
   color: #000 !important;
@@ -491,7 +490,6 @@ span {
   padding: 0 0.5em;
 }
 
-/* Icon / text inside button */
 .video-js.vjs-white-theme
   .vjs-http-source-selector.vjs-menu-button
   .vjs-icon-placeholder:before,
@@ -503,7 +501,6 @@ span {
   text-shadow: none;
 }
 
-/* Hover / focus state */
 .video-js.vjs-white-theme
   .vjs-http-source-selector.vjs-menu-button:hover
   button,
@@ -514,7 +511,6 @@ span {
   border-color: #bcbcbc;
 }
 
-/* The dropdown menu panel */
 .video-js.vjs-white-theme .vjs-http-source-selector .vjs-menu {
   background: transparent;
 }
@@ -527,7 +523,6 @@ span {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Menu items */
 .video-js.vjs-white-theme .vjs-http-source-selector .vjs-menu-item {
   color: #000 !important;
   text-shadow: none;
@@ -546,7 +541,6 @@ span {
   background: #f2f2f2;
 }
 
-/* Scrollbar (if many qualities) */
 .video-js.vjs-white-theme
   .vjs-http-source-selector
   .vjs-menu-content::-webkit-scrollbar {
@@ -567,4 +561,12 @@ span {
   .vjs-http-source-selector
   .vjs-menu-content::-webkit-scrollbar-thumb:hover {
   background: #b0b0b0;
+}
+
+.video-js.vjs-white-theme .vjs-play-progress {
+  background-color: #000 !important;
+}
+
+.video-js .vjs-play-progress:before {
+  color: #000 !important;
 }
