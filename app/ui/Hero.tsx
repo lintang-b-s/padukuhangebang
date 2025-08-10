@@ -128,7 +128,7 @@ function Hero() {
       >
         <button
           className="w-[40px] h-[40px] rounded-[50%] bg-[#f9e2e244] border-none text-white 
-        duration-[50ms] border-8 border-white flex items-center justify-center hover:bg-white "
+        duration-[50ms] border-8 border-white flex items-center justify-center hover:bg-gray-200 "
         >
           <MdNavigateNext
             size={40}
@@ -145,7 +145,7 @@ function Hero() {
       >
         <button
           className="w-[40px] h-[40px] rounded-[50%] bg-[#f9e2e244] border-none text-white 
-        duration-[50ms] border-8 border-white flex items-center justify-center hover:bg-white "
+        duration-[50ms] border-8 border-white flex items-center justify-center hover:bg-gray-200 "
         >
           <MdNavigateBefore
             size={40}

@@ -12,7 +12,7 @@ function PDFViewer() {
     <div className="h-screen w-screen">
       <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.4.120/build/pdf.worker.min.js">
         <Viewer
-          fileUrl={"https://firebasestorage.googleapis.com/v0/b/kkn-gebang-c3ff2.firebasestorage.app/o/gebang.pdf?alt=media&token=d038904e-f709-403d-bd7f-66a81afd2e7e"}
+          fileUrl={"https://firebasestorage.googleapis.com/v0/b/kkn-gebang-c3ff2.firebasestorage.app/o/Gebang.pdf?alt=media"}
           plugins={[defaultLayoutPluginInstance]}
         />
       </Worker>
