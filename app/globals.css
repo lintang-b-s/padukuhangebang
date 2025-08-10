@@ -12,7 +12,7 @@
   --h2-font-family: var(--font-lora-serif);
   --h2-font-color: #272726;
   --h3-font-size: 24px;
-  
+
   --h3-font-family: var(--font-lora-serif);
   --h3-font-color: #000000;
 
@@ -473,4 +473,98 @@ span {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* video.js */
+/* Control bar background already white (if needed) */
+.video-js.vjs-white-theme .vjs-control-bar {
+  background: #fff !important;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.08);
+}
+
+/* Quality (http source) selector button */
+.video-js.vjs-white-theme .vjs-http-source-selector.vjs-menu-button button {
+  background: #fff !important;
+  color: #000 !important;
+  border: 1px solid #d0d0d0;
+  border-radius: 4px;
+  padding: 0 0.5em;
+}
+
+/* Icon / text inside button */
+.video-js.vjs-white-theme
+  .vjs-http-source-selector.vjs-menu-button
+  .vjs-icon-placeholder:before,
+.video-js.vjs-white-theme
+  .vjs-http-source-selector.vjs-menu-button
+  button
+  span {
+  color: #000 !important;
+  text-shadow: none;
+}
+
+/* Hover / focus state */
+.video-js.vjs-white-theme
+  .vjs-http-source-selector.vjs-menu-button:hover
+  button,
+.video-js.vjs-white-theme
+  .vjs-http-source-selector.vjs-menu-button:focus
+  button {
+  background: #f3f3f3 !important;
+  border-color: #bcbcbc;
+}
+
+/* The dropdown menu panel */
+.video-js.vjs-white-theme .vjs-http-source-selector .vjs-menu {
+  background: transparent;
+}
+
+.video-js.vjs-white-theme .vjs-http-source-selector .vjs-menu-content {
+  background: #fff;
+  border: 1px solid #d0d0d0;
+  border-radius: 4px;
+  padding: 0.25em 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Menu items */
+.video-js.vjs-white-theme .vjs-http-source-selector .vjs-menu-item {
+  color: #000 !important;
+  text-shadow: none;
+  font-size: 0.85rem;
+  padding: 0.4em 1em;
+}
+
+.video-js.vjs-white-theme
+  .vjs-http-source-selector
+  .vjs-menu-item.vjs-selected {
+  background: #e8f2ff;
+  font-weight: 600;
+}
+
+.video-js.vjs-white-theme .vjs-http-source-selector .vjs-menu-item:hover {
+  background: #f2f2f2;
+}
+
+/* Scrollbar (if many qualities) */
+.video-js.vjs-white-theme
+  .vjs-http-source-selector
+  .vjs-menu-content::-webkit-scrollbar {
+  width: 8px;
+}
+.video-js.vjs-white-theme
+  .vjs-http-source-selector
+  .vjs-menu-content::-webkit-scrollbar-track {
+  background: #fff;
+}
+.video-js.vjs-white-theme
+  .vjs-http-source-selector
+  .vjs-menu-content::-webkit-scrollbar-thumb {
+  background: #c7c7c7;
+  border-radius: 4px;
+}
+.video-js.vjs-white-theme
+  .vjs-http-source-selector
+  .vjs-menu-content::-webkit-scrollbar-thumb:hover {
+  background: #b0b0b0;
 }

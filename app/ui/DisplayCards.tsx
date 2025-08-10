@@ -8,10 +8,13 @@ function DisplayCards(props: { cards: UMKMCard[] }) {
   let i = 0;
   console.log("cards: ", cards);
   while (i < cards.length) {
+    if (i == 8) {
+      break;
+    }
     console.log("i: ", i);
-    if (i % 5 != 0) {
+    if (i % 7 != 0) {
       let doubleCards: any = [];
-      while (i < cards.length && i % 5 != 0) {
+      while (i < cards.length && i % 7 != 0) {
         doubleCards.push(cards[i]);
         i++;
       }
@@ -23,7 +26,7 @@ function DisplayCards(props: { cards: UMKMCard[] }) {
   }
 
   return (
-    <>
+    <div >
       {groups.map((group, groupIndex) => {
         if (group.type === "single") {
           const card = group.cards[0];
@@ -76,7 +79,7 @@ function DisplayCards(props: { cards: UMKMCard[] }) {
           );
         }
       })}
-    </>
+    </div>
   );
 }
 

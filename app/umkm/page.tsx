@@ -8,9 +8,54 @@ import { FaArrowRight } from "react-icons/fa";
 import { UMKMCard } from "@/type/type";
 import { umkmFetcherCard } from "@/lib/api";
 import { Skeleton } from "@/components/ui/skeleton";
+import ReactPlayer from "react-player";
+import VideoJS from "../ui/VideoJS";
+import videojs from "video.js";
 
 function UMKM() {
   const [currentItems, setCurrentItems] = useState<UMKMCard[]>([]);
+
+  const playerRef = React.useRef(null);
+
+  const videoJsOptions = {
+    autoplay: true,
+    controls: true,
+    responsive: true,
+    fluid: true,
+    sources: [
+      {
+        src: "https://firebasestorage.googleapis.com/v0/b/kkn-gebang-c3ff2.firebasestorage.app/o/master.m3u8?alt=media",
+        type: "application/x-mpegURL",
+      },
+    ],
+    controlBar: {
+      children: [
+        "playToggle",
+        "volumePanel",
+        "currentTimeDisplay",
+        "timeDivider",
+        "durationDisplay",
+        "progressControl",
+        "liveDisplay",
+        "remainingTimeDisplay",
+        "fullscreenToggle",
+        "httpSourceSelector",
+      ],
+    },
+  };
+
+  const handlePlayerReady = (player: any) => {
+    playerRef.current = player;
+
+    // You can handle player events here, for example:
+    player.on("waiting", () => {
+      videojs.log("player is waiting");
+    });
+
+    player.on("dispose", () => {
+      videojs.log("player will dispose");
+    });
+  };
 
   useEffect(() => {
     umkmFetcherCard().then((items) => setCurrentItems(items));
@@ -48,6 +93,9 @@ function UMKM() {
           tentang kerajinan yang lahir dari budaya, dan tentang harapan yang
           tumbuh bersama cita rasa dan mutu.
         </p>
+        <div className="w-full pb-12 pt-4">
+          <VideoJS options={videoJsOptions} onReady={handlePlayerReady} />
+        </div>
 
         {currentItems.length > 0 ? (
           <DisplayCards cards={currentItems} />

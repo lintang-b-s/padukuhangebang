@@ -42,11 +42,15 @@
     "react-map-gl": "^8.0.4",
     "react-markdown": "^10.1.0",
     "react-paginate": "^8.3.0",
+    "react-player": "^3.3.1",
     "react-quilljs": "^2.0.5",
     "react-social-icons": "^6.24.0",
     "recharts": "2.15.4",
     "swiper": "^11.2.8",
-    "tailwind-merge": "^3.3.1"
+    "tailwind-merge": "^3.3.1",
+    "video.js": "^7.18.1",
+    "videojs-contrib-quality-levels": "^2.1.0",
+    "videojs-http-source-selector": "^1.1.6"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
@@ -57,6 +61,7 @@
     "@types/react-big-calendar": "^1.16.2",
     "@types/react-dom": "^19",
     "@types/react-image-gallery": "^1.2.4",
+    "@types/video.js": "^7.3.58",
     "tailwindcss": "^4",
     "tw-animate-css": "^1.3.6",
     "typescript": "^5"
