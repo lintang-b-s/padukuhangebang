@@ -33,7 +33,7 @@ function NgloroPlace() {
   }, []);
   return (
     <div className="relative mt-20 mx-auto">
-      <h2>Peta Dusun Gebang</h2>
+      <h2>Peta Padukuhan Gebang</h2>
       <div
         id="place"
         className="px-4 pt-2 pb-3  shadow-lg absolute rounded-lg bg-white flex flex-col items-center gap-2 text-lg
@@ -48,7 +48,7 @@ function NgloroPlace() {
         >
           <Image
             src="/img/balai-dusun-gebang/balai-dusun-gebang1.jpeg"
-            alt="Balai Dusun Gebang"
+            alt="Balai Padukuhan Gebang"
             fill
             className=" object-cover"
           />
@@ -15469,7 +15469,7 @@ AAYEAAAAAAAAAAAYEAAAAAAAAAAAYEAAAAAAAAAAAICBABASZpiHw4hSAAAAAElFTkSuQmCC"
             style={{ overflow: "visible" }}
             width="2048"
             height="2048"
-            id="Balai_Dusun_Gebang"
+            id="Balai_Padukuhan_Gebang"
             xlinkHref="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAACAAAAAgACAYAAACyp9MwAAAACXBIWXMABG3jAARt4wGuoDNcAAAg
 AElEQVR4XuzdebD2d1ke8OsmiYAkLCJWDUjckLpAkS3oKKIoOHWktEWFVkS00lbF6eJg1YriMmqX
 kWpR67hiK4piHGQTnapVWQxIVcBoAAUdUQgaMQkoyd0/ztuQYM77Pec5z/JbPp+ZZzJkrt/7T94Z
@@ -17547,7 +17547,7 @@ AgAAAAAAAAAACHgBEELEzW13EWsAAAAASUVORK5CYII="
           style={{ overflow: "visible" }}
           width="2048"
           height="2048"
-          id="Balai_Dusun_Pule"
+          id="Balai_Padukuhan_Pule"
           xlinkHref="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAACAAAAAgACAYAAACyp9MwAAAACXBIWXMABG3jAARt4wGuoDNcAAAg
 AElEQVR4XuzdebD2d1ke8OsmiYAkLCJWDUjckLpAkS3oKKIoOHWktEWFVkS00lbF6eJg1YriMmqX
 kWpR67hiK4piHGQTnapVWQxIVcBoAAUdUQgaMQkoyd0/ztuQYM77Pec5z/JbPp+ZZzJkrt/7T94Z
@@ -29570,7 +29570,7 @@ AElFTkSuQmCC"
               src="/img/icons/town-hall-svgrepo-com.png"
               alt="town hall"
             />
-            <span className="font-bold ">Balai Dusun/Desa</span>
+            <span className="font-bold ">Balai Padukuhan/Desa</span>
           </div>
           <div className="flex flex-row gap-2 items-center">
             <Image

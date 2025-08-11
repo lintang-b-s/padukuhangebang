@@ -6,7 +6,7 @@ export const aboutGallery = [
     image: "/img/pantai-ngobaran.jpg",
   },
   {
-    name: "Balai Dusun Gebang",
+    name: "Balai Padukuhan Gebang",
     image: "/img/balai-dusun2.jpg",
   },
   {

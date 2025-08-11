@@ -289,31 +289,31 @@ export const saranaPrasarana = [
     nama: "Balai Padukuhan",
     gambar: "/img/balai-dusun-gebang/balai-dusun-gebang1.jpeg",
     deskripsi:
-      "Balai Padukuhan merupakan fasilitas umum yang digunakan sebagai tempat pertemuan, musyawarah warga, kegiatan Posyandu, serta berbagai acara dan kegiatan lainnya di tingkat padukuhan. Balai ini berlokasi di RT 16 (Kayutowo) Dusun Gebang.",
+      "Balai Padukuhan merupakan fasilitas umum yang digunakan sebagai tempat pertemuan, musyawarah warga, kegiatan Posyandu, serta berbagai acara dan kegiatan lainnya di tingkat padukuhan. Balai ini berlokasi di RT 16 (Kayutowo) Padukuhan Gebang.",
   },
   {
     nama: "Lapangan Voli",
     gambar: "/img/lapangan-voli.jpeg",
     deskripsi:
-      "Lapangan Dusun Gebang merupakan fasilitas umum yang digunakan sebagai tempat kegiatan olahraga dan berkumpulnya warga, seperti bermain voli, sepak bola, dan kegiatan senam. Selain itu, lapangan ini juga menjadi lokasi pelaksanaan acara masyarakat, seperti lomba Agustusan dan kegiatan lainnya yang bersifat komunal. Lapangan ini berada di samping jalan utama Dusun Gebang, sehingga mudah diakses oleh seluruh warga.",
+      "Lapangan Padukuhan Gebang merupakan fasilitas umum yang digunakan sebagai tempat kegiatan olahraga dan berkumpulnya warga, seperti bermain voli, sepak bola, dan kegiatan senam. Selain itu, lapangan ini juga menjadi lokasi pelaksanaan acara masyarakat, seperti lomba Agustusan dan kegiatan lainnya yang bersifat komunal. Lapangan ini berada di samping jalan utama Padukuhan Gebang, sehingga mudah diakses oleh seluruh warga.",
   },
   {
     nama: "MADRASAH Ibtidaiyah Negeri (MIN) 10",
     gambar: "/img/mi-10.jpeg",
     deskripsi:
-      "Madrasah Ibtidaiyah Negeri (MIN) 10 Gunungkidul merupakan lembaga pendidikan dasar formal yang berada di bawah naungan Kementerian Agama. Sekolah ini menyediakan pendidikan berbasis agama Islam untuk jenjang pendidikan dasar (setara SD), dengan kurikulum terpadu antara pelajaran umum dan keagamaan. MIN 10 tidak hanya berfokus pada pengembangan akademik, tetapi juga membentuk karakter siswa melalui kegiatan keagamaan dan sosial. Madrasah ini menjadi salah satu pusat pendidikan penting di wilayah Dusun Gebang dan sekitarnya. MIN 10 ini terletak di RT 17 Dusun Gebang.",
+      "Madrasah Ibtidaiyah Negeri (MIN) 10 Gunungkidul merupakan lembaga pendidikan dasar formal yang berada di bawah naungan Kementerian Agama. Sekolah ini menyediakan pendidikan berbasis agama Islam untuk jenjang pendidikan dasar (setara SD), dengan kurikulum terpadu antara pelajaran umum dan keagamaan. MIN 10 tidak hanya berfokus pada pengembangan akademik, tetapi juga membentuk karakter siswa melalui kegiatan keagamaan dan sosial. Madrasah ini menjadi salah satu pusat pendidikan penting di wilayah Padukuhan Gebang dan sekitarnya. MIN 10 ini terletak di RT 17 Padukuhan Gebang.",
   },
   {
     nama: "Mushola RT 16",
     gambar: "/img/mushola-rt16.jpg",
     deskripsi:
-      "Mushola RT 16 merupakan sarana ibadah yang digunakan oleh warga Dusun Gebang, khususnya di wilayah Kayutowo, untuk melaksanakan salat berjamaah dan kegiatan keagamaan lainnya. Mushola ini menjadi tempat penting bagi warga untuk mempererat silaturahmi, terutama dalam kegiatan keagamaan seperti pengajian dan salat tarawih saat Ramadan. Letaknya yang strategis di lingkungan RT 16 membuat mushola ini mudah diakses dan aktif digunakan oleh masyarakat sekitar.",
+      "Mushola RT 16 merupakan sarana ibadah yang digunakan oleh warga Padukuhan Gebang, khususnya di wilayah Kayutowo, untuk melaksanakan salat berjamaah dan kegiatan keagamaan lainnya. Mushola ini menjadi tempat penting bagi warga untuk mempererat silaturahmi, terutama dalam kegiatan keagamaan seperti pengajian dan salat tarawih saat Ramadan. Letaknya yang strategis di lingkungan RT 16 membuat mushola ini mudah diakses dan aktif digunakan oleh masyarakat sekitar.",
   },
   {
     nama: "Masjid Gebang",
     gambar: "/img/masjid-gebang.jpg",
     deskripsi:
-      "Masjid Gebang adalah masjid utama di Dusun Gebang yang berperan sebagai pusat kegiatan ibadah dan keagamaan masyarakat. Selain digunakan untuk salat lima waktu dan salat Jumat, masjid ini juga menyelenggarakan kegiatan TPA (Taman Pendidikan Al-Qur'an) secara rutin, yang menjadi wadah bagi anak-anak untuk belajar membaca Al-Qur'an dan memahami ajaran Islam. Kegiatan TPA ini menjadi bagian penting dalam pembinaan karakter islami generasi muda di dusun. Masjid ini terletak di lokasi yang mudah dijangkau dan menjadi simbol keagamaan masyarakat Dusun Gebang.",
+      "Masjid Gebang adalah masjid utama di Padukuhan Gebang yang berperan sebagai pusat kegiatan ibadah dan keagamaan masyarakat. Selain digunakan untuk salat lima waktu dan salat Jumat, masjid ini juga menyelenggarakan kegiatan TPA (Taman Pendidikan Al-Qur'an) secara rutin, yang menjadi wadah bagi anak-anak untuk belajar membaca Al-Qur'an dan memahami ajaran Islam. Kegiatan TPA ini menjadi bagian penting dalam pembinaan karakter islami generasi muda di dusun. Masjid ini terletak di lokasi yang mudah dijangkau dan menjadi simbol keagamaan masyarakat Padukuhan Gebang.",
   },
   {
     nama: "Mushola RT 18 & 19",

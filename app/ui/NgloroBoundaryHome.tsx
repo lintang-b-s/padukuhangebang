@@ -10,41 +10,39 @@ function NgloroBoundary() {
           <div className="flex flex-col gap-2 items-start ">
             <div className="flex flex-row gap-2 items-center">
               <div className="flex rounded-full w-4 h-4  bg-[#7FEAD8]"></div>
-              <span className="font-bold ">Dusun Ngloro</span>
+              <span className="font-bold ">Padukuhan Ngloro</span>
             </div>
             <div className="flex flex-row gap-2 items-center">
               <div className="flex rounded-full w-4 h-4  bg-[#E5DE88]"></div>
 
-              <span className="font-bold ">Dusun Pule</span>
+              <span className="font-bold ">Padukuhan Pule</span>
             </div>
             <div className="flex flex-row gap-2 items-center">
               <div className="flex rounded-full w-4 h-4  bg-[#7F95EE]"></div>
 
-              <span className="font-bold ">Dusun Karangnongko</span>
+              <span className="font-bold ">Padukuhan Karangnongko</span>
             </div>
             <div className="flex flex-row gap-2 items-center">
               <div className="flex rounded-full w-4 h-4  bg-[#E5FB88]"></div>
-              <span className="font-bold ">Dusun Gebang</span>
+              <span className="font-bold ">Padukuhan Gebang</span>
             </div>
           </div>
           <div className="flex flex-col gap-2 items-start ">
             <div className="flex flex-row gap-2 items-center">
               <div className="flex rounded-full w-4 h-4  bg-[#A7A7C2]"></div>
 
-              <span className="font-bold ">Dusun Pringsurat</span>
+              <span className="font-bold ">Padukuhan Pringsurat</span>
             </div>
             <div className="flex flex-row gap-2 items-center">
               <div className="flex rounded-full w-4 h-4  bg-[#E59588]"></div>
 
-              <span className="font-bold ">Dusun Tekik</span>
+              <span className="font-bold ">Padukuhan Tekik</span>
             </div>
           </div>
         </div>
       </div>
 
       <div className="relative w-full">
-        
-
         <svg
           version="1.1"
           id="Layer_1"

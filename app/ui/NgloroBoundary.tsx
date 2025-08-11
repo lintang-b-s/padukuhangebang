@@ -38,7 +38,7 @@ function NgloroBoundary() {
   return (
     <div className="relative flex flex-col md:flex-row items-start  mt-13 ">
       <div className="flex flex-col gap-10 items-start max-w-[600px] ">
-        <h2 className="font-bold ">Peta Batas Dusun Gebang</h2>
+        <h2 className="font-bold ">Peta Batas Padukuhan Gebang</h2>
         <div className="relative w-[400px] h-[300px] md:hidden  ">
           <Image alt="peta dusun rt" fill src={"/img/peta-gebang.png"} />
         </div>
@@ -68,9 +68,9 @@ function NgloroBoundary() {
         </div>
 
         <p className=" pr-4">
-          Dusun Gebang merupakan salah satu Dusun di wilayah Kalurahan Ngloro
-          Kapanewon Saptosari Kabupaten Gunungkidul dengan luas wilayah
-          1.080,2550 Ha. Dusun Gebang memiliki topografi yang berbukit-bukit
+          Padukuhan Gebang merupakan salah satu Padukuhan di wilayah Kalurahan
+          Ngloro Kapanewon Saptosari Kabupaten Gunungkidul dengan luas wilayah
+          1.080,2550 Ha. Padukuhan Gebang memiliki topografi yang berbukit-bukit
           dengan ketinggian rata-rata 25 m di atas permukaan laut dengan suhu
           udara berkisar 27–32°C serta kontur tanah berupa dataran dan
           pegunungan
@@ -104,8 +104,8 @@ function NgloroBoundary() {
           </Table>
         </div>
         <p className="pr-4">
-          Alamat balai dusun: Kayutowo RT 16 RW 04, Padukuhan Gebang, Kalurahan Ngloro,
-          Kapanewon Saptosari, Gunung Kidul, Yogyakarta
+          Alamat balai dusun: Kayutowo RT 16 RW 04, Padukuhan Gebang, Kalurahan
+          Ngloro, Kapanewon Saptosari, Gunung Kidul, Yogyakarta
         </p>
       </div>
 

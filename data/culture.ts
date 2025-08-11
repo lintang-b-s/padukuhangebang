@@ -7,47 +7,47 @@ export const cultures = [
   },
   {
     name: "Yasinan",
-    summary: `Yasinan adalah tradisi pembacaan Surat Yasin secara bersama-sama yang dilakukan oleh masyarakat Dusun Gebang sebagai bentuk doa dan dzikir untuk memohon keselamatan, keberkahan, serta mendoakan arwah leluhur atau anggota keluarga yang telah meninggal dunia. Kegiatan ini biasanya dilaksanakan secara rutin setiap malam Senin atau dalam rangkaian acara tertentu seperti tahlilan, mitoni, atau syukuran keluarga.`,
+    summary: `Yasinan adalah tradisi pembacaan Surat Yasin secara bersama-sama yang dilakukan oleh masyarakat Padukuhan Gebang sebagai bentuk doa dan dzikir untuk memohon keselamatan, keberkahan, serta mendoakan arwah leluhur atau anggota keluarga yang telah meninggal dunia. Kegiatan ini biasanya dilaksanakan secara rutin setiap malam Senin atau dalam rangkaian acara tertentu seperti tahlilan, mitoni, atau syukuran keluarga.`,
     thumbnail: "/img/dokumentasi/yasinan.png",
   },
   {
     name: "Sholawatan",
-    summary: `Sholawatan beriringan gamelan merupakan bentuk unik dari tradisi sholawatan di Dusun Gebang, yang menggabungkan unsur keagamaan dengan kekayaan seni budaya Jawa. Dalam tradisi ini, lantunan puji-pujian kepada Nabi Muhammad SAW dibawakan dengan iringan alat musik gamelan seperti kendang, gong, saron, dan bonang, menciptakan harmoni yang khas dan menyentuh hati.`,
+    summary: `Sholawatan beriringan gamelan merupakan bentuk unik dari tradisi sholawatan di Padukuhan Gebang, yang menggabungkan unsur keagamaan dengan kekayaan seni budaya Jawa. Dalam tradisi ini, lantunan puji-pujian kepada Nabi Muhammad SAW dibawakan dengan iringan alat musik gamelan seperti kendang, gong, saron, dan bonang, menciptakan harmoni yang khas dan menyentuh hati.`,
     thumbnail: "/img/dokumentasi/sholawatan.jpeg",
   },
   {
     name: "Hadroh",
-    summary: `Hadroh adalah salah satu kesenian islami yang berkembang di Dusun Gebang, yang menampilkan lantunan sholawat atau puji-pujian kepada Nabi Muhammad SAW dengan iringan alat musik rebana. Tradisi ini memiliki akar kuat dalam budaya pesantren dan menjadi media dakwah yang dikemas secara musikal dan penuh makna spiritual. Dalam pertunjukan hadroh, para pemain—baik anak-anak maupun orang dewasa—melantunkan syair-syair islami yang mengandung pesan moral, ajakan kebaikan, serta kecintaan kepada Rasulullah. `,
+    summary: `Hadroh adalah salah satu kesenian islami yang berkembang di Padukuhan Gebang, yang menampilkan lantunan sholawat atau puji-pujian kepada Nabi Muhammad SAW dengan iringan alat musik rebana. Tradisi ini memiliki akar kuat dalam budaya pesantren dan menjadi media dakwah yang dikemas secara musikal dan penuh makna spiritual. Dalam pertunjukan hadroh, para pemain—baik anak-anak maupun orang dewasa—melantunkan syair-syair islami yang mengandung pesan moral, ajakan kebaikan, serta kecintaan kepada Rasulullah. `,
     thumbnail: "/img/dokumentasi/hadroh.png",
   },
   {
     name: "Mitoni",
-    summary: `Mitoni, atau disebut juga tingkeban, adalah tradisi adat Jawa yang dilaksanakan pada usia kehamilan tujuh bulan sebagai bentuk doa dan harapan agar ibu dan calon bayi senantiasa diberi keselamatan. Di Dusun Gebang, mitoni menjadi bagian penting dari siklus kehidupan masyarakat yang kaya akan nilai spiritual dan budaya. Upacara mitoni biasanya diawali dengan doa-doa dan pembacaan ayat-ayat suci Al-Qur'an, dilanjutkan dengan prosesi adat seperti siraman (mandi simbolis dengan air bunga), pemotongan rambut calon ibu, serta pemberian makanan tradisional seperti rujak dan tumpeng. `,
+    summary: `Mitoni, atau disebut juga tingkeban, adalah tradisi adat Jawa yang dilaksanakan pada usia kehamilan tujuh bulan sebagai bentuk doa dan harapan agar ibu dan calon bayi senantiasa diberi keselamatan. Di Padukuhan Gebang, mitoni menjadi bagian penting dari siklus kehidupan masyarakat yang kaya akan nilai spiritual dan budaya. Upacara mitoni biasanya diawali dengan doa-doa dan pembacaan ayat-ayat suci Al-Qur'an, dilanjutkan dengan prosesi adat seperti siraman (mandi simbolis dengan air bunga), pemotongan rambut calon ibu, serta pemberian makanan tradisional seperti rujak dan tumpeng. `,
     thumbnail: "/img/dokumentasi/mitoni.jpeg",
   },
   {
     name: "Puputan",
-    summary: `Puputan adalah tradisi yang dilakukan setelah bayi baru lahir mengalami puput atau lepasnya tali pusar secara alami. Di Dusun Gebang, puputan menjadi momen penting yang menandai fase awal kehidupan seorang bayi, sekaligus wujud rasa syukur keluarga kepada Tuhan atas keselamatan ibu dan anak. Tradisi ini biasanya disertai dengan doa bersama, pembacaan ayat-ayat suci Al-Qur’an, serta penyediaan makanan tradisional untuk dibagikan kepada tetangga atau kerabat terdekat.`,
+    summary: `Puputan adalah tradisi yang dilakukan setelah bayi baru lahir mengalami puput atau lepasnya tali pusar secara alami. Di Padukuhan Gebang, puputan menjadi momen penting yang menandai fase awal kehidupan seorang bayi, sekaligus wujud rasa syukur keluarga kepada Tuhan atas keselamatan ibu dan anak. Tradisi ini biasanya disertai dengan doa bersama, pembacaan ayat-ayat suci Al-Qur’an, serta penyediaan makanan tradisional untuk dibagikan kepada tetangga atau kerabat terdekat.`,
     thumbnail: "/img/dokumentasi/puputan-bayi.jpeg",
   },
   {
     name: "Lamaran",
-    summary: `Lamaran adalah salah satu tahapan penting dalam adat pernikahan masyarakat Dusun Gebang, di mana pihak keluarga laki-laki secara resmi datang ke rumah calon mempelai perempuan untuk menyampaikan niat melamar dan meminang secara adat dan kekeluargaan. Prosesi lamaran biasanya dilakukan dalam suasana formal namun hangat, dihadiri oleh keluarga inti dari kedua belah pihak. Rombongan pihak laki-laki membawa seserahan atau hantaran sebagai simbol kesungguhan niat. Setelah disambut oleh keluarga perempuan, acara dilanjutkan dengan penyampaian maksud, perbincangan antarorang tua, dan penentuan waktu untuk pertunangan atau pernikahan.`,
+    summary: `Lamaran adalah salah satu tahapan penting dalam adat pernikahan masyarakat Padukuhan Gebang, di mana pihak keluarga laki-laki secara resmi datang ke rumah calon mempelai perempuan untuk menyampaikan niat melamar dan meminang secara adat dan kekeluargaan. Prosesi lamaran biasanya dilakukan dalam suasana formal namun hangat, dihadiri oleh keluarga inti dari kedua belah pihak. Rombongan pihak laki-laki membawa seserahan atau hantaran sebagai simbol kesungguhan niat. Setelah disambut oleh keluarga perempuan, acara dilanjutkan dengan penyampaian maksud, perbincangan antarorang tua, dan penentuan waktu untuk pertunangan atau pernikahan.`,
     thumbnail: "/img/dokumentasi/lamaran.jpg",
   },
   {
     name: "Memasang Tarub",
-    summary: `Memasang tarub adalah tradisi adat Jawa yang masih dilestarikan oleh masyarakat Dusun Gebang sebagai bagian dari persiapan hajatan, terutama pernikahan. Tarub merupakan tenda atau bangunan sementara yang dihiasi dengan janur (daun kelapa muda), umbul-umbul, dan ornamen tradisional lainnya yang dipasang di halaman rumah sebagai penanda bahwa akan diselenggarakan acara besar. Tradisi ini tidak hanya bersifat fungsional sebagai tempat berkumpulnya tamu, tetapi juga memiliki makna simbolis.`,
+    summary: `Memasang tarub adalah tradisi adat Jawa yang masih dilestarikan oleh masyarakat Padukuhan Gebang sebagai bagian dari persiapan hajatan, terutama pernikahan. Tarub merupakan tenda atau bangunan sementara yang dihiasi dengan janur (daun kelapa muda), umbul-umbul, dan ornamen tradisional lainnya yang dipasang di halaman rumah sebagai penanda bahwa akan diselenggarakan acara besar. Tradisi ini tidak hanya bersifat fungsional sebagai tempat berkumpulnya tamu, tetapi juga memiliki makna simbolis.`,
     thumbnail: "/img/dokumentasi/mmasang-tarub.jpeg",
   },
   {
     name: "Nyadran",
-    summary: `Nyadran adalah tradisi ziarah kubur yang dilaksanakan oleh masyarakat Dusun Gebang sebagai bentuk penghormatan kepada leluhur dan orang tua yang telah meninggal dunia. Kegiatan ini biasanya dilakukan menjelang bulan Ramadan atau pada waktu-waktu tertentu sesuai adat setempat. Dalam tradisi Nyadran, warga secara bersama-sama membersihkan makam keluarga dan leluhur, kemudian menggelar doa bersama (tahlilan) serta membawa makanan dalam bentuk berkat atau tenongan yang kemudian dibagikan kepada peserta. `,
+    summary: `Nyadran adalah tradisi ziarah kubur yang dilaksanakan oleh masyarakat Padukuhan Gebang sebagai bentuk penghormatan kepada leluhur dan orang tua yang telah meninggal dunia. Kegiatan ini biasanya dilakukan menjelang bulan Ramadan atau pada waktu-waktu tertentu sesuai adat setempat. Dalam tradisi Nyadran, warga secara bersama-sama membersihkan makam keluarga dan leluhur, kemudian menggelar doa bersama (tahlilan) serta membawa makanan dalam bentuk berkat atau tenongan yang kemudian dibagikan kepada peserta. `,
     thumbnail: "/img/dokumentasi/nyadran.jpg",
   },
   {
     name: "Karawitan",
-    summary: `Karawitan adalah seni musik tradisional Jawa yang dimainkan menggunakan seperangkat alat musik gamelan, seperti gong, kenong, saron, bonang, dan kendang. Di Dusun Gebang, karawitan menjadi salah satu bentuk kesenian yang masih aktif dilestarikan oleh masyarakat, baik dalam kegiatan adat, keagamaan, maupun hiburan. Pertunjukan karawitan sering mengiringi acara seperti wayang kulit, pernikahan, mitoni, khitanan, dan selamatan. Alunan gamelan yang lembut dan harmonis menciptakan suasana sakral dan khidmat, sekaligus menyampaikan nilai-nilai filosofi Jawa yang dalam.`,
+    summary: `Karawitan adalah seni musik tradisional Jawa yang dimainkan menggunakan seperangkat alat musik gamelan, seperti gong, kenong, saron, bonang, dan kendang. Di Padukuhan Gebang, karawitan menjadi salah satu bentuk kesenian yang masih aktif dilestarikan oleh masyarakat, baik dalam kegiatan adat, keagamaan, maupun hiburan. Pertunjukan karawitan sering mengiringi acara seperti wayang kulit, pernikahan, mitoni, khitanan, dan selamatan. Alunan gamelan yang lembut dan harmonis menciptakan suasana sakral dan khidmat, sekaligus menyampaikan nilai-nilai filosofi Jawa yang dalam.`,
     thumbnail: "/img/dokumentasi/karawitan.jpeg",
   },
   {

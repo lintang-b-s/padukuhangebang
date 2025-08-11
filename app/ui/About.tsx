@@ -73,7 +73,9 @@ function About() {
           </div>
 
           <div className="flex flex-col gap-10 items-start  lg:ml-0 ">
-            <h2 className="text-white!  font-bold">Peta Batas Dusun Gebang</h2>
+            <h2 className="text-white!  font-bold">
+              Peta Batas Padukuhan Gebang
+            </h2>
             <div className="grid grid-cols-2 gap-8 ">
               <div className="flex flex-col gap-2 items-start ">
                 <div className="flex flex-row gap-2 items-center">
@@ -116,17 +118,18 @@ function About() {
         />
 
         <div className="text-left lg:text-left ">
-          <h2 className="pb-4 font-bold">Mengenal Dusun Gebang</h2>
+          <h2 className="pb-4 font-bold">Mengenal Padukuhan Gebang</h2>
 
           <p className="lg:text-xl text-wrap pr-2">
-            Dalam pembagian administratifnya Dusun Gebang terbagi menjadi 4 RT
-            yaitu : RT 16 (Kayutowo) RT 17 (Gebang) dan RT 18 RT 19 (Sidowayah)
+            Dalam pembagian administratifnya Padukuhan Gebang terbagi menjadi 4
+            RT yaitu : RT 16 (Kayutowo) RT 17 (Gebang) dan RT 18 RT 19
+            (Sidowayah)
           </p>
           <br />
           <p className="lg:text-xl">
-            Wilayah Dusun Gebang didominasi oleh lahan pertanian dan perbukitan,
-            dengan vegetasi khas daerah karst yang subur dan potensi alam yang
-            melimpah.
+            Wilayah Padukuhan Gebang didominasi oleh lahan pertanian dan
+            perbukitan, dengan vegetasi khas daerah karst yang subur dan potensi
+            alam yang melimpah.
           </p>
 
           <div className="grid grid-cols-2 gap-x-2 mx-auto mt-4 pr-12 gap-y-2">
@@ -349,7 +352,7 @@ function About() {
           </h2>
 
           <p className="lg:text-xl text-wrap pr-2">
-            Dusun Gebang tak hanya menyuguhkan keindahan alam, tetapi juga
+            Padukuhan Gebang tak hanya menyuguhkan keindahan alam, tetapi juga
             kekayaan budaya yang kental dan masih lestari hingga kini.
             Masyarakat masih aktif melestarikan berbagai tradisi dan kesenian
             lokal seperti Jathilan, Tari Klasik Jawa, dan ritual-ritual adat
@@ -359,7 +362,7 @@ function About() {
           </p>
           <br />
           <p className="lg:text-xl text-wrap pr-2">
-            Di sekitar Dusun Gebang, terdapat pula berbagai destinasi wisata
+            Di sekitar Padukuhan Gebang, terdapat pula berbagai destinasi wisata
             yang mudah dijangkau dan sangat menarik untuk dikunjungi.
             Pantai-pantai eksotis seperti Pantai Ngeden, Pantai Nglorong, dan
             Pantai Widodaren menawarkan panorama alam yang menakjubkan, cocok

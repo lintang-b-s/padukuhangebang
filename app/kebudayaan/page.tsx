@@ -35,7 +35,7 @@ function Culture() {
       <div className="mt-4 pr-4 py-1 container ">
         <div className="py-2">
           <p className="text-xl font-semibold ">
-            Dusun Gebang, yang terletak di wilayah Saptosari, Gunungkidul,
+            Padukuhan Gebang, yang terletak di wilayah Saptosari, Gunungkidul,
             menyimpan kekayaan budaya dan tradisi yang menjadi cerminan
             identitas masyarakatnya. Setiap ritus dan kesenian yang dijalankan
             merupakan warisan leluhur yang terus dijaga lintas generasi—bukan

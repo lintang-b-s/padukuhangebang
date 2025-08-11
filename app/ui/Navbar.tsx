@@ -42,7 +42,7 @@ function Navbar() {
                 scrolled ? "!text-[#304F47]" : "!text-[#304F47] lg:!text-white"
               } `}
             >
-              Dusun Gebang
+              Padukuhan Gebang
             </span>
             <span
               className={`text-md  ${
@@ -98,7 +98,7 @@ function Navbar() {
               after:transition-[width] after:duration-300 after:absolute after:left-0 after:bottom-[-8px] 
              active:after:w-[70%] "
               >
-                Berita Dusun
+                Berita Padukuhan
               </a>
             </li>
 
@@ -194,7 +194,7 @@ function Navbar() {
                  lg:hover:text-gray-300   after:transition-all after:duration-300 after:absolute after:left-0 after:bottom-[-8px] 
              hover:after:w-[90%] `}
               >
-                Berita Dusun
+                Berita Padukuhan
               </a>
             </li>
 

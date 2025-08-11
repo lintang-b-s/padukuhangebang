@@ -101,7 +101,7 @@ const chartConfig = {
 const pejabats = [
   {
     nama: "Hendra Wijaya",
-    jabatan: "Kepala Dusun",
+    jabatan: "Kepala Padukuhan",
   },
   {
     nama: "Nursinta Hanafi",
@@ -166,7 +166,7 @@ const profesiChartConfig = {
   },
 } satisfies ChartConfig;
 
-function TabelOrganisasiDusun() {
+function TabelOrganisasiPadukuhan() {
   return (
     <Table>
       <TableHeader>
@@ -218,7 +218,7 @@ function About() {
               -translate-y-[50%] text-center leading-[1.2] !text-headerOne
               !text-white text-shadow-headerOne font-semibold"
           >
-            Profil Dusun
+            Profil Padukuhan
           </h1>
         </div>
       </div>
@@ -259,7 +259,7 @@ function About() {
           </div>
         </div>
         <div className="relative mt-20 pr-5 md:pr-0 ">
-          <h2 className="font-bold">Struktur Organisasi Dusun</h2>
+          <h2 className="font-bold">Struktur Organisasi Padukuhan</h2>
 
           <div className="flex flex-col items-center gap-6 mt-12">
             <div className="relative w-full max-w-[400px] md:max-w-[800px] h-[200px] md:h-[400px] lg:h-[600px] flex-shrink-0 cursor-pointer mt-6">
@@ -270,7 +270,7 @@ function About() {
               />
             </div>
 
-            <TabelOrganisasiDusun />
+            <TabelOrganisasiPadukuhan />
           </div>
         </div>
 
@@ -419,7 +419,7 @@ function About() {
           alt="motif walang"
           src={"/img/element/stroke-motif-walang.png"}
         />
-        <h2 className="font-bold mt-12">Peta Dusun</h2>
+        <h2 className="font-bold mt-12">Peta Padukuhan</h2>
         <div className="w-[90%] lg:w-[80vw] h-[50vh] md:h-[70vh] mt-4">
           <Map
             {...viewState}
