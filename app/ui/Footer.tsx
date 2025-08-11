@@ -5,12 +5,12 @@ import { FaInstagram, FaTiktok } from "react-icons/fa";
 const footerLinks = [
   {
     name: "Instagram",
-    link: "https://www.instagram.com",
+    link: "https://www.instagram.com/saptosari.berseri",
     icon: <FaInstagram size={40} color="#77797B" />,
   },
   {
     name: "TikTok",
-    link: "https://www.tiktok.com",
+    link: "https://www.tiktok.com/@saptosari.berseri",
     icon: <FaTiktok size={40} color="#77797B" />,
   },
 ];
@@ -33,8 +33,8 @@ function Footer() {
                 Alamat
               </span>
               <span className="text-start text-lg text-[#77797B]  ">
-                Padukuhan Gebang, Kalurahan Ngloro, Kecamatan Saptosari, Kabupaten Gunungkidul, Daerah Istimewa
-                Yogyakarta
+                Padukuhan Gebang, Kalurahan Ngloro, Kecamatan Saptosari,
+                Kabupaten Gunungkidul, Daerah Istimewa Yogyakarta
               </span>
             </div>
 

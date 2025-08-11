@@ -1,10 +1,22 @@
 "use client";
+import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import { IoClose, IoMenu } from "react-icons/io5";
 
 function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
+  const scrollEffectPaths = [
+    "/",
+    "/umkm",
+    "/artikel",
+    "/profil",
+    "/kebudayaan",
+    "/galeri",
+  ];
+
+  const enableScrollEffect = scrollEffectPaths.includes(pathname);
 
   useEffect(() => {
     const onScroll = () => {
@@ -18,8 +30,10 @@ function Navbar() {
 
   return (
     <header
-      className={`fixed w-full  duration-300 ${
-        scrolled ? "bg-white  shadow-md" : "bg-white lg:bg-white/0"
+      className={`fixed w-full ${
+        !enableScrollEffect ? "duration-0 shadow-md" : "duration-300"
+      } ${
+        scrolled ? "bg-white  shadow-md" : `bg-white lg:bg-white/0`
       }  top-0 z-[85]`}
     >
       <nav
@@ -38,22 +52,37 @@ function Navbar() {
           />
           <div className="flex flex-col">
             <span
-              className={`text-xl font-bold  ${
-                scrolled ? "!text-[#304F47]" : "!text-[#304F47] lg:!text-white"
-              } `}
+              className={`text-xl font-bold ${
+                enableScrollEffect &&
+                `${
+                  scrolled
+                    ? "!text-[#304F47]"
+                    : "!text-[#304F47] lg:!text-white"
+                }`
+              } !text-[#304F47]`}
             >
               Padukuhan Gebang
             </span>
             <span
               className={`text-md  ${
-                scrolled ? "!text-[#304F47]" : "!text-[#304F47] lg:!text-white"
+                enableScrollEffect &&
+                `${
+                  scrolled
+                    ? "!text-[#304F47]"
+                    : "!text-[#304F47] lg:!text-white"
+                }`
               } `}
             >
               Kal. Ngloro, Kec. Saptosari
             </span>
             <span
               className={`text-md  ${
-                scrolled ? "!text-[#304F47]" : "!text-[#304F47] lg:!text-white"
+                enableScrollEffect &&
+                `${
+                  scrolled
+                    ? "!text-[#304F47]"
+                    : "!text-[#304F47] lg:!text-white"
+                }`
               } `}
             >
               Kabupaten Gunung Kidul
@@ -163,8 +192,9 @@ function Navbar() {
               <a
                 href="/"
                 className={`relative ${
-                  scrolled ? "text-[#304F47]" : "text-white"
-                } font-medium after:w-0 after:h-[3px] after:bg-[#304F47] hover:text-[#304F47]/70 
+                  enableScrollEffect &&
+                  `${scrolled ? "text-[#304F47]" : "text-white"}`
+                }  text-[#304F47] font-medium after:w-0 after:h-[3px] after:bg-[#304F47] hover:text-[#304F47]/70 
                  lg:hover:text-gray-300   after:transition-all after:duration-300 after:absolute after:left-0 after:bottom-[-8px] 
              hover:after:w-[90%] `}
               >
@@ -176,8 +206,9 @@ function Navbar() {
               <a
                 href="/profil"
                 className={`relative ${
-                  scrolled ? "text-[#304F47]" : "text-white"
-                } font-medium after:w-0 after:h-[3px] after:bg-[#304F47] hover:text-[#304F47]/70 
+                  enableScrollEffect &&
+                  `${scrolled ? "text-[#304F47]" : "text-white"}`
+                }  text-[#304F47] font-medium after:w-0 after:h-[3px] after:bg-[#304F47] hover:text-[#304F47]/70 
                  lg:hover:text-gray-300   after:transition-all after:duration-300 after:absolute after:left-0 after:bottom-[-8px] 
              hover:after:w-[90%] `}
               >
@@ -189,8 +220,9 @@ function Navbar() {
               <a
                 href="/artikel"
                 className={`relative ${
-                  scrolled ? "text-[#304F47]" : "text-white"
-                } font-medium after:w-0 after:h-[3px] after:bg-[#304F47] hover:text-[#304F47]/70 
+                  enableScrollEffect &&
+                  `${scrolled ? "text-[#304F47]" : "text-white"}`
+                }  text-[#304F47] font-medium after:w-0 after:h-[3px] after:bg-[#304F47] hover:text-[#304F47]/70 
                  lg:hover:text-gray-300   after:transition-all after:duration-300 after:absolute after:left-0 after:bottom-[-8px] 
              hover:after:w-[90%] `}
               >
@@ -202,8 +234,9 @@ function Navbar() {
               <a
                 href="/kebudayaan"
                 className={`relative ${
-                  scrolled ? "text-[#304F47]" : "text-white"
-                } font-medium after:w-0 after:h-[3px] after:bg-[#304F47] hover:text-[#304F47]/70 
+                  enableScrollEffect &&
+                  `${scrolled ? "text-[#304F47]" : "text-white"}`
+                }  text-[#304F47] font-medium after:w-0 after:h-[3px] after:bg-[#304F47] hover:text-[#304F47]/70 
                  lg:hover:text-gray-300   after:transition-all after:duration-300 after:absolute after:left-0 after:bottom-[-8px] 
              hover:after:w-[90%] `}
               >
@@ -214,8 +247,9 @@ function Navbar() {
               <a
                 href="/umkm"
                 className={`relative ${
-                  scrolled ? "text-[#304F47]" : "text-white"
-                } font-medium after:w-0 after:h-[3px] after:bg-[#304F47] hover:text-[#304F47]/70 
+                  enableScrollEffect &&
+                  `${scrolled ? "text-[#304F47]" : "text-white"}`
+                }  text-[#304F47] font-medium after:w-0 after:h-[3px] after:bg-[#304F47] hover:text-[#304F47]/70 
                  lg:hover:text-gray-300   after:transition-all after:duration-300 after:absolute after:left-0 after:bottom-[-8px] 
              hover:after:w-[90%] `}
               >
@@ -227,8 +261,9 @@ function Navbar() {
               <a
                 href="/destinations"
                 className={`relative ${
-                  scrolled ? "text-[#304F47]" : "text-white"
-                } font-medium after:w-0 after:h-[3px] after:bg-[#304F47] hover:text-[#304F47]/70 
+                  enableScrollEffect &&
+                  `${scrolled ? "text-[#304F47]" : "text-white"}`
+                }  text-[#304F47] font-medium after:w-0 after:h-[3px] after:bg-[#304F47] hover:text-[#304F47]/70 
                  lg:hover:text-gray-300   after:transition-all after:duration-300 after:absolute after:left-0 after:bottom-[-8px] 
              hover:after:w-[90%] `}
               >
@@ -240,8 +275,9 @@ function Navbar() {
               <a
                 href="/booklet"
                 className={`relative ${
-                  scrolled ? "text-[#304F47]" : "text-white"
-                } font-medium after:w-0 after:h-[3px] after:bg-[#304F47] hover:text-[#304F47]/70 
+                  enableScrollEffect &&
+                  `${scrolled ? "text-[#304F47]" : "text-white"}`
+                }  text-[#304F47] font-medium after:w-0 after:h-[3px] after:bg-[#304F47] hover:text-[#304F47]/70 
                  lg:hover:text-gray-300   after:transition-all after:duration-300 after:absolute after:left-0 after:bottom-[-8px] 
              hover:after:w-[90%] `}
               >
@@ -253,8 +289,9 @@ function Navbar() {
               <a
                 href="/galeri"
                 className={`relative ${
-                  scrolled ? "text-[#304F47]" : "text-white"
-                } font-medium after:w-0 after:h-[3px] after:bg-[#304F47] hover:text-[#304F47]/70 
+                  enableScrollEffect &&
+                  `${scrolled ? "text-[#304F47]" : "text-white"}`
+                }  text-[#304F47] font-medium after:w-0 after:h-[3px] after:bg-[#304F47] hover:text-[#304F47]/70 
                  lg:hover:text-gray-300   after:transition-all after:duration-300 after:absolute after:left-0 after:bottom-[-8px] 
              hover:after:w-[90%] `}
               >

@@ -76,8 +76,6 @@ function Hero() {
 
   return (
     <section className="relative h-dvh w-screen overflow-hidden ">
-      {/* <div className="absolute inset-0 bg-gradient-to-b from-black/10  to-black/10  z-[10]" /> */}
-
       <div className={`relative h-full w-full`}>
         {heroImages.map((image, index) => {
           let animate = "";

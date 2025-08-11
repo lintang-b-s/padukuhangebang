@@ -72,20 +72,23 @@ function Articles() {
     <div className="relative w-full min-h-screen overflow-hidden">
       <Navbar />
       <div className="relative h-dvh w-full overflow-hidden ">
-        <div className="relative h-full w-full ">
-          <Image
-            src={"/img/dokumentasi/article.jpg"}
-            fill
-            alt="galeri"
-            className=" object-cover"
-          />
-
+        <div
+          style={
+            {
+              backgroundImage: `linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(/img/dokumentasi/article.jpg)`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            } as React.CSSProperties
+          }
+          className={`relative h-dvh w-full overflow-hidden 
+              bg-cover bg-center `}
+        >
           <h1
             className="absolute left-[50%] top-[50%] -translate-x-[50%]
                           -translate-y-[50%] text-center leading-[1.2] !text-headerOne 
                         !text-white  text-shadow-headerOne font-semibold"
           >
-            Articles
+            Berita Padukuhan
           </h1>
         </div>
       </div>
