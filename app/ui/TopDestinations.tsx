@@ -16,7 +16,10 @@ function TopDestinations() {
     fetchDestinations().then((data) => {
       const currentDestinations = data.slice(0, 8).map((destination) => {
         let updatedDestination = destination;
-        if (destination.thumbnail.startsWith("img/") ||destination.thumbnail.startsWith("images/")) {
+        if (
+          destination.thumbnail.startsWith("img/") ||
+          destination.thumbnail.startsWith("images/")
+        ) {
           updatedDestination = {
             ...destination,
             thumbnail: storageImageURL(destination.thumbnail),
@@ -44,7 +47,7 @@ function TopDestinations() {
           href="/destinations"
         >
           <span className="!text-[#F3C725] hover:text-[#dfc979] text-lg">
-            Learn more
+            Tampilkan semua
           </span>
           <FaArrowRight
             color="#F3C725"

@@ -32,7 +32,10 @@ function RecentArticles() {
 
       const currentSortedArticles = sortedArticles.map((article) => {
         let updatedArticle = article;
-        if (article.thumbnail.startsWith("img/") ||  article.thumbnail.startsWith("images/")) {
+        if (
+          article.thumbnail.startsWith("img/") ||
+          article.thumbnail.startsWith("images/")
+        ) {
           updatedArticle = {
             ...article,
             thumbnail: storageImageURL(article.thumbnail),
@@ -55,7 +58,7 @@ function RecentArticles() {
         href={`/artikel`}
       >
         <span className="!text-[#F3C725] hover:text-[#dfc979] text-lg">
-          Show all
+          Tampilkan semua
         </span>
         <FaArrowRight
           color="#F3C725"

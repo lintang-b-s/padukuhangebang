@@ -9,10 +9,18 @@ import Events from "./ui/Events";
 import AboutGallery from "./ui/AboutGallery";
 import RecentArticles from "./ui/RecentArticle";
 import { Worker } from "@react-pdf-viewer/core";
+import Head from "next/head";
 
 export default function Home() {
   return (
     <div className="relative min-h-screen w-screen overflow-x-hidden">
+      <Head>
+        <link
+          rel="canonical"
+          href="https://www.padukuhangebang.com/"
+          key="canonical"
+        />
+      </Head>
       <Navbar />
       <Hero />
       <div className="flex flex-col space-y-2  ">

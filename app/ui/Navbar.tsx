@@ -51,6 +51,7 @@ function Navbar() {
             src={"/img/gebang.svg"}
             className="rounded-full w-[65px] h-[65px] lg:w-[75px] lg:h-[75px] 
              lg:pl-0"
+            alt="Logo Padukuhan Gebang"
           />
           <div className="flex flex-col">
             <span

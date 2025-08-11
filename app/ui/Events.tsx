@@ -73,7 +73,7 @@ function Events() {
         href={`/events`}
       >
         <span className="!text-[#F3C725] hover:text-[#dfc979] text-lg">
-          Show all
+          Tampilkan semua
         </span>
         <FaArrowRight
           color="#F3C725"
