@@ -83,10 +83,10 @@ function UMKMS() {
       >
         <h1 className="!text-[#272726] font-semibold leading-[1.2]">UMKM</h1>
 
-        <div className="mt-4  ">
+        <div className="mt-4">
           <div className="w-screen h-[1px] bg-[#dbd9d2] relative left-1/2 -ml-[50vw] "></div>
 
-          <div className=" mt-4 flex flex-row justify-between items-center">
+          <div className="mt-4 flex flex-row justify-between items-center">
             <div>
               <span className="font-bold !text-[#F3C725] ">
                 {dataUMKMUnggulan.length}

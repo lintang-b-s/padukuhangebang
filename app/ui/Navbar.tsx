@@ -30,11 +30,13 @@ function Navbar() {
 
   return (
     <header
-      className={`fixed w-full ${
+      className={`fixed w-full bg-white top-0 z-[85] ${
         !enableScrollEffect ? "duration-0 shadow-md" : "duration-300"
       } ${
-        scrolled ? "bg-white  shadow-md" : `bg-white lg:bg-white/0`
-      }  top-0 z-[85]`}
+        enableScrollEffect
+          ? `${scrolled ? "bg-white  shadow-md" : `bg-white lg:bg-white/0`}  `
+          : ``
+      } `}
     >
       <nav
         className=" h-[80px] lg:h-[95px] w-full flex flex-row
