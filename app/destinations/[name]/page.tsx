@@ -131,7 +131,10 @@ function DestinationPage() {
       let destData = foundData.find(
         (dest) => dest.name === name.replaceAll("%20", " ")
       );
-      if (destData?.thumbnail.startsWith("img/") || destData?.thumbnail.startsWith("images/")) {
+      if (
+        destData?.thumbnail.startsWith("img/") ||
+        destData?.thumbnail.startsWith("images/")
+      ) {
         destData = {
           ...destData,
           thumbnail: storageImageURL(destData?.thumbnail),
@@ -271,13 +274,13 @@ function DestinationPage() {
             >
               <TiContacts size={24} />
               <span className="!text[#272726] font-semibold text-sm ">
-                Contact
+                Kontak
               </span>
             </div>
           </div>
           {/* modal dari map & contact */}
           <div
-            className={`flex flex-col gap-1 mt-2 w-[10vw] items-start justify-center py-3 px-8 rounded-lg bg-[#F0EFEB]
+            className={`flex flex-col gap-1 mt-2 w-[90vw] items-start justify-center py-3 px-8 rounded-lg bg-[#F0EFEB]
         z-1 absolute  ${
           modalDetailType == "contact"
             ? `animate-open-modal origin-top`
