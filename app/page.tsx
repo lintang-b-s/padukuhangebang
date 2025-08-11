@@ -12,7 +12,7 @@ import { Worker } from "@react-pdf-viewer/core";
 
 export default function Home() {
   return (
-    <main className="font-[family-name:var(--font-mulish-sans)] relative min-h-screen w-screen overflow-x-hidden">
+    <div className="relative min-h-screen w-screen overflow-x-hidden">
       <Navbar />
       <Hero />
       <div className="flex flex-col space-y-2  ">
@@ -29,6 +29,6 @@ export default function Home() {
       </div>
 
       <Footer />
-    </main>
+    </div>
   );
 }

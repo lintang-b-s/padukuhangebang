@@ -16,8 +16,6 @@
   --h3-font-family: var(--font-lora-serif);
   --h3-font-color: #000000;
 
-  --body-font: "Poppins", sans-serif;
-
   --radius: 0.625rem;
 
   --card: oklch(1 0 0);
@@ -144,8 +142,6 @@
 
 .container {
   max-width: 1120px;
-  /* margin-left: 0.4rem;
-  margin-right: 0.4rem; */
   margin-inline: 0.4rem;
 }
 
@@ -157,7 +153,7 @@
 }
 
 body {
-  font-family: var(--body-font);
+  font-family: var(--font-sans);
   overflow-x: hidden;
   margin: 0;
   padding: 0;
@@ -573,5 +569,5 @@ span {
 
 .video-js.vjs-white-theme {
   border-radius: 4px;
-  overflow: hidden; 
+  overflow: hidden;
 }

@@ -32,8 +32,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${mulish.variable} ${lora.variable} antialiased`}>
-        {children}
+      <body className={`${mulish.variable} ${lora.variable}  antialiased`}>
+        <main className="font-[family-name:var(--font-mulish-sans)] ">
+          {children}
+        </main>
       </body>
     </html>
   );

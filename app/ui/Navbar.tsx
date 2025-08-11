@@ -93,9 +93,9 @@ function Navbar() {
         </a>
 
         <div
-          className={`w-full lg:max-w-[800px]  lg:left-[94%] lg:-translate-x-[94%] xl:left-1/2 xl:-translate-x-1/2 lg:top-10 px-[12px] fixed pb-12 pt-4 bg-white md:bg-transparent
-             lg:py-0 transition-[top] duration-150  ${
-               showMenu ? "top-0" : "top-[-100%]  "
+          className={`w-full lg:max-w-[800px] lg:left-[94%] lg:-translate-x-[94%] xl:left-1/2 xl:-translate-x-1/2 lg:top-10 px-[12px] fixed pb-12 pt-4
+             bg-white md:bg-transparent lg:py-0 transition-[top] duration-150  ${
+               showMenu ? "top-0" : "top-[-100%]"
              }`}
         >
           {/* mobile */}
@@ -240,7 +240,7 @@ function Navbar() {
           </ul>
 
           {/* desktop */}
-          <ul className="hidden lg:flex lg:flex-row lg:gap-[30px] z-[85]">
+          <ul className="hidden lg:flex lg:flex-row lg:gap-[30px] xl:gap-[25px] z-[85]">
             <li className="">
               <a
                 href="/"
