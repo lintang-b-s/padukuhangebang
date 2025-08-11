@@ -15,10 +15,10 @@ function Maps(props: MapsProps) {
     latitude: centerLatitude,
     zoom: 13,
   });
-  
+
   const [popupData, setPopupData] = React.useState<ObjectLocation | undefined>(
     undefined
-);
+  );
   return (
     <Map
       {...viewState}
@@ -46,7 +46,6 @@ function Maps(props: MapsProps) {
               style={{ textDecoration: "none", border: "none" }}
               href={`${popupData.hrefLink}`}
             >
-
               <div className="relative md:max-w-24 w-full md:h-24 ">
                 <Image
                   src={popupData.thumbnail!}

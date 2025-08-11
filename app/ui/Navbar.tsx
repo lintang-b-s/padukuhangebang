@@ -42,13 +42,13 @@ function Navbar() {
       >
         <a
           href="/"
-          className="px-[12px] absolute xl:left-10 flex-shrink-0
+          className="px-[12px] absolute left-4 xl:left-10 flex-shrink-0
            flex flex-row items-center space-x-3 "
         >
           <img
             src={"/img/gebang.svg"}
             className="rounded-full w-[65px] h-[65px] lg:w-[75px] lg:h-[75px] 
-            pl-3 lg:pl-0"
+             lg:pl-0"
           />
           <div className="flex flex-col">
             <span
@@ -91,13 +91,64 @@ function Navbar() {
         </a>
 
         <div
-          className={`w-full lg:max-w-[800px]  lg:left-[94%] lg:-translate-x-[94%] xl:left-1/2 xl:-translate-x-1/2 lg:top-10 px-[12px] fixed py-12 bg-white md:bg-transparent
+          className={`w-full lg:max-w-[800px]  lg:left-[94%] lg:-translate-x-[94%] xl:left-1/2 xl:-translate-x-1/2 lg:top-10 px-[12px] fixed pb-12 pt-4 bg-white md:bg-transparent
              lg:py-0 transition-[top] duration-150  ${
                showMenu ? "top-0" : "top-[-100%]  "
              }`}
         >
           {/* mobile */}
           <ul className="text-center flex flex-col gap-4 lg:hidden">
+            <li>
+              <a
+                href="/"
+                className="px-[12px] left-4 xl:left-10 flex-shrink-0
+           flex flex-row items-center space-x-3 "
+              >
+                <img
+                  src={"/img/gebang.svg"}
+                  className="rounded-full w-[65px] h-[65px] lg:w-[75px] lg:h-[75px] 
+             lg:pl-0"
+                />
+                <div className="flex flex-col">
+                  <span
+                    className={`text-xl font-bold ${
+                      enableScrollEffect &&
+                      `${
+                        scrolled
+                          ? "!text-[#304F47]"
+                          : "!text-[#304F47] lg:!text-white"
+                      }`
+                    } !text-[#304F47]`}
+                  >
+                    Padukuhan Gebang
+                  </span>
+                  <span
+                    className={`text-md  ${
+                      enableScrollEffect &&
+                      `${
+                        scrolled
+                          ? "!text-[#304F47]"
+                          : "!text-[#304F47] lg:!text-white"
+                      }`
+                    } `}
+                  >
+                    Kal. Ngloro, Kec. Saptosari
+                  </span>
+                  <span
+                    className={`text-md  ${
+                      enableScrollEffect &&
+                      `${
+                        scrolled
+                          ? "!text-[#304F47]"
+                          : "!text-[#304F47] lg:!text-white"
+                      }`
+                    } `}
+                  >
+                    Kabupaten Gunung Kidul
+                  </span>
+                </div>
+              </a>
+            </li>
             <li className="">
               <a
                 href="/"
