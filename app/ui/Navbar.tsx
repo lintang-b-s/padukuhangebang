@@ -44,7 +44,7 @@ function Navbar() {
       >
         <a
           href="/"
-          className="px-[12px] absolute left-4 xl:left-10 flex-shrink-0
+          className="px-[12px] absolute left-6 xl:left-10 lg:flex-shrink-0
            flex flex-row items-center space-x-3 "
         >
           <img
@@ -364,7 +364,7 @@ function Navbar() {
         </div>
 
         <div
-          className="flex cursor-pointer text-[20px] lg:hidden ml-1"
+          className="flex cursor-pointer text-[20px] lg:hidden ml-2"
           onClick={() => {
             setShowMenu(true);
           }}
