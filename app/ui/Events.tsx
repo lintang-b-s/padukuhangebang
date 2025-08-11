@@ -67,7 +67,7 @@ function Events() {
 
   return (
     <div className="flex flex-col gap-y-4 pl-1 pr-6 pt-4 container  ">
-      <h2 className="hyphens-auto font-bold">Kegiatan Desa</h2>
+      <h2 className="hyphens-auto font-bold">Agenda Desa</h2>
       <a
         className="group cursor-pointer flex items-center  gap-x-2"
         href={`/events`}

@@ -146,8 +146,8 @@ function EventList() {
           showMap ? `hidden` : `block`
         }`}
       >
-        <h1 className="!text-[#272726] font-semibold leading-[1.2]">
-          Kegiatan Desa
+        <h1 className="!text-[#272726] font-bold leading-[1.2]">
+          Agenda Desa
         </h1>
         <div className="w-screen h-[1px] bg-[#dbd9d2] relative left-1/2 -ml-[50vw] mt-4 "></div>
 
