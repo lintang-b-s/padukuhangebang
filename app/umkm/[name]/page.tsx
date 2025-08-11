@@ -648,7 +648,7 @@ function UMKMDetail() {
                   </a>
                 </div>
                 <a
-                  className="group cursor-pointer items-center  gap-x-2 flex mb-2"
+                  className="group cursor-pointer items-center  gap-x-2 flex mb-2 lg:hidden"
                   href={data?.googleMapsLink!}
                 >
                   <span className="!text-[#F3C725] hover:text-[#dfc979] text-lg">
