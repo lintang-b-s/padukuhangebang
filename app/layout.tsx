@@ -13,7 +13,7 @@ const lora = Lora({
 });
 
 export const metadata: Metadata = {
-  title: "Padukuhan Gebang",
+  title: "Padukuhan Gebang - Website Resmi | Informasi, Potensi & Pemerintahan",
   description:
     "Padukuhan Gebang, Kalurahan Ngloro, Kecamatan Saptosari, Kabupaten Gunungkidul",
   icons: {

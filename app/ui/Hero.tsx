@@ -76,34 +76,32 @@ function Hero() {
 
   return (
     <section className="relative h-dvh w-screen overflow-hidden ">
+      {/* <div className="absolute inset-0 bg-gradient-to-b from-black/10  to-black/10  z-[10]" /> */}
+
       <div className={`relative h-full w-full`}>
         {heroImages.map((image, index) => {
           let animate = "";
           if (index === currentIndex) {
             animate += "z-2 animate-slider-in active";
           } else if (index === prevIndex) {
-            animate += "z-1 animate-slider-out";
+            animate += "z-1 animate-slider-out ";
           } else {
-            animate += "z-0";
+            animate += "z-0 opacity-0";
           }
           return (
             <div
               key={index}
               style={
                 {
-                  "--transform": `${slideType === "next" ? "100%" : "-100%"}`,
+                  "--transform": slideType === "next" ? "100%" : "-100%",
+                  backgroundImage: `linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(${image.src})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
                 } as React.CSSProperties
               }
-              className={`absolute w-full h-full item ${animate} `}
+              className={`absolute w-full h-full item ${animate} 
+              bg-cover bg-center `}
             >
-              <Image
-                src={image.src}
-                width={1200}
-                height={150}
-                alt={image.alt}
-                className="size-full absolute object-cover"
-              />
-
               <div
                 className="relative max-w-[669px] top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] 
          lg:translate-x-0 lg:translate-y-0 lg:top-[200px] lg:left-[136px]  animate-text  px-8"
