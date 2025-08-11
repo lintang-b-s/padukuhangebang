@@ -1,3 +1,4 @@
+commit: git@github.com:lintangbs2/dusungebang.git, https://github.com/lintangbs2/ngloro-4-berseri
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
