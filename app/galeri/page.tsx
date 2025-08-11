@@ -9,7 +9,7 @@ import "react-image-gallery/styles/css/image-gallery.css";
 import { ActivityGallery, ImageModal } from "@/type/type";
 import { IoIosClose } from "react-icons/io";
 import Footer from "../ui/Footer";
-import { fetchEvents, storageImageURL } from "@/lib/api";
+import { fetchArticles, fetchEvents, storageImageURL } from "@/lib/api";
 import { Skeleton } from "@/components/ui/skeleton";
 import ReactPaginate from "react-paginate";
 
@@ -34,7 +34,7 @@ function Galeri() {
   };
 
   useEffect(() => {
-    fetchEvents().then((data) => {
+    fetchArticles().then((data) => {
       setPageCount(Math.ceil(data.length / itemsPerPage));
       setItemCount(data.length);
       const endOffset = itemOffset + itemsPerPage;
@@ -42,16 +42,14 @@ function Galeri() {
       for (let item of data) {
         let currentItemImages = [];
         for (let curImage of item!.images!) {
-          currentItemImages.push(
-             storageImageURL(curImage) 
-          );
+          currentItemImages.push(storageImageURL(curImage));
         }
         if (currentItemImages.length === 0) {
           console.log("item: ", item, " skipped...");
           continue;
         }
         galleryItems.push({
-          name: item.name,
+          name: item.title,
           images: currentItemImages,
         });
       }

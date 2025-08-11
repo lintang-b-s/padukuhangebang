@@ -72,7 +72,7 @@ function Navbar() {
             <li className="">
               <a
                 href="/"
-                className="relative text-[#304F47] after:w-0 after:h-[2px] after:bg-[#304F47] 
+                className="relative text-[#304F47] after:w-0 after:h-[2px] after:bg-[#304F47]  
               after:transition-[width] after:duration-300 after:absolute after:left-0 after:bottom-[-8px] 
              active:after:w-[70%] "
               >
@@ -83,7 +83,7 @@ function Navbar() {
             <li>
               <a
                 href="/profil"
-                className="relative text-[#304F47] after:w-0 after:h-[2px] after:bg-[#304F47] 
+                className="relative text-[#304F47] after:w-0 after:h-[2px] after:bg-[#304F47]  
               after:transition-[width] after:duration-300 after:absolute after:left-0 after:bottom-[-8px] 
              active:after:w-[70%] "
               >
@@ -94,7 +94,7 @@ function Navbar() {
             <li>
               <a
                 href="/artikel"
-                className="relative text-[#304F47] after:w-0 after:h-[2px] after:bg-[#304F47] 
+                className="relative text-[#304F47] after:w-0 after:h-[2px] after:bg-[#304F47]  
               after:transition-[width] after:duration-300 after:absolute after:left-0 after:bottom-[-8px] 
              active:after:w-[70%] "
               >
@@ -105,7 +105,7 @@ function Navbar() {
             <li>
               <a
                 href="/kebudayaan"
-                className="relative text-[#304F47] after:w-0 after:h-[2px] after:bg-[#304F47] 
+                className="relative text-[#304F47] after:w-0 after:h-[2px] after:bg-[#304F47]  
               after:transition-[width] after:duration-300 after:absolute after:left-0 after:bottom-[-8px] 
              active:after:w-[70%] "
               >
@@ -115,7 +115,7 @@ function Navbar() {
             <li>
               <a
                 href="/umkm"
-                className="relative text-[#304F47] after:w-0 after:h-[2px] after:bg-[#304F47] 
+                className="relative text-[#304F47] after:w-0 after:h-[2px] after:bg-[#304F47]  
               after:transition-[width] after:duration-300 after:absolute after:left-0 after:bottom-[-8px] 
              active:after:w-[70%] "
               >
@@ -126,7 +126,7 @@ function Navbar() {
             <li>
               <a
                 href="/destinations"
-                className="relative text-[#304F47] after:w-0 after:h-[2px] after:bg-[#304F47] 
+                className="relative text-[#304F47] after:w-0 after:h-[2px] after:bg-[#304F47]  
               after:transition-[width] after:duration-300 after:absolute after:left-0 after:bottom-[-8px] 
              active:after:w-[70%] "
               >
@@ -137,7 +137,7 @@ function Navbar() {
             <li>
               <a
                 href="/booklet"
-                className="relative text-[#304F47] after:w-0 after:h-[2px] after:bg-[#304F47] 
+                className="relative text-[#304F47] after:w-0 after:h-[2px] after:bg-[#304F47]  
               after:transition-[width] after:duration-300 after:absolute after:left-0 after:bottom-[-8px] 
              active:after:w-[70%] "
               >
@@ -148,7 +148,7 @@ function Navbar() {
             <li>
               <a
                 href="/galeri"
-                className="relative text-[#304F47] after:w-0 after:h-[2px] after:bg-[#304F47] 
+                className="relative text-[#304F47] after:w-0 after:h-[2px] after:bg-[#304F47]  
               after:transition-[width] after:duration-300 after:absolute after:left-0 after:bottom-[-8px] 
              active:after:w-[70%] "
               >
@@ -164,8 +164,8 @@ function Navbar() {
                 href="/"
                 className={`relative ${
                   scrolled ? "text-[#304F47]" : "text-white"
-                } font-medium after:w-0 after:h-[3px] after:bg-[#304F47] hover:text-[#304F47]/70
-              after:transition-all after:duration-300 after:absolute after:left-0 after:bottom-[-8px] 
+                } font-medium after:w-0 after:h-[3px] after:bg-[#304F47] hover:text-[#304F47]/70 
+                 lg:hover:text-gray-300   after:transition-all after:duration-300 after:absolute after:left-0 after:bottom-[-8px] 
              hover:after:w-[90%] `}
               >
                 Home
@@ -177,8 +177,8 @@ function Navbar() {
                 href="/profil"
                 className={`relative ${
                   scrolled ? "text-[#304F47]" : "text-white"
-                } font-medium after:w-0 after:h-[3px] after:bg-[#304F47] hover:text-[#304F47]/70
-              after:transition-all after:duration-300 after:absolute after:left-0 after:bottom-[-8px] 
+                } font-medium after:w-0 after:h-[3px] after:bg-[#304F47] hover:text-[#304F47]/70 
+                 lg:hover:text-gray-300   after:transition-all after:duration-300 after:absolute after:left-0 after:bottom-[-8px] 
              hover:after:w-[90%] `}
               >
                 Profil
@@ -190,8 +190,8 @@ function Navbar() {
                 href="/artikel"
                 className={`relative ${
                   scrolled ? "text-[#304F47]" : "text-white"
-                } font-medium after:w-0 after:h-[3px] after:bg-[#304F47] hover:text-[#304F47]/70
-              after:transition-all after:duration-300 after:absolute after:left-0 after:bottom-[-8px] 
+                } font-medium after:w-0 after:h-[3px] after:bg-[#304F47] hover:text-[#304F47]/70 
+                 lg:hover:text-gray-300   after:transition-all after:duration-300 after:absolute after:left-0 after:bottom-[-8px] 
              hover:after:w-[90%] `}
               >
                 Berita Dusun
@@ -203,8 +203,8 @@ function Navbar() {
                 href="/kebudayaan"
                 className={`relative ${
                   scrolled ? "text-[#304F47]" : "text-white"
-                } font-medium after:w-0 after:h-[3px] after:bg-[#304F47] hover:text-[#304F47]/70
-              after:transition-all after:duration-300 after:absolute after:left-0 after:bottom-[-8px] 
+                } font-medium after:w-0 after:h-[3px] after:bg-[#304F47] hover:text-[#304F47]/70 
+                 lg:hover:text-gray-300   after:transition-all after:duration-300 after:absolute after:left-0 after:bottom-[-8px] 
              hover:after:w-[90%] `}
               >
                 Kebudayaan
@@ -215,8 +215,8 @@ function Navbar() {
                 href="/umkm"
                 className={`relative ${
                   scrolled ? "text-[#304F47]" : "text-white"
-                } font-medium after:w-0 after:h-[3px] after:bg-[#304F47] hover:text-[#304F47]/70
-              after:transition-all after:duration-300 after:absolute after:left-0 after:bottom-[-8px] 
+                } font-medium after:w-0 after:h-[3px] after:bg-[#304F47] hover:text-[#304F47]/70 
+                 lg:hover:text-gray-300   after:transition-all after:duration-300 after:absolute after:left-0 after:bottom-[-8px] 
              hover:after:w-[90%] `}
               >
                 UMKM
@@ -228,8 +228,8 @@ function Navbar() {
                 href="/destinations"
                 className={`relative ${
                   scrolled ? "text-[#304F47]" : "text-white"
-                } font-medium after:w-0 after:h-[3px] after:bg-[#304F47] hover:text-[#304F47]/70
-              after:transition-all after:duration-300 after:absolute after:left-0 after:bottom-[-8px] 
+                } font-medium after:w-0 after:h-[3px] after:bg-[#304F47] hover:text-[#304F47]/70 
+                 lg:hover:text-gray-300   after:transition-all after:duration-300 after:absolute after:left-0 after:bottom-[-8px] 
              hover:after:w-[90%] `}
               >
                 Destinasi Wisata
@@ -241,8 +241,8 @@ function Navbar() {
                 href="/booklet"
                 className={`relative ${
                   scrolled ? "text-[#304F47]" : "text-white"
-                } font-medium after:w-0 after:h-[3px] after:bg-[#304F47] hover:text-[#304F47]/70
-              after:transition-all after:duration-300 after:absolute after:left-0 after:bottom-[-8px] 
+                } font-medium after:w-0 after:h-[3px] after:bg-[#304F47] hover:text-[#304F47]/70 
+                 lg:hover:text-gray-300   after:transition-all after:duration-300 after:absolute after:left-0 after:bottom-[-8px] 
              hover:after:w-[90%] `}
               >
                 Booklet
@@ -254,8 +254,8 @@ function Navbar() {
                 href="/galeri"
                 className={`relative ${
                   scrolled ? "text-[#304F47]" : "text-white"
-                } font-medium after:w-0 after:h-[3px] after:bg-[#304F47] hover:text-[#304F47]/70
-              after:transition-all after:duration-300 after:absolute after:left-0 after:bottom-[-8px] 
+                } font-medium after:w-0 after:h-[3px] after:bg-[#304F47] hover:text-[#304F47]/70 
+                 lg:hover:text-gray-300   after:transition-all after:duration-300 after:absolute after:left-0 after:bottom-[-8px] 
              hover:after:w-[90%] `}
               >
                 Galeri
