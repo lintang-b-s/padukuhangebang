@@ -70,6 +70,8 @@ const umkmFetcherCard = async function () {
       pemilik: doc.data().pemilik,
       kategoriUsaha: doc.data().kategoriUsaha,
       rangeHarga: doc.data().rangeHarga,
+      googleMapsLink: doc.data().googleMapsLink,
+      id: doc.id,
     } as UMKMCard);
   });
   return items;

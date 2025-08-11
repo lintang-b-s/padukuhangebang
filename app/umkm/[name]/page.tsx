@@ -226,6 +226,7 @@ function UMKMDetail() {
     let foundData = currentItems.find(
       (item) => item.title === name.replaceAll("%20", " ")
     );
+    console.log("foundData: ", foundData);
     setDescriptions(
       foundData?.description.split("\n").filter((p) => p.trim() !== "")!
     );
@@ -634,8 +635,8 @@ function UMKMDetail() {
                     )}
                   </span>
                   <a
-                    className="group cursor-pointer  items-center  gap-x-2 hidden lg:flex"
-                    href={data?.googleMapsLink}
+                    className="group cursor-pointer items-center  gap-x-2 hidden lg:flex"
+                    href={data?.googleMapsLink!}
                   >
                     <span className="!text-[#F3C725] hover:text-[#dfc979] text-lg">
                       Lihat Di Google Maps
@@ -646,6 +647,18 @@ function UMKMDetail() {
                     />
                   </a>
                 </div>
+                <a
+                  className="group cursor-pointer items-center  gap-x-2 flex mb-2"
+                  href={data?.googleMapsLink!}
+                >
+                  <span className="!text-[#F3C725] hover:text-[#dfc979] text-lg">
+                    Lihat Di Google Maps
+                  </span>
+                  <FaArrowRight
+                    color="#F3C725"
+                    className="group-hover:animate-seemore-next"
+                  />
+                </a>
                 {!isOpenMap && (
                   <div className="w-screen h-[1px] bg-[#dbd9d2] relative left-1/2 -ml-[50vw] md:hidden"></div>
                 )}
