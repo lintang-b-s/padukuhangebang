@@ -17,7 +17,7 @@ export default function Home() {
       <Head>
         <link
           rel="canonical"
-          href="https://www.padukuhangebang.com/"
+          href="https://www.padukuhangebang.com"
           key="canonical"
         />
       </Head>
