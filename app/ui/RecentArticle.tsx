@@ -89,7 +89,7 @@ function RecentArticles() {
                     />
                   </div>
 
-                  <div className="flex flex-col gap-y-2 mt-1 sm:gap-y-0 sm:mt-2">
+                  <div className="flex flex-col gap-2 mt-1  sm:mt-2">
                     <span className="font-bold">
                       {`${article.title.slice(0, 120)}...`}
                     </span>
@@ -110,7 +110,7 @@ function RecentArticles() {
                       <div
                         className="prose  "
                         dangerouslySetInnerHTML={{
-                          __html: article.content.slice(0,90) + "...",
+                          __html: article.content.slice(0, 90) + "...",
                         }}
                       />
                     </div>
