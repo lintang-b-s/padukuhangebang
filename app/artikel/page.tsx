@@ -103,7 +103,7 @@ function Articles() {
                   <div
                     key={index}
                     className="flex flex-col gap-1 px-4 py-4 rounded-lg shadow-lg
-                   items-start relative border-1 border-slate-200 h-full max-h-[526px]"
+                   items-start relative border-1 border-slate-200 h-full max-h-[570px]"
                   >
                     <a
                       className="group relative w-full h-full max-w-[600px] max-h-[300px] aspect-square md:max-h-[300px] 
@@ -122,23 +122,23 @@ function Articles() {
                     <div className="flex flex-col gap-2">
                       <h4 className="font-bold !text-black">{`${article.title.slice(
                         0,
-                        75
+                        120
                       )}...`}</h4>
                       <div className="flex flex-row gap-6 items-center">
                         <div className="flex flex-row gap-2">
                           <CiCalendarDate size={20} />
-                          <span>{article.postDate.toDateString()}</span>
+                          <span className="text-sm">{article.postDate.toDateString()}</span>
                         </div>
                         <div className="flex flex-row gap-2">
                           <IoPeopleOutline size={20} />
-                          <span>{article.penulis}</span>
+                          <span className="text-sm">{article.penulis}</span>
                         </div>
                       </div>
                       <div className="ql-editor pb-14">
                         <div
                           className="prose max-w-none "
                           dangerouslySetInnerHTML={{
-                            __html: article.content.slice(0, 80) + "...",
+                            __html: article.content.slice(0, 90) + "...",
                           }}
                         />
                       </div>

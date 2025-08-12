@@ -73,7 +73,7 @@ function RecentArticles() {
                 <div
                   key={index}
                   className="relative flex flex-col sm:grid sm:grid-cols-1 gap-1 items-center justify-center group
-               rounded-lg shadow-lg  px-4 py-5 border-1 border-slate-200 h-full max-h-[526px]"
+               rounded-lg shadow-lg  px-4 py-5 border-1 border-slate-200 h-full max-h-[570px]"
                 >
                   <div
                     className="relative w-full max-w-80 h-46 sm:w-52 sm:h-50 md:w-62 md:h-50 lg:w-90 lg:h-70
@@ -90,25 +90,27 @@ function RecentArticles() {
                   </div>
 
                   <div className="flex flex-col gap-y-2 mt-1 sm:gap-y-0 sm:mt-2">
-                    <span className="text-lg font-bold md:text-2xl">
-                      {`${article.title.slice(0, 54)}...`}
+                    <span className="font-bold">
+                      {`${article.title.slice(0, 120)}...`}
                     </span>
 
                     <div className="flex flex-row gap-6 items-center">
                       <div className="flex flex-row gap-2">
                         <CiCalendarDate size={20} />
-                        <span>{article.postDate.toDateString()}</span>
+                        <span className="text-sm">
+                          {article.postDate.toDateString()}
+                        </span>
                       </div>
                       <div className="flex flex-row gap-2">
                         <IoPeopleOutline size={20} />
-                        <span>{article.penulis}</span>
+                        <span className="text-sm">{article.penulis}</span>
                       </div>
                     </div>
                     <div className="ql-editor pb-14">
                       <div
                         className="prose  "
                         dangerouslySetInnerHTML={{
-                          __html: article.content.slice(0, 80) + "...",
+                          __html: article.content.slice(0,90) + "...",
                         }}
                       />
                     </div>
