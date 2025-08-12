@@ -10,6 +10,7 @@ import AboutGallery from "./ui/AboutGallery";
 import RecentArticles from "./ui/RecentArticle";
 import { Worker } from "@react-pdf-viewer/core";
 import Head from "next/head";
+import { addDataEvents } from "@/lib/addData";
 
 export default function Home() {
   return (
@@ -30,7 +31,6 @@ export default function Home() {
         <RecentArticles />
         <TopDestinations />
       </div>
-      <TopAttraction />
 
       <div className=" py-2 mt-[50px] container">
         <AboutGallery />

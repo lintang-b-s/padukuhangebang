@@ -293,9 +293,6 @@ function DestinationPage() {
                 {data?.information!.penanggungjawab}
               </span>
 
-              <span className="!text-[#686867]  font-semibold">
-                {data?.information!.email}
-              </span>
               <span className="!text-[#686867] font-semibold ">
                 {data?.information!.noTelp
                   ? ` ${data?.information.noTelp}`
@@ -641,9 +638,6 @@ function DestinationPage() {
                         ? `Telepon ${data?.information?.noTelp}`
                         : ``}
                       <br />
-                      {data?.information?.email
-                        ? `Email ${data?.information?.email}`
-                        : ""}
                     </p>
                   </div>
                 </>
@@ -693,9 +687,7 @@ function DestinationPage() {
                       <span className="!text-[#686867] font-semibold  text-lg ">
                         {data?.information!.penanggungjawab}
                       </span>
-                      <span className="!text-[#686867] font-semibold   text-lg">
-                        {data?.information!.email}
-                      </span>
+
                       <span className="!text-[#686867] font-semibold  text-lg">
                         {data?.information!.noTelp
                           ? ` ${data?.information.noTelp}`

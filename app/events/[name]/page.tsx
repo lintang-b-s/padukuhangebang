@@ -43,7 +43,7 @@ import type { FeatureCollection } from "geojson";
 import { Skeleton } from "@/components/ui/skeleton";
 import { TbMapSearch } from "react-icons/tb";
 import DisplayListImages from "@/app/ui/DisplayListImages";
-import { fetchEvents } from "@/lib/api";
+import { fetchEvents, storageImageURL } from "@/lib/api";
 import "moment/locale/id";
 
 moment.locale("id");
@@ -191,17 +191,6 @@ function EventDetail() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  useEffect(() => {
-    if (data?.images) {
-      setImagesModal(
-        data.images.map((image) => ({
-          original: image,
-          thumbnail: image,
-        }))
-      );
-    }
-  }, [data]);
-
   const toggleOpenContact = () => {
     if (window.innerWidth >= 1024) {
       return;
@@ -256,10 +245,10 @@ function EventDetail() {
         <div className="pt-24 container ">
           <h1 className="!text-[#272726] font-bold">{data?.name}</h1>
           <span className="!text-[#F3C725] font-bold">Acara</span>{" "}
-          <span className="!text-[#686867]">{data?.kelurahan}</span>
+          <span className="!text-[#686867]">{data?.tempat}</span>
           <div className="relative h-[202px] md:h-[500px] lg:h-[670px] flex-shrink-0 cursor-pointer mt-6">
             <Image
-              src={data?.thumbnail!}
+              src={storageImageURL(data?.thumbnail!)}
               alt={data?.name!}
               fill
               className="rounded-lg object-cover"
@@ -327,11 +316,6 @@ function EventDetail() {
               <span className="!text-[#686867]  font-semibold">
                 {data?.information!.penanggungjawab}
               </span>
-              {data?.information!.email ?? (
-                <span className="!text-[#686867]  font-semibold">
-                  {data?.information!.email}
-                </span>
-              )}
 
               <span className="!text-[#686867]  font-semibold">
                 {data?.information!.noTelp
@@ -355,39 +339,6 @@ function EventDetail() {
           </div>
           <div className="md:grid md:grid-cols-6 md:gap-8">
             <div className="col-span-4">
-              <p className="!text[#272726] font-semibold mt-6 text-2xl">
-                {data?.summary}
-              </p>
-              <div className="flex justify-between mt-4">
-                <div className="flex flex-col gap-1">
-                  <span className="!text-[#F3C725] text-lg">Images</span>
-                  <div className="flex items-center h-[1.5px] ">
-                    <div className="w-[10px]  h-[1.5px] bg-[#F3C725]"></div>
-                    <div className="flex-grow  h-[1.5px] bg-[#ccc]"></div>
-                  </div>
-                </div>
-
-                <div
-                  className="group cursor-pointer flex items-center mt-1 gap-x-2"
-                  onClick={() => {
-                    setIsOpen(true);
-                    setImageModalIndex(0);
-                  }}
-                >
-                  <span className="!text-[#F3C725] hover:text-[#dfc979] text-lg">
-                    See more
-                  </span>
-                  <FaArrowRight
-                    color="#F3C725"
-                    className="group-hover:animate-seemore-next"
-                  />
-                </div>
-              </div>
-
-              <DisplayListImages
-                images={data?.images!}
-                handleImageClick={handleImageClick}
-              />
               <h3 className="!text-[#272726] font-bold mt-6">Deskripsi</h3>
               {descriptions?.length > 0 &&
                 descriptions?.map((description, index) => (
@@ -423,7 +374,7 @@ function EventDetail() {
                     </span>
                     <div className="flex flex-col items-start justify-start gap-1 mt-1 md:mt-0 md:col-span-7">
                       <p className="!text-[#686867] text-lg ">
-                        {data?.kelurahan}
+                        {data?.tempat}
                         <br />
                         {data?.address}
                         <br />
@@ -741,9 +692,6 @@ function EventDetail() {
                         ? `Telepon ${data?.information?.noTelp}`
                         : ``}
                       <br />
-                      {data?.information?.email
-                        ? `Email ${data?.information?.email}`
-                        : ""}
                     </p>
                   </div>
                 </>
@@ -792,9 +740,6 @@ function EventDetail() {
                     <div className="flex flex-col ">
                       <span className="!text-[#686867] font-semibold text-lg ">
                         {data?.information!.penanggungjawab}
-                      </span>
-                      <span className="!text-[#686867] font-semibold text-lg">
-                        {data?.information!.email}
                       </span>
                       <span className="!text-[#686867] font-semibold text-lg">
                         {data?.information!.noTelp

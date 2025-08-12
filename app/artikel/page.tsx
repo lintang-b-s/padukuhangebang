@@ -127,7 +127,9 @@ function Articles() {
                       <div className="flex flex-row gap-6 items-center">
                         <div className="flex flex-row gap-2">
                           <CiCalendarDate size={20} />
-                          <span className="text-sm">{article.postDate.toDateString()}</span>
+                          <span className="text-sm">
+                            {article.postDate.toDateString()}
+                          </span>
                         </div>
                         <div className="flex flex-row gap-2">
                           <IoPeopleOutline size={20} />

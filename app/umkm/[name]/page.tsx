@@ -353,9 +353,7 @@ function UMKMDetail() {
                 <span className="!text-[#686867]  font-semibold">
                   {data?.kontak!.namaPemilik}
                 </span>
-                <span className="!text-[#686867]  font-semibold">
-                  {data?.kontak!.email}
-                </span>
+
                 <span className="!text-[#686867]  font-semibold">
                   {data?.kontak!.noTelp ? `Telepon ${data?.kontak.noTelp}` : ``}
                 </span>
@@ -470,9 +468,6 @@ function UMKMDetail() {
                           <br />
                           {data?.kontak?.noTelp ? `${data?.kontak.noTelp}` : ``}
                           <br />
-                          {data?.kontak?.email
-                            ? `Email ${data?.kontak?.email}`
-                            : ""}
                         </p>
                       </div>
                     </div>
@@ -936,11 +931,7 @@ function UMKMDetail() {
                         <span className="!text-[#686867] font-semibold text-lg">
                           {data?.kontak!.namaPemilik}
                         </span>
-                        {data?.kontak!.email ?? (
-                          <span className="!text-[#686867] font-semibold   text-lg">
-                            {data?.kontak!.email}
-                          </span>
-                        )}
+
                         <span className="!text-[#686867] font-semibold   text-lg">
                           {data?.kontak!.noTelp
                             ? ` ${data?.kontak.noTelp}`

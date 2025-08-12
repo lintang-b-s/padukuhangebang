@@ -15,7 +15,7 @@ import ReactPaginate from "react-paginate";
 import Maps from "../ui/Map";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { events } from "@/data/events";
-import { fetchEvents } from "@/lib/api";
+import { fetchEvents, storageImageURL } from "@/lib/api";
 import { Skeleton } from "@/components/ui/skeleton";
 import "moment/locale/id";
 import moment from "moment";
@@ -146,11 +146,8 @@ function EventList() {
           showMap ? `hidden` : `block`
         }`}
       >
-        <h1 className="!text-[#272726] font-bold leading-[1.2]">
-          Agenda Desa
-        </h1>
+        <h1 className="!text-[#272726] font-bold leading-[1.2]">Agenda Dusun</h1>
         <div className="w-screen h-[1px] bg-[#dbd9d2] relative left-1/2 -ml-[50vw] mt-4 "></div>
-
         <div className="mt-4  ">
           <div className=" mt-4 flex flex-row justify-between items-center">
             <div className="text-lg">
@@ -160,7 +157,6 @@ function EventList() {
               <span className="font-bold"> Results</span>
             </div>
 
-            {/* map button */}
             <div
               className="flex items-center gap-x-2 mt-2 p-3 rounded-xl  bg-[#F0EFEB] cursor-pointer hover:bg-[#E8E6E2] transition-all duration-300
             lg:hidden"
@@ -173,7 +169,6 @@ function EventList() {
             </div>
           </div>
         </div>
-
         {/* list events & map (jika lg screen) */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
           <div className="col-span-2">
@@ -300,7 +295,7 @@ function EventCardComponent({ event }: { event: ObjectLocation }) {
       group-hover:scale-[98%] group-active:scale-[98%] rounded-lg transition-all duration-400 ease-in-out overflow-hidden"
       >
         <Image
-          src={event.thumbnail!}
+          src={storageImageURL(event.thumbnail!)}
           alt={event.name}
           fill
           className="rounded-lg object-cover group-hover:scale-110 group-active:scale-110 transform ease-in-out duration-400 transition-transform"

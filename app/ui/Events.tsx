@@ -1,6 +1,6 @@
 "use client";
 import { Skeleton } from "@/components/ui/skeleton";
-import { fetchEvents } from "@/lib/api";
+import { fetchEvents, storageImageURL } from "@/lib/api";
 import { CalendarEvent, EventSaptosari } from "@/type/type";
 import moment from "moment";
 import Image from "next/image";
@@ -67,7 +67,7 @@ function Events() {
 
   return (
     <div className="flex flex-col gap-y-4 pl-1 pr-6 pt-4 container  ">
-      <h2 className="hyphens-auto font-bold">Agenda Desa</h2>
+      <h2 className="hyphens-auto font-bold">Agenda Dusun</h2>
       <a
         className="group cursor-pointer flex items-center  gap-x-2"
         href={`/events`}
@@ -99,7 +99,7 @@ function Events() {
               group-hover:scale-[98%] group-active:scale-[98%] rounded-lg transition-all duration-400 ease-in-out overflow-hidden"
                   >
                     <Image
-                      src={event.thumbnail!}
+                      src={storageImageURL(event.thumbnail!)}
                       alt={event.name}
                       fill
                       className="rounded-lg object-cover group-hover:scale-110 group-active:scale-110
@@ -129,7 +129,7 @@ function Events() {
                       {event.name}
                     </span>
                     <span className="mt-3 !text-[#686867]">
-                      {event.kelurahan},{" "}
+                      {event.tempat},{" "}
                       {moment(event.startDate).format("D MMMM YYYY")} -{" "}
                       {moment(event.endDate).format("D MMMM YYYY")}
                     </span>
@@ -147,7 +147,7 @@ function Events() {
             ))}
       </div>
 
-      <div className="w-[95%] h-[70vh] mt-3 mx-auto">
+      <div className="w-[95%] h-[45vh] mt-3 mx-auto">
         {currentEvents.length > 0 ? (
           <Calendar
             toolbar={true}

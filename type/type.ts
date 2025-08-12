@@ -43,7 +43,6 @@ export type UMKMContact = {
   namaPemilik: string;
   alamat: string;
   noTelp?: string;
-  email?: string;
   mediaSosial?: MediaSosial[];
   onlineShop?: OnlineShop[];
 };
@@ -81,14 +80,12 @@ export type EventSaptosari = {
   id?: string;
   name: string;
   address: string;
-  kelurahan: string;
+  tempat: string;
   startDate: Date;
   endDate: Date;
   openingHours: string[]; // informasi
   description: string;
   thumbnail?: string;
-  summary: string;
-  images?: string[];
   latitude: number;
   longitude: number;
   information?: EventInformation;
@@ -103,7 +100,6 @@ export type EventInformation = {
   organisasi: string;
   penanggungjawab: string;
   noTelp: string;
-  email: string;
   umurMasuk: string;
   category: string[];
   tempat: string;
@@ -144,7 +140,6 @@ export type DestinationInformation = {
   organisasi: string;
   penanggungjawab: string;
   noTelp: string;
-  email: string;
   suitableFor: string; // Children, Families, Groups, Individual, Couples
   category: string[]; // Education, Nature, Active
   placeType: PlaceType; // indoor, outdoor, etc.

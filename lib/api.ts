@@ -107,7 +107,7 @@ const fetchEvents = async function () {
     items.push({
       name: doc.data().name,
       address: doc.data().address,
-      kelurahan: doc.data().kelurahan,
+      tempat: doc.data().tempat,
       startDate: doc.data().startDate.toDate(),
       endDate: doc.data().endDate.toDate(),
       openingHours: doc.data().openingHours,
