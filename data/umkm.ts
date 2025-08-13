@@ -31,7 +31,6 @@ Dengan komitmen pada mutu dan pelayanan, DR Snack terus berinovasi dalam penyaji
       alamat:
         "JL Sidowayah, Gebang, Ngloro, Kec. Saptosari, Kabupaten Gunungkidul, Daerah Istimewa Yogyakarta 55871",
       noTelp: "081280545709",
-      email: "",
       mediaSosial: [],
       onlineShop: [],
     },
